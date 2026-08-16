@@ -3,133 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TSB Tech</title>
+<title>TSB Tech — Cours Python</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-font-family:Arial,sans-serif;
-background:#050914;
-color:white;
-line-height:1.6
-}
-nav{
-padding:18px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #1c2940;
-background:#070b14
-}
-.logo{font-size:25px;font-weight:bold}
-.logo span{color:#1680ff}
-nav a{color:white;text-decoration:none;margin-left:20px}
-.btn{
-display:inline-block;
-background:#1677ff;
-color:white;
-padding:12px 20px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-border:0
-}
-.hero{
-padding:90px 7%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-background:radial-gradient(circle at 80%,#103b85,transparent 40%)
-}
-.badge{
-color:#48a5ff;
-border:1px solid #245080;
-padding:7px 14px;
-border-radius:30px
-}
-h1{
-font-size:clamp(42px,6vw,70px);
-line-height:1.05;
-margin:25px 0
-}
-.blue{color:#1677ff}
-.hero p{color:#aab5c8;font-size:18px;margin-bottom:25px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.code{
-background:#030710;
-border:1px solid #20385d;
-border-radius:18px;
-padding:30px;
-font-family:monospace;
-color:#6fc1ff;
-box-shadow:0 20px 60px #001d55
-}
-section{padding:65px 7%}
-h2{font-size:32px;margin-bottom:25px}
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-.card{
-background:#0b1220;
-border:1px solid #1d2c44;
-border-radius:15px;
-padding:25px
-}
-.card:hover{border-color:#1680ff}
-.icon{font-size:35px}
-.card h3{margin:10px 0}
-.card p{color:#9eabc0}
-.small{display:block;color:#3896ff;margin-top:15px;font-weight:bold}
-.path{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-.step{
-background:#0b1220;
-border:1px solid #1d2c44;
-border-radius:15px;
-padding:25px
-}
-.number{
-width:40px;height:40px;
-display:grid;place-items:center;
-background:#1677ff;
-border-radius:50%;
-font-weight:bold;
-margin-bottom:15px
-}
-.exercise{
-background:#0b1220;
-border:1px solid #1d2c44;
-padding:25px;
-border-radius:15px
-}
-.answer{
-display:block;
-width:100%;
-margin:10px 0;
-padding:12px;
-background:#101b2d;
-border:1px solid #2a3c58;
-color:white;
-border-radius:8px;
-text-align:left
-}
-.answer:hover{border-color:#1680ff}
-footer{
-padding:30px;
-text-align:center;
-border-top:1px solid #1c2940;
-color:#7f8ba0
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#050914;color:#fff;line-height:1.6}
+nav{background:#070b14;border-bottom:1px solid #1d2a40;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:25px;font-weight:bold}.logo span{color:#1677ff}
+nav a{color:#fff;text-decoration:none;margin-left:18px}
+.btn{background:#1677ff;color:white;border:0;border-radius:8px;padding:11px 17px;font-weight:bold;cursor:pointer}
+.hero{padding:75px 6%;background:radial-gradient(circle at 80% 20%,#123d86,transparent 35%)}
+.hero h1{font-size:clamp(42px,6vw,68px);line-height:1.05;margin:20px 0}
+.blue{color:#1677ff}.hero p{color:#aab5c8;font-size:18px;max-width:700px}
+.badge{color:#4ca5ff;border:1px solid #245080;padding:7px 14px;border-radius:30px;font-size:12px}
+.container{max-width:1150px;margin:auto}
+.main{display:grid;grid-template-columns:250px 1fr;gap:25px;padding:50px 6%}
+.sidebar{background:#0b1220;border:1px solid #1d2b43;border-radius:14px;padding:20px;height:max-content}
+.sidebar h3{margin-top:0}
+.lesson-link{display:block;color:#aebbd0;padding:10px;border-radius:8px;margin:4px 0;cursor:pointer}
+.lesson-link:hover,.lesson-link.active{background:#102542;color:white}
+.lesson{display:none;background:#0b1220;border:1px solid #1d2b43;border-radius:15px;padding:28px}
+.lesson.active{display:block}
+.lesson h2{font-size:30px}
+.muted{color:#aab5c8}
+pre{background:#030710;border:1px solid #203655;border-radius:10px;padding:18px;overflow:auto;color:#c8dcf7}
+.quiz button{display:block;width:100%;text-align:left;background:#101b2d;color:white;border:1px solid #293d59;border-radius:8px;padding:12px;margin:9px 0;cursor:pointer}
+.quiz button:hover{border-color:#1677ff}
+.result{font-weight:bold;margin:12px 0}
+.progress{background:#07101e;border:1px solid #233b5d;border-radius:12px;padding:18px;margin-bottom:20px}
+.bar{height:10px;background:#19263a;border-radius:10px;overflow:hidden;margin-top:10px}
+.fill{height:100%;width:0;background:#1677ff;transition:.4s}
+footer{text-align:center;border-top:1px solid #1d2a40;padding:30px;color:#7e8b9f}
+
 @media(max-width:800px){
-.hero{grid-template-columns:1fr}
-.grid,.path{grid-template-columns:1fr}
-nav div:nth-child(2){display:none}
+nav a{display:none}
+.main{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -140,173 +48,423 @@ nav div:nth-child(2){display:none}
 <div class="logo"><span>TSB</span> Tech</div>
 <div>
 <a href="#cours">Cours</a>
-<a href="#parcours">Parcours</a>
-<a href="#exercices">Exercices</a>
+<a href="#apropos">À propos</a>
 </div>
-<a class="btn" href="#cours">Commencer</a>
+<button class="btn" onclick="window.location='#cours'">Apprendre</button>
 </nav>
 
 <header class="hero">
+<div class="container">
+<span class="badge">TSB TECH · PROGRAMMATION</span>
 
-<div>
-<span class="badge">BIENVENUE SUR TSB TECH</span>
-
-<h1>
-Apprends l'informatique
-<br>
-<span class="blue">étape par étape.</span>
-</h1>
+<h1>🐍 Apprendre <span class="blue">Python</span></h1>
 
 <p>
-Des cours simples, des exercices pratiques et des projets
-pour apprendre l'informatique et construire ton avenir.
+Apprends Python étape par étape avec des cours simples,
+des exemples, des exercices et un mini-projet.
 </p>
-
-<div class="buttons">
-<a class="btn" href="#cours">Commencer maintenant →</a>
-<a class="btn" href="#parcours">Voir le parcours</a>
 </div>
-</div>
-
-<div class="code">
-<h3>💻 TSB Tech</h3>
-<br>
-<span>const</span> avenir = "informatique";<br>
-<span>let</span> niveau = "débutant";<br><br>
-apprendre();<br>
-pratiquer();<br>
-construire();<br><br>
-<span style="color:#45e39b">✓ Progression en cours...</span>
-</div>
-
 </header>
 
-<section id="cours">
+<main class="main" id="cours">
 
-<h2>📚 Nos cours</h2>
+<aside class="sidebar">
+<h3>📚 Cours Python</h3>
 
-<div class="grid">
-
-<div class="card">
-<div class="icon">🐍</div>
-<h3>Python</h3>
-<p>Apprends la programmation Python depuis zéro.</p>
-<span class="small">Débutant → Avancé</span>
+<div class="lesson-link active" onclick="showLesson(1,this)">
+1. Introduction
 </div>
 
-<div class="card">
-<div class="icon">🌐</div>
-<h3>HTML & CSS</h3>
-<p>Crée tes premiers sites web modernes.</p>
-<span class="small">Développement Web</span>
+<div class="lesson-link" onclick="showLesson(2,this)">
+2. Variables
 </div>
 
-<div class="card">
-<div class="icon">⚡</div>
-<h3>JavaScript</h3>
-<p>Rends tes sites interactifs et dynamiques.</p>
-<span class="small">Programmation Web</span>
+<div class="lesson-link" onclick="showLesson(3,this)">
+3. Types de données
 </div>
 
-<div class="card">
-<div class="icon">🗄️</div>
-<h3>SQL</h3>
-<p>Apprends à utiliser les bases de données.</p>
-<span class="small">Bases de données</span>
+<div class="lesson-link" onclick="showLesson(4,this)">
+4. Conditions
 </div>
 
-<div class="card">
-<div class="icon">🐧</div>
-<h3>Linux</h3>
-<p>Découvre le terminal et les commandes Linux.</p>
-<span class="small">Système</span>
+<div class="lesson-link" onclick="showLesson(5,this)">
+5. Boucles
 </div>
 
-<div class="card">
-<div class="icon">🛡️</div>
-<h3>Cybersécurité</h3>
-<p>Découvre les bases de la sécurité informatique.</p>
-<span class="small">Sécurité</span>
+<div class="lesson-link" onclick="showLesson(6,this)">
+6. Fonctions
 </div>
 
-</div>
-</section>
-
-<section id="parcours">
-
-<h2>🎯 Ton parcours</h2>
-
-<div class="path">
-
-<div class="step">
-<div class="number">1</div>
-<h3>Débutant</h3>
-<p>Découvre les bases de l'informatique et de la programmation.</p>
+<div class="lesson-link" onclick="showLesson(7,this)">
+7. Listes
 </div>
 
-<div class="step">
-<div class="number">2</div>
-<h3>Intermédiaire</h3>
-<p>Pratique avec des exercices et des petits projets.</p>
+<div class="lesson-link" onclick="showLesson(8,this)">
+8. Mini-projet
 </div>
-
-<div class="step">
-<div class="number">3</div>
-<h3>Avancé</h3>
-<p>Construis des projets complets et développe ton autonomie.</p>
-</div>
-
-</div>
-</section>
-
-<section id="exercices">
-
-<h2>🧩 Exercice du jour</h2>
-
-<div class="exercise">
-
-<h3>Python : quelle est la valeur de x ?</h3>
-
-<br>
-
-<pre>
-x = 5
-x = x + 3
-</pre>
-
-<br>
-
-<button class="answer" onclick="alert('❌ Essaie encore !')">
-A. 5
-</button>
-
-<button class="answer" onclick="alert('✅ Bonne réponse ! x = 8')">
-B. 8
-</button>
-
-<button class="answer" onclick="alert('❌ Essaie encore !')">
-C. 3
-</button>
-
-</div>
-</section>
+</aside>
 
 <section>
 
-<div class="card">
-<h2>🚀 Prêt à commencer ?</h2>
-<p>
-TSB Tech — Apprends. Code. Réussis.
-</p>
-<br>
-<a class="btn" href="#cours">Commencer l'apprentissage</a>
+<div class="progress">
+<b>📊 Ta progression</b>
+
+<span id="progressText" style="float:right">
+0 / 8 leçons
+</span>
+
+<div class="bar">
+<div class="fill" id="fill"></div>
+</div>
 </div>
 
+<!-- LEÇON 1 -->
+
+<article class="lesson active" id="lesson1">
+
+<h2>1. Introduction à Python</h2>
+
+<p class="muted">
+Python est un langage de programmation très utilisé.
+Il permet notamment de créer des applications, automatiser
+des tâches et travailler avec les données.
+</p>
+
+<h3>Ton premier programme</h3>
+
+<pre>print("Bienvenue sur TSB Tech !")</pre>
+
+<p class="muted">
+La fonction <b>print()</b> permet d'afficher du texte.
+</p>
+
+<h3>🧩 Exercice</h3>
+
+<p>
+Quelle commande permet d'afficher « Bonjour » ?
+</p>
+
+<div class="quiz">
+
+<button onclick="answer(this,true,'Bravo ! Bonne réponse.')">
+A. print("Bonjour")
+</button>
+
+<button onclick="answer(this,false,'Pas encore. Essaie encore.')">
+B. show("Bonjour")
+</button>
+
+<button onclick="answer(this,false,'Pas encore. Essaie encore.')">
+C. text("Bonjour")
+</button>
+
+</div>
+
+<div class="result"></div>
+
+<button class="btn" onclick="complete(1)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+<!-- LEÇON 2 -->
+
+<article class="lesson" id="lesson2">
+
+<h2>2. Les variables</h2>
+
+<p class="muted">
+Une variable permet de stocker une information.
+</p>
+
+<pre>
+nom = "TSB Tech"
+age = 20
+
+print(nom)
+print(age)
+</pre>
+
+<p class="muted">
+La valeur d'une variable peut être utilisée plus tard
+dans le programme.
+</p>
+
+<h3>🎯 Défi</h3>
+
+<p>
+Crée une variable appelée <b>prenom</b> et donne-lui ton prénom.
+</p>
+
+<button class="btn" onclick="complete(2)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+<!-- LEÇON 3 -->
+
+<article class="lesson" id="lesson3">
+
+<h2>3. Les types de données</h2>
+
+<p class="muted">
+Python possède plusieurs types de données.
+</p>
+
+<pre>
+nom = "Awa"       # texte
+age = 20          # entier
+taille = 1.75     # nombre décimal
+connecte = True   # booléen
+</pre>
+
+<p class="muted">
+Les types courants sont <b>str</b>, <b>int</b>, <b>float</b>
+et <b>bool</b>.
+</p>
+
+<button class="btn" onclick="complete(3)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+<!-- LEÇON 4 -->
+
+<article class="lesson" id="lesson4">
+
+<h2>4. Les conditions</h2>
+
+<p class="muted">
+Une condition permet à ton programme de prendre une décision.
+</p>
+
+<pre>
+age = 18
+
+if age >= 18:
+    print("Majeur")
+else:
+    print("Mineur")
+</pre>
+
+<p class="muted">
+Python utilise <b>if</b> et <b>else</b> pour effectuer des choix.
+</p>
+
+<button class="btn" onclick="complete(4)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+<!-- LEÇON 5 -->
+
+<article class="lesson" id="lesson5">
+
+<h2>5. Les boucles</h2>
+
+<p class="muted">
+Une boucle permet de répéter une instruction.
+</p>
+
+<pre>
+for i in range(5):
+    print(i)
+</pre>
+
+<p class="muted">
+Cette boucle affiche plusieurs valeurs automatiquement.
+</p>
+
+<button class="btn" onclick="complete(5)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+<!-- LEÇON 6 -->
+
+<article class="lesson" id="lesson6">
+
+<h2>6. Les fonctions</h2>
+
+<p class="muted">
+Une fonction permet de regrouper des instructions
+que tu peux réutiliser.
+</p>
+
+<pre>
+def saluer(nom):
+    print("Bonjour", nom)
+
+saluer("Awa")
+</pre>
+
+<button class="btn" onclick="complete(6)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+<!-- LEÇON 7 -->
+
+<article class="lesson" id="lesson7">
+
+<h2>7. Les listes</h2>
+
+<p class="muted">
+Une liste permet de stocker plusieurs éléments.
+</p>
+
+<pre>
+fruits = ["mangue", "banane", "orange"]
+
+print(fruits[0])
+
+fruits.append("pomme")
+</pre>
+
+<button class="btn" onclick="complete(7)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+<!-- LEÇON 8 -->
+
+<article class="lesson" id="lesson8">
+
+<h2>8. 🏆 Mini-projet : calculatrice</h2>
+
+<p class="muted">
+Pour terminer ce premier parcours, crée une petite
+calculatrice Python.
+</p>
+
+<pre>
+a = 10
+b = 5
+
+print("Addition :", a + b)
+print("Soustraction :", a - b)
+print("Multiplication :", a * b)
+print("Division :", a / b)
+</pre>
+
+<h3>🎯 Mission</h3>
+
+<p class="muted">
+Améliore ensuite le programme avec <b>input()</b> afin que
+l'utilisateur puisse entrer lui-même les deux nombres.
+</p>
+
+<button class="btn" onclick="complete(8)">
+🏆 Terminer le parcours Python
+</button>
+
+</article>
+
+</section>
+</main>
+
+<section id="apropos" style="padding:30px 6% 60px">
+<div class="container">
+<div class="lesson" style="display:block">
+<h2>🚀 TSB Tech</h2>
+<p class="muted">
+Apprends. Code. Réussis.
+Notre objectif est de rendre l'apprentissage
+de l'informatique simple et pratique.
+</p>
+</div>
+</div>
 </section>
 
 <footer>
-© 2026 TSB Tech — Apprends. Code. Réussis.
+© 2026 TSB Tech — Plateforme d'apprentissage informatique
 </footer>
+
+<script>
+
+let done = JSON.parse(
+localStorage.getItem("tsbPythonDone") || "[]"
+);
+
+function showLesson(number,element){
+
+document.querySelectorAll(".lesson").forEach(function(x){
+x.classList.remove("active");
+});
+
+document.getElementById("lesson"+number)
+.classList.add("active");
+
+document.querySelectorAll(".lesson-link")
+.forEach(function(x){
+x.classList.remove("active");
+});
+
+element.classList.add("active");
+
+window.scrollTo({
+top:document.getElementById("cours").offsetTop-70,
+behavior:"smooth"
+});
+
+}
+
+function complete(number){
+
+if(!done.includes(number)){
+
+done.push(number);
+
+localStorage.setItem(
+"tsbPythonDone",
+JSON.stringify(done)
+);
+
+}
+
+updateProgress();
+
+alert(
+number === 8
+? "🎉 Félicitations ! Tu as terminé le parcours Python."
+: "✓ Leçon terminée !"
+);
+
+}
+
+function updateProgress(){
+
+document.getElementById("progressText")
+.textContent = done.length + " / 8 leçons";
+
+document.getElementById("fill")
+.style.width = (done.length / 8 * 100) + "%";
+
+}
+
+function answer(button,correct,message){
+
+let result =
+button.parentElement.nextElementSibling;
+
+result.textContent =
+(correct ? "✓ " : "✗ ") + message;
+
+result.style.color =
+correct ? "#34d399" : "#ff8b8b";
+
+}
+
+updateProgress();
+
+</script>
 
 </body>
 </html>
