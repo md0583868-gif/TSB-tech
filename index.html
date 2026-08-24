@@ -47,9 +47,9 @@
         des cours simples, des exercices et des projets pratiques.
       </p>
 
-      <a href="html-css.html" class="btn">
-  🚀 Commencer maintenant
-</a>
+      <a href="#cours" class="btn">
+        🚀 Commencer maintenant
+      </a>
 
     </div>
   </header>
@@ -69,7 +69,7 @@
 
       <div class="course-grid">
 
-        <!-- INFORMATIQUE -->
+        <!-- BASES INFORMATIQUE -->
         <div class="course-card">
 
           <div class="course-icon">💻</div>
@@ -82,11 +82,11 @@
             Découvre les fondamentaux de l'informatique
             et comprends comment fonctionne un ordinateur.
           </p>
-<!-- PARCOURS PYTHON -->
-        <button class="btn"
-        onclick="window.location='#informatique'">
-  Commencer
-</button>
+
+          <button class="btn"
+                  onclick="startCourse('informatique')">
+            Commencer
+          </button>
 
         </div>
 
@@ -105,10 +105,9 @@
             et à leur donner un beau design.
           </p>
 
-          <button class="btn"
-                  onclick="startCourse('web')">
+          <a href="html-css.html" class="btn">
             Commencer
-          </button>
+          </a>
 
         </div>
 
@@ -128,8 +127,8 @@
           </p>
 
           <button class="btn"
-                  onclick="startCourse('javascript')">
-            Commencer
+                  onclick="startCourse('JavaScript')">
+            Bientôt disponible
           </button>
 
         </div>
@@ -220,7 +219,7 @@
       <!-- PROGRESSION -->
       <div class="progress">
 
-        <b>📊 Ta progression</b>
+        <b>📊 Ta progression Python</b>
 
         <span id="progressText"
               style="float:right">
@@ -228,9 +227,7 @@
         </span>
 
         <div class="bar">
-          <div class="fill"
-               id="fill">
-          </div>
+          <div class="fill" id="fill"></div>
         </div>
 
       </div>
@@ -569,11 +566,9 @@ print("Division :", a / b)
     function showLesson(number, element) {
 
       document
-        .querySelectorAll(".lesson")
+        .querySelectorAll("#python .lesson")
         .forEach(function(x) {
-
           x.classList.remove("active");
-
         });
 
 
@@ -585,9 +580,7 @@ print("Division :", a / b)
       document
         .querySelectorAll(".lesson-link")
         .forEach(function(x) {
-
           x.classList.remove("active");
-
         });
 
 
@@ -667,11 +660,21 @@ print("Division :", a / b)
 
     function startCourse(course) {
 
-      alert(
-        "🚀 Le cours " +
-        course +
-        " sera bientôt disponible sur TSB Tech !"
-      );
+      if (course === "informatique") {
+
+        alert(
+          "💻 Le cours Bases de l'informatique sera bientôt disponible sur TSB Tech !"
+        );
+
+      } else {
+
+        alert(
+          "🚀 Le cours " +
+          course +
+          " sera bientôt disponible sur TSB Tech !"
+        );
+
+      }
 
     }
 
