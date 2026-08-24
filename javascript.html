@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TSB Tech — JavaScript</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+
+    <div class="logo">
+      <span>TSB</span> Tech
+    </div>
+
+    <a href="index.html" class="btn">
+      ← Accueil
+    </a>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="container">
+
+      <span class="badge">
+        TSB TECH · PROGRAMMATION
+      </span>
+
+      <h1>
+        ⚡ <span class="blue">JavaScript</span>
+      </h1>
+
+      <p>
+        Apprends à rendre tes pages web
+        interactives et dynamiques.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- COURS -->
+  <main class="main">
+
+
+    <!-- MENU DES LEÇONS -->
+    <aside class="sidebar">
+
+      <h3>
+        ⚡ Cours JavaScript
+      </h3>
+
+
+      <div class="lesson-link active"
+           onclick="showLesson(1,this)">
+        1. Introduction
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(2,this)">
+        2. Variables
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(3,this)">
+        3. Types et opérateurs
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(4,this)">
+        4. Conditions
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(5,this)">
+        5. Boucles
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(6,this)">
+        6. Fonctions
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(7,this)">
+        7. Interactions
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(8,this)">
+        8. Mini-projet
+      </div>
+
+    </aside>
+
+
+    <!-- CONTENU -->
+    <section>
+
+
+      <!-- PROGRESSION -->
+      <div class="progress">
+
+        <b>
+          📊 Ta progression JavaScript
+        </b>
+
+        <span id="progressText"
+              style="float:right">
+          0 / 8 leçons
+        </span>
+
+        <div class="bar">
+
+          <div class="fill"
+               id="fill">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LEÇON 1 -->
+      <article class="lesson active"
+               id="lesson1">
+
+        <h2>
+          1. 🟨 Introduction à JavaScript
+        </h2>
+
+        <p class="muted">
+          JavaScript est un langage de programmation
+          très utilisé pour rendre les pages web interactives.
+        </p>
+
+
+        <h3>
+          ⚡ Premier exemple
+        </h3>
+
+        <pre>
+alert("Bienvenue sur TSB Tech !");
+        </pre>
+
+
+        <p class="muted">
+          La fonction <b>alert()</b> affiche
+          un message à l'utilisateur.
+        </p>
+
+
+        <h3>
+          🧩 Exercice
+        </h3>
+
+        <p>
+          Quelle commande affiche une fenêtre avec
+          le message « Bonjour » ?
+        </p>
+
+
+        <div class="quiz">
+
+          <button onclick="answer(this,true,'Bravo ! Bonne réponse.')">
+            A. alert("Bonjour")
+          </button>
+
+          <button onclick="answer(this,false,'Essaie encore.')">
+            B. message("Bonjour")
+          </button>
+
+          <button onclick="answer(this,false,'Essaie encore.')">
+            C. popup("Bonjour")
+          </button>
+
+        </div>
+
+
+        <div class="result"></div>
+
+
+        <button class="btn"
+                onclick="complete(1)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 2 -->
+      <article class="lesson"
+               id="lesson2">
+
+        <h2>
+          2. 📦 Les variables
+        </h2>
+
+        <p class="muted">
+          Une variable permet de stocker une information
+          que ton programme peut utiliser.
+        </p>
+
+
+        <pre>
+let nom = "TSB Tech";
+
+let age = 20;
+
+console.log(nom);
+
+console.log(age);
+        </pre>
+
+
+        <h3>
+          🧠 À retenir
+        </h3>
+
+        <p class="muted">
+          <b>let</b> permet de créer une variable
+          dont la valeur peut changer.
+        </p>
+
+
+        <h3>
+          🎯 Défi
+        </h3>
+
+        <p>
+          Crée une variable appelée
+          <b>prenom</b> et donne-lui ton prénom.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(2)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 3 -->
+      <article class="lesson"
+               id="lesson3">
+
+        <h2>
+          3. 🔢 Types de données et opérateurs
+        </h2>
+
+        <p class="muted">
+          JavaScript peut manipuler différents types
+          de données.
+        </p>
+
+
+        <pre>
+let nom = "Awa";
+
+let age = 20;
+
+let prix = 10.5;
+
+let connecte = true;
+        </pre>
+
+
+        <h3>
+          ➕ Les opérateurs
+        </h3>
+
+
+        <pre>
+let a = 10;
+
+let b = 5;
+
+console.log(a + b);
+
+console.log(a - b);
+
+console.log(a * b);
+
+console.log(a / b);
+        </pre>
+
+
+        <p class="muted">
+          Les opérateurs permettent notamment
+          d'effectuer des calculs.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(3)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 4 -->
+      <article class="lesson"
+               id="lesson4">
+
+        <h2>
+          4. 🔀 Les conditions
+        </h2>
+
+        <p class="muted">
+          Une condition permet au programme
+          de prendre une décision.
+        </p>
+
+
+        <pre>
+let age = 18;
+
+if (age >= 18) {
+
+    console.log("Majeur");
+
+} else {
+
+    console.log("Mineur");
+
+}
+        </pre>
+
+
+        <h3>
+          🧠 Comprendre
+        </h3>
+
+        <p class="muted">
+          Si la condition est vraie,
+          le premier bloc est exécuté.
+          Sinon, le bloc <b>else</b> est exécuté.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(4)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 5 -->
+      <article class="lesson"
+               id="lesson5">
+
+        <h2>
+          5. 🔁 Les boucles
+        </h2>
+
+        <p class="muted">
+          Une boucle permet de répéter une instruction
+          plusieurs fois.
+        </p>
+
+
+        <pre>
+for (let i = 0; i < 5; i++) {
+
+    console.log(i);
+
+}
+        </pre>
+
+
+        <p class="muted">
+          Cette boucle affiche les nombres
+          de 0 à 4.
+        </p>
+
+
+        <h3>
+          🎯 Pourquoi utiliser une boucle ?
+        </h3>
+
+        <p>
+          Elle permet d'éviter de répéter
+          manuellement le même code.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(5)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 6 -->
+      <article class="lesson"
+               id="lesson6">
+
+        <h2>
+          6. ⚙️ Les fonctions
+        </h2>
+
+        <p class="muted">
+          Une fonction regroupe des instructions
+          que tu peux réutiliser.
+        </p>
+
+
+        <pre>
+function saluer(nom) {
+
+    console.log("Bonjour " + nom);
+
+}
+
+saluer("Awa");
+        </pre>
+
+
+        <h3>
+          🧠 À retenir
+        </h3>
+
+        <p class="muted">
+          Une fonction peut recevoir des informations
+          appelées paramètres.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(6)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 7 -->
+      <article class="lesson"
+               id="lesson7">
+
+        <h2>
+          7. 🖱️ Les interactions
+        </h2>
+
+        <p class="muted">
+          JavaScript peut réagir aux actions
+          de l'utilisateur.
+        </p>
+
+
+        <h3>
+          Exemple
+        </h3>
+
+
+        <pre>
+&lt;button onclick="direBonjour()"&gt;
+
+    Cliquez ici
+
+&lt;/button&gt;
+
+&lt;script&gt;
+
+function direBonjour() {
+
+    alert("Bonjour !");
+
+}
+
+&lt;/script&gt;
+        </pre>
+
+
+        <h3>
+          🎯 Mission
+        </h3>
+
+        <p class="muted">
+          Imagine un bouton qui affiche un message
+          lorsque l'utilisateur clique dessus.
+        </p>
+
+
+        <button class="btn"
+                onclick="demoInteraction()">
+          🖱️ Tester l'interaction
+        </button>
+
+
+        <br><br>
+
+
+        <button class="btn"
+                onclick="complete(7)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 8 -->
+      <article class="lesson"
+               id="lesson8">
+
+        <h2>
+          8. 🏆 Mini-projet : page interactive
+        </h2>
+
+
+        <p class="muted">
+          Pour terminer ton parcours JavaScript,
+          tu vas créer une petite page interactive.
+        </p>
+
+
+        <h3>
+          🎯 Objectif
+        </h3>
+
+
+        <p>
+          Crée une page contenant :
+          <br><br>
+
+          🌐 Un titre
+          <br>
+
+          📝 Un texte
+          <br>
+
+          🖱️ Un bouton
+          <br>
+
+          ⚡ Une interaction JavaScript
+        </p>
+
+
+        <h3>
+          💻 Exemple
+        </h3>
+
+
+        <pre>
+function bienvenue() {
+
+    alert("Bienvenue sur mon site !");
+
+}
+        </pre>
+
+
+        <p class="muted">
+          Ensuite, connecte cette fonction
+          à un bouton HTML.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(8)">
+          🏆 Terminer le parcours
+        </button>
+
+      </article>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    © 2026 TSB Tech —
+    Apprentissage informatique
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    let done = JSON.parse(
+      localStorage.getItem("tsbJavaScriptDone") || "[]"
+    );
+
+
+    function showLesson(number, element) {
+
+      document
+        .querySelectorAll(".lesson")
+        .forEach(function(x) {
+
+          x.classList.remove("active");
+
+        });
+
+
+      document
+        .getElementById("lesson" + number)
+        .classList.add("active");
+
+
+      document
+        .querySelectorAll(".lesson-link")
+        .forEach(function(x) {
+
+          x.classList.remove("active");
+
+        });
+
+
+      element.classList.add("active");
+
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+      });
+
+    }
+
+
+    function complete(number) {
+
+      if (!done.includes(number)) {
+
+        done.push(number);
+
+        localStorage.setItem(
+          "tsbJavaScriptDone",
+          JSON.stringify(done)
+        );
+
+      }
+
+
+      updateProgress();
+
+
+      if (number === 8) {
+
+        alert(
+          "🎉 Félicitations ! Tu as terminé le parcours JavaScript !"
+        );
+
+      } else {
+
+        alert(
+          "✓ Leçon terminée !"
+        );
+
+      }
+
+    }
+
+
+    function updateProgress() {
+
+      document
+        .getElementById("progressText")
+        .textContent =
+        done.length + " / 8 leçons";
+
+
+      document
+        .getElementById("fill")
+        .style.width =
+        (done.length / 8 * 100) + "%";
+
+    }
+
+
+    function answer(button, correct, message) {
+
+      let result =
+        button.parentElement.nextElementSibling;
+
+
+      result.textContent =
+        (correct ? "✓ " : "✗ ") + message;
+
+
+      result.style.color =
+        correct ? "#34d399" : "#ff8b8b";
+
+    }
+
+
+    function demoInteraction() {
+
+      alert(
+        "⚡ Bravo ! JavaScript vient de réagir à ton clic."
+      );
+
+    }
+
+
+    updateProgress();
+
+  </script>
+
+</body>
+
+</html>
