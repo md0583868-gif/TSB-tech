@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
 
   <!-- NAVIGATION -->
   <nav>
+
     <div class="logo">
       <span>TSB</span> Tech
     </div>
@@ -25,11 +27,13 @@
     <button class="btn" onclick="window.location='#cours'">
       Apprendre
     </button>
+
   </nav>
 
 
   <!-- ACCUEIL -->
   <header class="hero">
+
     <div class="container">
 
       <span class="badge">
@@ -52,6 +56,7 @@
       </a>
 
     </div>
+
   </header>
 
 
@@ -69,10 +74,13 @@
 
       <div class="course-grid">
 
-        <!-- BASES INFORMATIQUE -->
+
+        <!-- BASES DE L'INFORMATIQUE -->
         <div class="course-card">
 
-          <div class="course-icon">💻</div>
+          <div class="course-icon">
+            💻
+          </div>
 
           <h3>
             Bases de l'informatique
@@ -83,16 +91,19 @@
             et comprends comment fonctionne un ordinateur.
           </p>
 
-         <a href="informatique.html" class="btn">
-  Commencer
-</a>
+          <a href="informatique.html" class="btn">
+            Commencer
+          </a>
+
         </div>
 
 
-        <!-- HTML CSS -->
+        <!-- HTML & CSS -->
         <div class="course-card">
 
-          <div class="course-icon">🌐</div>
+          <div class="course-icon">
+            🌐
+          </div>
 
           <h3>
             HTML & CSS
@@ -113,7 +124,9 @@
         <!-- JAVASCRIPT -->
         <div class="course-card">
 
-          <div class="course-icon">⚡</div>
+          <div class="course-icon">
+            ⚡
+          </div>
 
           <h3>
             JavaScript
@@ -125,7 +138,7 @@
           </p>
 
           <button class="btn"
-                  onclick="startCourse('JavaScript')">
+                  onclick="comingSoon('JavaScript')">
             Bientôt disponible
           </button>
 
@@ -135,7 +148,9 @@
         <!-- PYTHON -->
         <div class="course-card">
 
-          <div class="course-icon">🐍</div>
+          <div class="course-icon">
+            🐍
+          </div>
 
           <h3>
             Python
@@ -153,6 +168,7 @@
 
         </div>
 
+
       </div>
 
     </div>
@@ -163,46 +179,56 @@
   <!-- PARCOURS PYTHON -->
   <main class="main" id="python">
 
+
+    <!-- SIDEBAR -->
     <aside class="sidebar">
 
       <h3>
         🐍 Cours Python
       </h3>
 
+
       <div class="lesson-link active"
            onclick="showLesson(1,this)">
         1. Introduction
       </div>
+
 
       <div class="lesson-link"
            onclick="showLesson(2,this)">
         2. Variables
       </div>
 
+
       <div class="lesson-link"
            onclick="showLesson(3,this)">
         3. Types de données
       </div>
+
 
       <div class="lesson-link"
            onclick="showLesson(4,this)">
         4. Conditions
       </div>
 
+
       <div class="lesson-link"
            onclick="showLesson(5,this)">
         5. Boucles
       </div>
+
 
       <div class="lesson-link"
            onclick="showLesson(6,this)">
         6. Fonctions
       </div>
 
+
       <div class="lesson-link"
            onclick="showLesson(7,this)">
         7. Listes
       </div>
+
 
       <div class="lesson-link"
            onclick="showLesson(8,this)">
@@ -212,12 +238,16 @@
     </aside>
 
 
+    <!-- CONTENU PYTHON -->
     <section>
+
 
       <!-- PROGRESSION -->
       <div class="progress">
 
-        <b>📊 Ta progression Python</b>
+        <b>
+          📊 Ta progression Python
+        </b>
 
         <span id="progressText"
               style="float:right">
@@ -225,7 +255,11 @@
         </span>
 
         <div class="bar">
-          <div class="fill" id="fill"></div>
+
+          <div class="fill"
+               id="fill">
+          </div>
+
         </div>
 
       </div>
@@ -511,6 +545,7 @@ print("Division :", a / b)
 
       </article>
 
+
     </section>
 
   </main>
@@ -532,6 +567,7 @@ print("Division :", a / b)
         <p class="muted">
           Apprends. Code. Réussis.
           <br><br>
+
           Notre objectif est de rendre
           l'apprentissage de l'informatique
           simple, pratique et accessible.
@@ -566,7 +602,9 @@ print("Division :", a / b)
       document
         .querySelectorAll("#python .lesson")
         .forEach(function(x) {
+
           x.classList.remove("active");
+
         });
 
 
@@ -578,14 +616,17 @@ print("Division :", a / b)
       document
         .querySelectorAll(".lesson-link")
         .forEach(function(x) {
+
           x.classList.remove("active");
+
         });
 
 
       element.classList.add("active");
 
 
-      document.getElementById("python")
+      document
+        .getElementById("python")
         .scrollIntoView({
           behavior: "smooth"
         });
@@ -605,6 +646,7 @@ print("Division :", a / b)
         );
 
       }
+
 
       updateProgress();
 
@@ -628,12 +670,14 @@ print("Division :", a / b)
 
     function updateProgress() {
 
-      document.getElementById("progressText")
+      document
+        .getElementById("progressText")
         .textContent =
         done.length + " / 8 leçons";
 
 
-      document.getElementById("fill")
+      document
+        .getElementById("fill")
         .style.width =
         (done.length / 8 * 100) + "%";
 
@@ -656,23 +700,13 @@ print("Division :", a / b)
     }
 
 
-    function startCourse(course) {
+    function comingSoon(course) {
 
-      if (course === "informatique") {
-
-        alert(
-          "💻 Le cours Bases de l'informatique sera bientôt disponible sur TSB Tech !"
-        );
-
-      } else {
-
-        alert(
-          "🚀 Le cours " +
-          course +
-          " sera bientôt disponible sur TSB Tech !"
-        );
-
-      }
+      alert(
+        "🚀 Le cours " +
+        course +
+        " sera bientôt disponible sur TSB Tech !"
+      );
 
     }
 
@@ -682,4 +716,5 @@ print("Division :", a / b)
   </script>
 
 </body>
+
 </html>
