@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TSB Tech — HTML & CSS</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+
+    <div class="logo">
+      <span>TSB</span> Tech
+    </div>
+
+    <a href="index.html" class="btn">
+      ← Accueil
+    </a>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="container">
+
+      <span class="badge">
+        TSB TECH · DÉVELOPPEMENT WEB
+      </span>
+
+      <h1>
+        🌐 HTML <span class="blue">&</span> CSS
+      </h1>
+
+      <p>
+        Apprends à créer des pages web modernes,
+        étape par étape, même si tu débutes.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- COURS -->
+  <main class="main">
+
+
+    <!-- MENU DES LEÇONS -->
+    <aside class="sidebar">
+
+      <h3>
+        🌐 HTML & CSS
+      </h3>
+
+
+      <div class="lesson-link active"
+           onclick="showLesson(1,this)">
+        1. Introduction
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(2,this)">
+        2. Structure HTML
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(3,this)">
+        3. Les titres et textes
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(4,this)">
+        4. Les liens et images
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(5,this)">
+        5. Introduction au CSS
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(6,this)">
+        6. Couleurs et tailles
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(7,this)">
+        7. Créer un bouton
+      </div>
+
+
+      <div class="lesson-link"
+           onclick="showLesson(8,this)">
+        8. Mini-projet
+      </div>
+
+    </aside>
+
+
+    <!-- CONTENU -->
+    <section>
+
+
+      <!-- PROGRESSION -->
+      <div class="progress">
+
+        <b>📊 Ta progression HTML & CSS</b>
+
+        <span id="progressText"
+              style="float:right">
+          0 / 8 leçons
+        </span>
+
+        <div class="bar">
+
+          <div class="fill"
+               id="fill">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LEÇON 1 -->
+      <article class="lesson active"
+               id="lesson1">
+
+        <h2>
+          1. Introduction au développement web
+        </h2>
+
+        <p class="muted">
+          Un site web utilise généralement plusieurs
+          technologies pour fonctionner.
+        </p>
+
+
+        <h3>
+          🌐 Les trois principales technologies
+        </h3>
+
+        <p>
+          🧱 <b>HTML</b> → structure de la page
+          <br><br>
+
+          🎨 <b>CSS</b> → apparence et design
+          <br><br>
+
+          ⚡ <b>JavaScript</b> → interactions
+        </p>
+
+
+        <h3>
+          💻 Exemple HTML
+        </h3>
+
+        <pre>
+&lt;h1&gt;Bienvenue sur TSB Tech&lt;/h1&gt;
+        </pre>
+
+
+        <h3>
+          🎯 À retenir
+        </h3>
+
+        <p class="muted">
+          HTML construit la page.
+          CSS la rend belle.
+          JavaScript permet de créer des interactions.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(1)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 2 -->
+      <article class="lesson"
+               id="lesson2">
+
+        <h2>
+          2. La structure HTML
+        </h2>
+
+        <p class="muted">
+          Une page HTML possède une structure de base.
+        </p>
+
+
+        <pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+    &lt;title&gt;Ma page&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Bonjour !&lt;/h1&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+        </pre>
+
+
+        <h3>
+          🧠 Comprendre
+        </h3>
+
+        <p class="muted">
+          <b>&lt;head&gt;</b> contient les informations
+          de la page.
+          <br><br>
+
+          <b>&lt;body&gt;</b> contient ce qui est visible
+          sur la page.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(2)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 3 -->
+      <article class="lesson"
+               id="lesson3">
+
+        <h2>
+          3. Les titres et les textes
+        </h2>
+
+        <p class="muted">
+          HTML possède plusieurs niveaux de titres.
+        </p>
+
+
+        <pre>
+&lt;h1&gt;Grand titre&lt;/h1&gt;
+
+&lt;h2&gt;Sous-titre&lt;/h2&gt;
+
+&lt;h3&gt;Petit titre&lt;/h3&gt;
+
+&lt;p&gt;
+Voici un paragraphe.
+&lt;/p&gt;
+        </pre>
+
+
+        <h3>
+          🎯 Exemple
+        </h3>
+
+        <p>
+          Le titre principal utilise généralement
+          <b>h1</b>.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(3)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 4 -->
+      <article class="lesson"
+               id="lesson4">
+
+        <h2>
+          4. Les liens et les images
+        </h2>
+
+        <p class="muted">
+          HTML permet d'ajouter des liens et des images.
+        </p>
+
+
+        <h3>
+          🔗 Créer un lien
+        </h3>
+
+        <pre>
+&lt;a href="https://example.com"&gt;
+
+    Visiter le site
+
+&lt;/a&gt;
+        </pre>
+
+
+        <h3>
+          🖼️ Ajouter une image
+        </h3>
+
+        <pre>
+&lt;img src="image.jpg"
+     alt="Mon image"&gt;
+        </pre>
+
+
+        <button class="btn"
+                onclick="complete(4)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 5 -->
+      <article class="lesson"
+               id="lesson5">
+
+        <h2>
+          5. Introduction au CSS
+        </h2>
+
+        <p class="muted">
+          CSS permet de modifier l'apparence
+          des éléments HTML.
+        </p>
+
+
+        <h3>
+          🎨 Exemple
+        </h3>
+
+        <pre>
+h1 {
+
+    color: blue;
+
+}
+        </pre>
+
+
+        <p>
+          Ici, le titre devient bleu.
+        </p>
+
+
+        <h3>
+          🧠 CSS signifie
+        </h3>
+
+        <p class="muted">
+          <b>Cascading Style Sheets</b>,
+          c'est-à-dire feuilles de style en cascade.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(5)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 6 -->
+      <article class="lesson"
+               id="lesson6">
+
+        <h2>
+          6. Couleurs et tailles
+        </h2>
+
+
+        <p class="muted">
+          CSS permet de modifier les couleurs
+          et les tailles des éléments.
+        </p>
+
+
+        <pre>
+h1 {
+
+    color: blue;
+
+    font-size: 40px;
+
+}
+
+
+p {
+
+    color: gray;
+
+}
+        </pre>
+
+
+        <h3>
+          📌 Les propriétés
+        </h3>
+
+        <p class="muted">
+          <b>color</b> change la couleur.
+          <br><br>
+
+          <b>font-size</b> change la taille du texte.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(6)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 7 -->
+      <article class="lesson"
+               id="lesson7">
+
+        <h2>
+          7. Créer un bouton
+        </h2>
+
+
+        <p class="muted">
+          HTML permet de créer un bouton avec
+          l'élément <b>&lt;button&gt;</b>.
+        </p>
+
+
+        <pre>
+&lt;button&gt;
+
+    Commencer
+
+&lt;/button&gt;
+        </pre>
+
+
+        <h3>
+          🎨 Ajouter du CSS
+        </h3>
+
+
+        <pre>
+button {
+
+    background: blue;
+
+    color: white;
+
+    padding: 12px 20px;
+
+}
+        </pre>
+
+
+        <p class="muted">
+          Avec CSS, tu peux modifier l'apparence
+          du bouton.
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(7)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- LEÇON 8 -->
+      <article class="lesson"
+               id="lesson8">
+
+        <h2>
+          8. 🏆 Mini-projet
+        </h2>
+
+
+        <p class="muted">
+          Tu vas créer ta première petite page web.
+        </p>
+
+
+        <h3>
+          💻 Code de départ
+        </h3>
+
+
+        <pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+    &lt;title&gt;Mon site&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Mon site&lt;/h1&gt;
+
+    &lt;p&gt;
+        Bienvenue sur mon site !
+    &lt;/p&gt;
+
+    &lt;button&gt;
+        Commencer
+    &lt;/button&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+        </pre>
+
+
+        <h3>
+          🎯 Mission
+        </h3>
+
+
+        <p class="muted">
+          Personnalise la page avec :
+          <br><br>
+
+          • ton propre titre
+          <br>
+          • un paragraphe
+          <br>
+          • un bouton
+          <br>
+          • tes propres couleurs
+        </p>
+
+
+        <button class="btn"
+                onclick="complete(8)">
+          🏆 Terminer le parcours
+        </button>
+
+      </article>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    © 2026 TSB Tech —
+    Apprentissage informatique
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    let done = JSON.parse(
+      localStorage.getItem("tsbWebDone") || "[]"
+    );
+
+
+    function showLesson(number, element) {
+
+      document
+        .querySelectorAll(".lesson")
+        .forEach(function(x) {
+
+          x.classList.remove("active");
+
+        });
+
+
+      document
+        .getElementById("lesson" + number)
+        .classList.add("active");
+
+
+      document
+        .querySelectorAll(".lesson-link")
+        .forEach(function(x) {
+
+          x.classList.remove("active");
+
+        });
+
+
+      element.classList.add("active");
+
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+      });
+
+    }
+
+
+    function complete(number) {
+
+      if (!done.includes(number)) {
+
+        done.push(number);
+
+        localStorage.setItem(
+          "tsbWebDone",
+          JSON.stringify(done)
+        );
+
+      }
+
+
+      updateProgress();
+
+
+      if (number === 8) {
+
+        alert(
+          "🎉 Félicitations ! Tu as terminé le parcours HTML & CSS !"
+        );
+
+      } else {
+
+        alert(
+          "✓ Leçon terminée !"
+        );
+
+      }
+
+    }
+
+
+    function updateProgress() {
+
+      document
+        .getElementById("progressText")
+        .textContent =
+        done.length + " / 8 leçons";
+
+
+      document
+        .getElementById("fill")
+        .style.width =
+        (done.length / 8 * 100) + "%";
+
+    }
+
+
+    updateProgress();
+
+  </script>
+
+</body>
+
+</html>
