@@ -137,10 +137,9 @@
             et rends tes sites plus dynamiques.
           </p>
 
-          <button class="btn"
-                  onclick="comingSoon('JavaScript')">
-            Bientôt disponible
-          </button>
+          <a href="javascript.html" class="btn">
+            Commencer
+          </a>
 
         </div>
 
@@ -161,10 +160,9 @@
             des exercices et un mini-projet.
           </p>
 
-          <button class="btn"
-                  onclick="window.location='#python'">
+          <a href="#python" class="btn">
             Commencer
-          </button>
+          </a>
 
         </div>
 
@@ -180,7 +178,6 @@
   <main class="main" id="python">
 
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
 
       <h3>
@@ -238,7 +235,6 @@
     </aside>
 
 
-    <!-- CONTENU PYTHON -->
     <section>
 
 
@@ -696,17 +692,6 @@ print("Division :", a / b)
 
       result.style.color =
         correct ? "#34d399" : "#ff8b8b";
-
-    }
-
-
-    function comingSoon(course) {
-
-      alert(
-        "🚀 Le cours " +
-        course +
-        " sera bientôt disponible sur TSB Tech !"
-      );
 
     }
 
