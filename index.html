@@ -7,7 +7,32 @@
 
   <title>TSB Tech — Apprendre l'informatique</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"><style>
+
+.badge-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.badge-card strong {
+  display: inline-block;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+.badge-card.unlocked {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(52, 211, 153, 0.18);
+}
+
+.badge-card.unlocked strong {
+  opacity: 1;
+}
+
+.badge-card.unlocked .course-icon {
+  transform: scale(1.08);
+}
+
+</style>
 </head>
 
 <body>
