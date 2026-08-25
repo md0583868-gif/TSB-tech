@@ -2,641 +2,2813 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TAPHZI STACK — Apprendre l'informatique</title>
+<title>TAPHZI STACK — Apprendre l'informatique</title>
 
-  <link rel="stylesheet" href="style.css">
+<style>
+
+/* =========================
+   BASE
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080b12;
+  color: #f5f7fb;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 7%;
+
+  background: rgba(8,11,18,0.95);
+  border-bottom: 1px solid #202635;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #3b82f6;
+}
+
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  color: #3b82f6;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 7%;
+
+  background:
+    radial-gradient(circle at top right,
+    rgba(37,99,235,.25),
+    transparent 35%);
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-small {
+  color: #60a5fa;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 8vw, 90px);
+  line-height: .95;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #3b82f6;
+}
+
+.hero p {
+  color: #aab4c5;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+  display: inline-block;
+
+  padding: 13px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  transition: .2s;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 1px solid #334155;
+  color: white;
+  background: #111827;
+}
+
+.btn-secondary:hover {
+  background: #1e293b;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.courses,
+.why,
+.about,
+.contact {
+  padding: 90px 7%;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.section-title p {
+  color: #60a5fa;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.section-title span {
+  color: #94a3b8;
+}
+
+
+/* =========================
+   COURS
+========================= */
+
+.course-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 25px;
+}
+
+.course-card {
+  background: #101521;
+
+  border: 1px solid #202938;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  transition: .25s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  border-color: #2563eb;
+}
+
+.course-icon {
+  font-size: 42px;
+}
+
+.course-level {
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.course-content h3 {
+  font-size: 24px;
+}
+
+.course-content p {
+  color: #9ca8b8;
+  line-height: 1.6;
+}
+
+.course-content ul {
+  padding-left: 20px;
+  color: #cbd5e1;
+  line-height: 2;
+}
+
+.course-btn {
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: white;
+
+  font-weight: bold;
+}
+
+.course-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================
+   WHY
+========================= */
+
+.why {
+  background: #0c1019;
+}
+
+.why-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(230px, 1fr));
+
+  gap: 20px;
+}
+
+.why-card {
+  padding: 30px;
+
+  background: #101521;
+
+  border: 1px solid #202938;
+
+  border-radius: 16px;
+
+  text-align: center;
+}
+
+.why-card div {
+  font-size: 40px;
+}
+
+.why-card p {
+  color: #9ca8b8;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.about-content h2 {
+  font-size: 45px;
+}
+
+.about-content h2 span {
+  color: #3b82f6;
+}
+
+.about-content p {
+  color: #aab4c5;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-form {
+  max-width: 650px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  border: 1px solid #293548;
+
+  background: #101521;
+
+  color: white;
+
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 40px 7%;
+
+  text-align: center;
+
+  border-top: 1px solid #202635;
+
+  color: #94a3b8;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer-logo span {
+  color: #3b82f6;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+
+/* =========================
+   PAGE DES COURS
+========================= */
+
+.course-page {
+  display: none;
+
+  min-height: 100vh;
+
+  padding: 30px 6% 80px;
+}
+
+.course-page.active {
+  display: block;
+}
+
+.course-header {
+  max-width: 900px;
+  margin: auto auto 30px;
+}
+
+.course-header h1 {
+  font-size: clamp(35px, 6vw, 60px);
+  margin: 15px 0;
+}
+
+.course-header p {
+  color: #aab4c5;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   RETOUR
+========================= */
+
+.back-button {
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   CONTENU COURS
+========================= */
+
+.course-layout {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 260px 1fr;
+
+  gap: 25px;
+}
+
+.lesson-menu {
+  background: #101521;
+
+  border: 1px solid #202938;
+
+  border-radius: 15px;
+
+  padding: 15px;
+
+  height: fit-content;
+
+  position: sticky;
+  top: 90px;
+}
+
+.lesson-menu h3 {
+  margin-top: 5px;
+}
+
+.lesson-link {
+  padding: 12px;
+
+  border-radius: 8px;
+
+  margin: 5px 0;
+
+  color: #b7c2d3;
+
+  cursor: pointer;
+}
+
+.lesson-link:hover {
+  background: #172033;
+}
+
+.lesson-link.active {
+  background: #2563eb;
+  color: white;
+}
+
+
+/* =========================
+   PROGRESSION
+========================= */
+
+.progress-box {
+  background: #101521;
+
+  border: 1px solid #202938;
+
+  border-radius: 15px;
+
+  padding: 18px;
+
+  margin-bottom: 20px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 9px;
+
+  background: #1e293b;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  margin-top: 12px;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+
+  background: #2563eb;
+
+  transition: .3s;
+}
+
+
+/* =========================
+   LEÇONS
+========================= */
+
+.lesson {
+  display: none;
+
+  background: #101521;
+
+  border: 1px solid #202938;
+
+  border-radius: 18px;
+
+  padding: 30px;
+}
+
+.lesson.active {
+  display: block;
+}
+
+.lesson h2 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.lesson h3 {
+  margin-top: 30px;
+  color: #60a5fa;
+}
+
+.lesson p {
+  color: #c2cad6;
+  line-height: 1.8;
+}
+
+.lesson .muted {
+  color: #94a3b8;
+}
+
+
+/* =========================
+   CODE
+========================= */
+
+pre {
+  overflow-x: auto;
+
+  background: #070a10;
+
+  border: 1px solid #202938;
+
+  border-radius: 10px;
+
+  padding: 20px;
+
+  color: #dbeafe;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin: 20px 0;
+}
+
+.quiz button {
+  padding: 13px;
+
+  border: 1px solid #334155;
+
+  border-radius: 9px;
+
+  background: #151c29;
+
+  color: white;
+
+  text-align: left;
+}
+
+.quiz button:hover {
+  background: #1e293b;
+}
+
+.result {
+  min-height: 25px;
+
+  font-weight: bold;
+
+  margin: 10px 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+  .navbar {
+    display: none;
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding-top: 60px;
+  }
+
+  .courses,
+  .why,
+  .about,
+  .contact {
+    padding: 60px 5%;
+  }
+
+  .course-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-menu {
+    position: static;
+  }
+
+  .lesson {
+    padding: 20px;
+  }
+
+  .lesson-menu {
+    display: grid;
+    gap: 5px;
+  }
+
+  .lesson-menu h3 {
+    grid-column: 1 / -1;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <!-- ================= HEADER ================= -->
 
-  <header class="header">
+<!-- ==================================================
+     PAGE PRINCIPALE
+================================================== -->
 
-    <div class="logo">
-      <span>TAPHZI</span> STACK
-    </div>
+<div id="homePage">
 
-    <nav class="navbar">
-      <a href="#accueil">Accueil</a>
-      <a href="#cours">Cours</a>
-      <a href="#apropos">À propos</a>
-      <a href="#contact">Contact</a>
-    </nav>
 
-  </header>
+<header class="header">
 
+  <div class="logo">
+    <span>TAPHZI</span> STACK
+  </div>
 
-  <!-- ================= ACCUEIL ================= -->
+  <nav class="navbar">
 
-  <main>
+    <a href="#accueil">Accueil</a>
 
-    <section id="accueil" class="hero">
+    <a href="#cours">Cours</a>
 
-      <div class="hero-content">
+    <a href="#apropos">À propos</a>
 
-        <p class="hero-small">
-          TAPHZI STACK · APPRENTISSAGE
-        </p>
+    <a href="#contact">Contact</a>
 
-        <h1>
-          Apprends.<br>
-          <span>Code.</span><br>
-          Réussis.
-        </h1>
+  </nav>
 
-        <p>
-          Découvre l'informatique étape par étape
-          avec des cours simples, des exercices
-          et des projets pratiques.
-        </p>
+</header>
 
-        <div class="hero-buttons">
 
-          <a href="#cours" class="btn btn-primary">
-            🚀 Commencer maintenant
-          </a>
+<main>
 
-          <a href="#cours" class="btn btn-secondary">
-            📚 Nos cours
-          </a>
 
-        </div>
+<!-- ================= HERO ================= -->
 
-      </div>
+<section id="accueil" class="hero">
 
-    </section>
+  <div class="hero-content">
 
+    <p class="hero-small">
+      TAPHZI STACK · APPRENTISSAGE
+    </p>
 
-    <!-- ================= COURS ================= -->
-
-    <section id="cours" class="courses">
-
-      <div class="section-title">
-
-        <p>APPRENDS À TON RYTHME</p>
-
-        <h2>Choisis ton parcours</h2>
-
-        <span>
-          Des cours conçus pour apprendre progressivement.
-        </span>
-
-      </div>
-
-
-      <div class="course-grid">
-
-
-        <!-- ================= INFORMATIQUE ================= -->
-
-        <article class="course-card">
-
-          <div class="course-icon">
-            💻
-          </div>
-
-          <div class="course-content">
-
-            <span class="course-level">
-              DÉBUTANT
-            </span>
-
-            <h3>
-              Bases de l'informatique
-            </h3>
-
-            <p>
-              Découvre les fondamentaux de l'informatique,
-              du matériel aux logiciels.
-            </p>
-
-            <ul>
-              <li>🖥️ Ordinateur</li>
-              <li>⚙️ Système d'exploitation</li>
-              <li>📁 Fichiers et dossiers</li>
-              <li>🌐 Internet</li>
-            </ul>
-
-            <a
-              href="informatique.html"
-              class="course-btn">
-
-              Commencer le cours →
-
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- ================= HTML & CSS ================= -->
-
-        <article class="course-card">
-
-          <div class="course-icon">
-            🌐
-          </div>
-
-          <div class="course-content">
-
-            <span class="course-level">
-              DÉBUTANT
-            </span>
-
-            <h3>
-              HTML & CSS
-            </h3>
-
-            <p>
-              Apprends à créer et à styliser
-              tes premières pages web.
-            </p>
-
-            <ul>
-              <li>🏗️ Structure HTML</li>
-              <li>📝 Texte et titres</li>
-              <li>🎨 CSS</li>
-              <li>📱 Responsive design</li>
-            </ul>
-
-            <a
-              href="html-css.html"
-              class="course-btn">
-
-              Commencer le cours →
-
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- ================= JAVASCRIPT ================= -->
-
-        <article class="course-card">
-
-          <div class="course-icon">
-            ⚡
-          </div>
-
-          <div class="course-content">
-
-            <span class="course-level">
-              INTERMÉDIAIRE
-            </span>
-
-            <h3>
-              JavaScript
-            </h3>
-
-            <p>
-              Apprends à rendre tes pages web
-              interactives et dynamiques.
-            </p>
-
-            <ul>
-              <li>📦 Variables</li>
-              <li>🔀 Conditions</li>
-              <li>🔁 Boucles</li>
-              <li>🖱️ Interactions</li>
-            </ul>
-
-            <a
-              href="javascript.html"
-              class="course-btn">
-
-              Commencer le cours →
-
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- ================= PYTHON ================= -->
-
-        <article class="course-card">
-
-          <div class="course-icon">
-            🐍
-          </div>
-
-          <div class="course-content">
-
-            <span class="course-level">
-              DÉBUTANT
-            </span>
-
-            <h3>
-              Python
-            </h3>
-
-            <p>
-              Découvre Python et apprends les bases
-              de la programmation.
-            </p>
-
-            <ul>
-              <li>🐍 Syntaxe Python</li>
-              <li>📦 Variables</li>
-              <li>🔀 Conditions</li>
-              <li>🔁 Boucles</li>
-            </ul>
-
-            <a
-              href="python.html"
-              class="course-btn">
-
-              Commencer le cours →
-
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- ================= PROJETS ================= -->
-
-        <article class="course-card special-card">
-
-          <div class="course-icon">
-            🚀
-          </div>
-
-          <div class="course-content">
-
-            <span class="course-level">
-              PROJETS
-            </span>
-
-            <h3>
-              Projets pratiques
-            </h3>
-
-            <p>
-              Mets tes connaissances en pratique
-              avec de vrais petits projets.
-            </p>
-
-            <ul>
-              <li>🌐 Site web</li>
-              <li>🧮 Calculatrice</li>
-              <li>🎮 Mini-jeu</li>
-              <li>💡 Projets personnels</li>
-            </ul>
-
-            <button
-              class="course-btn"
-              onclick="openProjects()">
-
-              Découvrir les projets →
-
-            </button>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= POURQUOI ================= -->
-
-    <section class="why">
-
-      <div class="section-title">
-
-        <p>POURQUOI TAPHZI STACK ?</p>
-
-        <h2>
-          Apprendre autrement.
-        </h2>
-
-      </div>
-
-
-      <div class="why-grid">
-
-        <div class="why-card">
-
-          <div>📚</div>
-
-          <h3>
-            Cours simples
-          </h3>
-
-          <p>
-            Des explications faciles à comprendre,
-            même lorsque tu débutes.
-          </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-          <div>💻</div>
-
-          <h3>
-            Pratique
-          </h3>
-
-          <p>
-            Apprends en pratiquant avec des exercices
-            et des projets.
-          </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-          <div>🚀</div>
-
-          <h3>
-            Progression
-          </h3>
-
-          <p>
-            Avance étape par étape jusqu'à devenir
-            autonome.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= À PROPOS ================= -->
-
-    <section id="apropos" class="about">
-
-      <div class="about-content">
-
-        <p class="section-label">
-          À PROPOS DE TAPHZI STACK
-        </p>
-
-        <h2>
-          Ton parcours vers
-          <span>l'informatique.</span>
-        </h2>
-
-        <p>
-          TAPHZI STACK est une plateforme d'apprentissage
-          destinée à rendre l'informatique plus simple
-          et accessible.
-        </p>
-
-        <p>
-          Que tu sois débutant ou que tu souhaites améliorer
-          tes compétences, tu peux apprendre progressivement
-          grâce aux cours, exercices et projets.
-        </p>
-
-        <a
-          href="#cours"
-          class="btn btn-primary">
-
-          Découvrir les cours →
-
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact" class="contact">
-
-      <div class="section-title">
-
-        <p>UNE QUESTION ?</p>
-
-        <h2>
-          Contacte TAPHZI STACK
-        </h2>
-
-        <span>
-          Une question, une suggestion ou une idée de cours ?
-        </span>
-
-      </div>
-
-
-      <form
-        class="contact-form"
-        onsubmit="sendMessage(event)">
-
-        <input
-          type="text"
-          id="name"
-          placeholder="Ton nom"
-          required
-        >
-
-        <input
-          type="email"
-          id="email"
-          placeholder="Ton adresse e-mail"
-          required
-        >
-
-        <textarea
-          id="message"
-          rows="6"
-          placeholder="Ton message..."
-          required
-        ></textarea>
-
-        <button
-          type="submit"
-          class="btn btn-primary">
-
-          Envoyer le message 🚀
-
-        </button>
-
-      </form>
-
-    </section>
-
-  </main>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer class="footer">
-
-    <div class="footer-logo">
-      <span>TAPHZI</span> STACK
-    </div>
+    <h1>
+      Apprends.<br>
+      <span>Code.</span><br>
+      Réussis.
+    </h1>
 
     <p>
-      Apprends. Code. Réussis.
+      Découvre l'informatique étape par étape
+      avec des cours simples, des exercices
+      et des projets pratiques.
     </p>
 
-    <div class="footer-links">
+    <div class="hero-buttons">
 
-      <a href="#accueil">
-        Accueil
+      <a href="#cours"
+         class="btn btn-primary">
+        🚀 Commencer maintenant
       </a>
 
-      <a href="#cours">
-        Cours
+      <a href="#cours"
+         class="btn btn-secondary">
+        📚 Nos cours
       </a>
-
-      <a href="#apropos">
-        À propos
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
-    </div>
-
-    <p class="copyright">
-      © 2026 TAPHZI STACK — Tous droits réservés.
-    </p>
-
-  </footer>
-
-
-  <!-- ================= MODALE PROJETS ================= -->
-
-  <div
-    id="projectModal"
-    class="modal"
-    aria-hidden="true">
-
-    <div class="modal-box">
-
-      <button
-        class="modal-close"
-        onclick="closeProjects()">
-
-        ×
-
-      </button>
-
-      <div class="modal-icon">
-        🚀
-      </div>
-
-      <h2>
-        Projets pratiques
-      </h2>
-
-      <p>
-        Les projets pratiques seront bientôt disponibles
-        sur TAPHZI STACK !
-      </p>
-
-      <button
-        class="btn btn-primary"
-        onclick="closeProjects()">
-
-        Fermer
-
-      </button>
 
     </div>
 
   </div>
 
-
-  <!-- ================= JAVASCRIPT ================= -->
-
-  <script>
-
-    /* ================= PROJETS ================= */
-
-    function openProjects() {
-
-      const modal =
-        document.getElementById("projectModal");
-
-      modal.classList.add("show");
-
-      modal.setAttribute(
-        "aria-hidden",
-        "false"
-      );
-
-    }
+</section>
 
 
-    function closeProjects() {
+<!-- ================= COURS ================= -->
 
-      const modal =
-        document.getElementById("projectModal");
+<section id="cours" class="courses">
 
-      modal.classList.remove("show");
+<div class="section-title">
 
-      modal.setAttribute(
-        "aria-hidden",
-        "true"
-      );
+<p>APPRENDS À TON RYTHME</p>
 
-    }
+<h2>Choisis ton parcours</h2>
+
+<span>
+Des cours conçus pour apprendre progressivement.
+</span>
+
+</div>
 
 
-    /* ================= FERMER MODALE ================= */
+<div class="course-grid">
 
-    window.addEventListener(
-      "click",
-      function(event) {
 
-        const modal =
-          document.getElementById("projectModal");
+<!-- INFORMATIQUE -->
 
-        if (event.target === modal) {
+<article class="course-card">
 
-          closeProjects();
+<div class="course-icon">💻</div>
 
-        }
+<div class="course-content">
 
-      }
+<span class="course-level">DÉBUTANT</span>
+
+<h3>Bases de l'informatique</h3>
+
+<p>
+Découvre les fondamentaux de l'informatique.
+</p>
+
+<ul>
+<li>🖥️ Ordinateur</li>
+<li>⚙️ Système d'exploitation</li>
+<li>📁 Fichiers</li>
+<li>🌐 Internet</li>
+</ul>
+
+<button
+class="course-btn"
+onclick="openCourse('informatique')">
+
+Commencer le cours →
+
+</button>
+
+</div>
+
+</article>
+
+
+<!-- HTML CSS -->
+
+<article class="course-card">
+
+<div class="course-icon">🌐</div>
+
+<div class="course-content">
+
+<span class="course-level">DÉBUTANT</span>
+
+<h3>HTML & CSS</h3>
+
+<p>
+Apprends à créer et styliser des pages web.
+</p>
+
+<ul>
+<li>🏗️ HTML</li>
+<li>🎨 CSS</li>
+<li>🔗 Liens</li>
+<li>🖼️ Images</li>
+</ul>
+
+<button
+class="course-btn"
+onclick="openCourse('web')">
+
+Commencer le cours →
+
+</button>
+
+</div>
+
+</article>
+
+
+<!-- JAVASCRIPT -->
+
+<article class="course-card">
+
+<div class="course-icon">⚡</div>
+
+<div class="course-content">
+
+<span class="course-level">INTERMÉDIAIRE</span>
+
+<h3>JavaScript</h3>
+
+<p>
+Apprends à rendre tes sites interactifs.
+</p>
+
+<ul>
+<li>📦 Variables</li>
+<li>🔀 Conditions</li>
+<li>🔁 Boucles</li>
+<li>🖱️ Interactions</li>
+</ul>
+
+<button
+class="course-btn"
+onclick="openCourse('javascript')">
+
+Commencer le cours →
+
+</button>
+
+</div>
+
+</article>
+
+
+<!-- PYTHON -->
+
+<article class="course-card">
+
+<div class="course-icon">🐍</div>
+
+<div class="course-content">
+
+<span class="course-level">DÉBUTANT</span>
+
+<h3>Python</h3>
+
+<p>
+Découvre la programmation avec Python.
+</p>
+
+<ul>
+<li>🐍 Syntaxe</li>
+<li>📦 Variables</li>
+<li>🔀 Conditions</li>
+<li>🔁 Boucles</li>
+</ul>
+
+<button
+class="course-btn"
+onclick="openCourse('python')">
+
+Commencer le cours →
+
+</button>
+
+</div>
+
+</article>
+
+
+<!-- PROJETS -->
+
+<article class="course-card">
+
+<div class="course-icon">🚀</div>
+
+<div class="course-content">
+
+<span class="course-level">PROJETS</span>
+
+<h3>Projets pratiques</h3>
+
+<p>
+Mets tes connaissances en pratique.
+</p>
+
+<ul>
+<li>🌐 Site web</li>
+<li>🧮 Calculatrice</li>
+<li>🎮 Mini-jeu</li>
+<li>💡 Projet personnel</li>
+</ul>
+
+<button
+class="course-btn"
+onclick="alert('🚀 Les projets pratiques seront bientôt disponibles !')">
+
+Découvrir les projets →
+
+</button>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= POURQUOI ================= -->
+
+<section class="why">
+
+<div class="section-title">
+
+<p>POURQUOI TAPHZI STACK ?</p>
+
+<h2>Apprendre autrement.</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div>📚</div>
+
+<h3>Cours simples</h3>
+
+<p>
+Des explications faciles à comprendre.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div>💻</div>
+
+<h3>Pratique</h3>
+
+<p>
+Apprends avec des exercices et des projets.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div>🚀</div>
+
+<h3>Progression</h3>
+
+<p>
+Avance étape par étape.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= À PROPOS ================= -->
+
+<section id="apropos" class="about">
+
+<div class="about-content">
+
+<p class="hero-small">
+À PROPOS DE TAPHZI STACK
+</p>
+
+<h2>
+Ton parcours vers
+<span>l'informatique.</span>
+</h2>
+
+<p>
+TAPHZI STACK est une plateforme d'apprentissage
+destinée à rendre l'informatique plus simple
+et accessible.
+</p>
+
+<p>
+Apprends progressivement grâce aux cours,
+exercices et projets.
+</p>
+
+<a href="#cours"
+class="btn btn-primary">
+
+Découvrir les cours →
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+<div class="section-title">
+
+<p>UNE QUESTION ?</p>
+
+<h2>Contacte TAPHZI STACK</h2>
+
+<span>
+Une question, une suggestion ou une idée de cours ?
+</span>
+
+</div>
+
+
+<form
+class="contact-form"
+onsubmit="sendMessage(event)">
+
+<input
+type="text"
+id="name"
+placeholder="Ton nom"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Ton adresse e-mail"
+required>
+
+<textarea
+id="message"
+rows="6"
+placeholder="Ton message..."
+required></textarea>
+
+<button
+type="submit"
+class="btn btn-primary">
+
+Envoyer le message 🚀
+
+</button>
+
+</form>
+
+</section>
+
+
+</main>
+
+
+<footer class="footer">
+
+<div class="footer-logo">
+
+<span>TAPHZI</span> STACK
+
+</div>
+
+<p>
+Apprends. Code. Réussis.
+</p>
+
+<div class="footer-links">
+
+<a href="#accueil">Accueil</a>
+
+<a href="#cours">Cours</a>
+
+<a href="#apropos">À propos</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+<p>
+© 2026 TAPHZI STACK — Tous droits réservés.
+</p>
+
+</footer>
+
+</div>
+
+
+<!-- ==================================================
+     COURS INFORMATIQUE
+================================================== -->
+
+<section id="course-informatique"
+class="course-page">
+
+<div class="course-header">
+
+<button
+class="btn btn-secondary back-button"
+onclick="closeCourse()">
+
+← Retour aux cours
+
+</button>
+
+<p class="hero-small">
+TAPHZI STACK · INFORMATIQUE
+</p>
+
+<h1>💻 Bases de l'informatique</h1>
+
+<p>
+Découvre les fondamentaux de l'informatique
+et comprends comment fonctionne un ordinateur.
+</p>
+
+</div>
+
+
+<div class="course-layout">
+
+<aside class="lesson-menu">
+
+<h3>💻 Leçons</h3>
+
+<div class="lesson-link active"
+onclick="showLesson('informatique',1,this)">
+1. Qu'est-ce que l'informatique ?
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('informatique',2,this)">
+2. Les composants
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('informatique',3,this)">
+3. Le processeur
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('informatique',4,this)">
+4. RAM et stockage
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('informatique',5,this)">
+5. Périphériques
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('informatique',6,this)">
+6. Internet
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('informatique',7,this)">
+7. Sécurité
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('informatique',8,this)">
+8. Mini-projet
+</div>
+
+</aside>
+
+
+<section>
+
+<div class="progress-box">
+
+<div class="progress-info">
+
+<b>📊 Progression</b>
+
+<span id="infoProgress">
+0 / 8
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+id="infoBar"
+class="progress-fill">
+</div>
+
+</div>
+
+</div>
+
+
+<div id="informatique-lessons">
+
+<article class="lesson active"
+id="informatique-lesson1">
+
+<h2>1. 🖥️ Qu'est-ce que l'informatique ?</h2>
+
+<p>
+L'informatique est le domaine qui permet de traiter,
+stocker et transmettre des informations grâce aux
+ordinateurs et aux systèmes numériques.
+</p>
+
+<h3>💡 Exemple</h3>
+
+<p>
+Lorsque tu utilises un smartphone, une application
+ou un ordinateur, l'informatique intervient pour
+traiter les données.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('informatique',1)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="informatique-lesson2">
+
+<h2>2. 💻 Les composants</h2>
+
+<p>
+Un ordinateur possède plusieurs composants.
+</p>
+
+<p>
+🧠 <b>CPU</b> → exécute les instructions.<br><br>
+💾 <b>RAM</b> → mémoire temporaire.<br><br>
+💽 <b>Stockage</b> → conserve les fichiers.<br><br>
+🖥️ <b>Écran</b> → affiche les informations.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('informatique',2)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="informatique-lesson3">
+
+<h2>3. 🧠 Le processeur</h2>
+
+<p>
+Le processeur, appelé CPU, exécute les instructions
+des programmes et effectue des calculs.
+</p>
+
+<pre>
+CPU
+ ↓
+Exécute les instructions
+ ↓
+Produit un résultat
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('informatique',3)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="informatique-lesson4">
+
+<h2>4. 💾 RAM et stockage</h2>
+
+<h3>RAM</h3>
+
+<p>
+La RAM conserve temporairement les données utilisées
+par les programmes.
+</p>
+
+<h3>Stockage</h3>
+
+<p>
+Le stockage conserve les fichiers même lorsque
+l'appareil est éteint.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('informatique',4)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="informatique-lesson5">
+
+<h2>5. ⌨️ Les périphériques</h2>
+
+<p>
+Les périphériques permettent de communiquer
+avec un ordinateur.
+</p>
+
+<p>
+⌨️ Clavier<br>
+🖱️ Souris<br>
+🎤 Microphone<br>
+🖥️ Écran<br>
+🔊 Haut-parleurs
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('informatique',5)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="informatique-lesson6">
+
+<h2>6. 🌐 Internet</h2>
+
+<p>
+Internet est un vaste réseau permettant à des appareils
+de communiquer et d'échanger des données.
+</p>
+
+<p>
+Le Web est un service qui fonctionne sur Internet
+et permet notamment de consulter des sites.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('informatique',6)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="informatique-lesson7">
+
+<h2>7. 🔐 Sécurité informatique</h2>
+
+<p>
+La sécurité informatique consiste à protéger
+les appareils, les comptes et les données.
+</p>
+
+<p>
+🔑 Utilise des mots de passe solides.<br><br>
+🔒 Ne partage pas tes mots de passe.<br><br>
+🛡️ Active la double authentification.<br><br>
+⚠️ Fais attention aux liens suspects.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('informatique',7)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="informatique-lesson8">
+
+<h2>8. 🏆 Mini-projet</h2>
+
+<p>
+Trouve les caractéristiques de ton ordinateur :
+</p>
+
+<p>
+🧠 Processeur<br>
+💾 RAM<br>
+💽 Stockage<br>
+🖥️ Système d'exploitation
+</p>
+
+<p>
+🎉 Tu as terminé les bases de l'informatique !
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('informatique',8)">
+🏆 Terminer le parcours
+</button>
+
+</article>
+
+</div>
+
+</section>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     COURS HTML CSS
+================================================== -->
+
+<section id="course-web"
+class="course-page">
+
+<div class="course-header">
+
+<button
+class="btn btn-secondary back-button"
+onclick="closeCourse()">
+← Retour aux cours
+</button>
+
+<p class="hero-small">
+TAPHZI STACK · DÉVELOPPEMENT WEB
+</p>
+
+<h1>🌐 HTML & CSS</h1>
+
+<p>
+Apprends à créer et styliser tes premières pages web.
+</p>
+
+</div>
+
+
+<div class="course-layout">
+
+<aside class="lesson-menu">
+
+<h3>🌐 Leçons</h3>
+
+<div class="lesson-link active"
+onclick="showLesson('web',1,this)">
+1. Introduction
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('web',2,this)">
+2. Structure HTML
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('web',3,this)">
+3. Titres et textes
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('web',4,this)">
+4. Liens et images
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('web',5,this)">
+5. Introduction CSS
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('web',6,this)">
+6. Couleurs et tailles
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('web',7,this)">
+7. Les boutons
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('web',8,this)">
+8. Mini-projet
+</div>
+
+</aside>
+
+
+<section>
+
+<div class="progress-box">
+
+<div class="progress-info">
+
+<b>📊 Progression HTML & CSS</b>
+
+<span id="webProgress">
+0 / 8
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+id="webBar"
+class="progress-fill">
+</div>
+
+</div>
+
+</div>
+
+
+<div id="web-lessons">
+
+<article class="lesson active"
+id="web-lesson1">
+
+<h2>1. 🌐 Introduction</h2>
+
+<p>
+HTML construit la structure d'une page.
+CSS permet de modifier son apparence.
+JavaScript ajoute des interactions.
+</p>
+
+<pre>
+&lt;h1&gt;Bienvenue sur TAPHZI STACK&lt;/h1&gt;
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('web',1)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="web-lesson2">
+
+<h2>2. 🏗️ Structure HTML</h2>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ma page&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Bonjour !&lt;/h1&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>
+La partie <b>head</b> contient des informations
+sur la page. La partie <b>body</b> contient
+le contenu visible.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('web',2)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="web-lesson3">
+
+<h2>3. 📝 Titres et textes</h2>
+
+<pre>
+&lt;h1&gt;Grand titre&lt;/h1&gt;
+
+&lt;h2&gt;Sous-titre&lt;/h2&gt;
+
+&lt;h3&gt;Petit titre&lt;/h3&gt;
+
+&lt;p&gt;Voici un paragraphe.&lt;/p&gt;
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('web',3)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="web-lesson4">
+
+<h2>4. 🔗 Liens et images</h2>
+
+<pre>
+&lt;a href="https://example.com"&gt;
+Visiter le site
+&lt;/a&gt;
+
+&lt;img src="image.jpg"
+alt="Mon image"&gt;
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('web',4)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="web-lesson5">
+
+<h2>5. 🎨 Introduction au CSS</h2>
+
+<pre>
+h1 {
+    color: blue;
+}
+</pre>
+
+<p>
+CSS permet de modifier l'apparence des éléments HTML.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('web',5)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="web-lesson6">
+
+<h2>6. 🌈 Couleurs et tailles</h2>
+
+<pre>
+h1 {
+    color: blue;
+    font-size: 40px;
+}
+
+p {
+    color: gray;
+}
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('web',6)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="web-lesson7">
+
+<h2>7. 🔘 Créer un bouton</h2>
+
+<pre>
+&lt;button&gt;
+    Commencer
+&lt;/button&gt;
+</pre>
+
+<pre>
+button {
+    background: blue;
+    color: white;
+    padding: 12px 20px;
+}
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('web',7)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="web-lesson8">
+
+<h2>8. 🏆 Mini-projet</h2>
+
+<pre>
+&lt;h1&gt;Mon site&lt;/h1&gt;
+
+&lt;p&gt;
+Bienvenue sur mon site !
+&lt;/p&gt;
+
+&lt;button&gt;
+Commencer
+&lt;/button&gt;
+</pre>
+
+<p>
+Personnalise ton titre, ton texte,
+ton bouton et tes couleurs.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('web',8)">
+🏆 Terminer le parcours
+</button>
+
+</article>
+
+</div>
+
+</section>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<section id="course-javascript"
+class="course-page">
+
+<div class="course-header">
+
+<button
+class="btn btn-secondary back-button"
+onclick="closeCourse()">
+← Retour aux cours
+</button>
+
+<p class="hero-small">
+TAPHZI STACK · PROGRAMMATION
+</p>
+
+<h1>⚡ JavaScript</h1>
+
+<p>
+Apprends à rendre tes pages web interactives.
+</p>
+
+</div>
+
+
+<div class="course-layout">
+
+<aside class="lesson-menu">
+
+<h3>⚡ Leçons</h3>
+
+<div class="lesson-link active"
+onclick="showLesson('javascript',1,this)">
+1. Introduction
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('javascript',2,this)">
+2. Variables
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('javascript',3,this)">
+3. Types et opérateurs
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('javascript',4,this)">
+4. Conditions
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('javascript',5,this)">
+5. Boucles
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('javascript',6,this)">
+6. Fonctions
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('javascript',7,this)">
+7. Interactions
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('javascript',8,this)">
+8. Mini-projet
+</div>
+
+</aside>
+
+
+<section>
+
+<div class="progress-box">
+
+<div class="progress-info">
+
+<b>📊 Progression JavaScript</b>
+
+<span id="jsProgress">
+0 / 8
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+id="jsBar"
+class="progress-fill">
+</div>
+
+</div>
+
+</div>
+
+
+<div id="javascript-lessons">
+
+
+<article class="lesson active"
+id="javascript-lesson1">
+
+<h2>1. ⚡ Introduction</h2>
+
+<p>
+JavaScript est un langage de programmation
+utilisé notamment pour rendre les pages web
+interactives.
+</p>
+
+<pre>
+alert("Bienvenue sur TAPHZI STACK !");
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('javascript',1)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="javascript-lesson2">
+
+<h2>2. 📦 Variables</h2>
+
+<pre>
+let nom = "TAPHZI STACK";
+
+let age = 20;
+
+console.log(nom);
+
+console.log(age);
+</pre>
+
+<p>
+Une variable permet de stocker une information.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('javascript',2)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="javascript-lesson3">
+
+<h2>3. 🔢 Types et opérateurs</h2>
+
+<pre>
+let nom = "Awa";
+
+let age = 20;
+
+let prix = 10.5;
+
+let connecte = true;
+</pre>
+
+<pre>
+let a = 10;
+let b = 5;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('javascript',3)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="javascript-lesson4">
+
+<h2>4. 🔀 Conditions</h2>
+
+<pre>
+let age = 18;
+
+if (age >= 18) {
+
+    console.log("Majeur");
+
+} else {
+
+    console.log("Mineur");
+
+}
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('javascript',4)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="javascript-lesson5">
+
+<h2>5. 🔁 Boucles</h2>
+
+<pre>
+for (let i = 0; i &lt; 5; i++) {
+
+    console.log(i);
+
+}
+</pre>
+
+<p>
+Cette boucle affiche les nombres de 0 à 4.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('javascript',5)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="javascript-lesson6">
+
+<h2>6. ⚙️ Fonctions</h2>
+
+<pre>
+function saluer(nom) {
+
+    console.log("Bonjour " + nom);
+
+}
+
+saluer("Awa");
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('javascript',6)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="javascript-lesson7">
+
+<h2>7. 🖱️ Interactions</h2>
+
+<pre>
+function direBonjour() {
+
+    alert("Bonjour !");
+
+}
+</pre>
+
+<button
+class="btn btn-primary"
+onclick="alert('⚡ JavaScript vient de réagir à ton clic !')">
+
+🖱️ Tester l'interaction
+
+</button>
+
+<br><br>
+
+<button class="btn btn-primary"
+onclick="completeLesson('javascript',7)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="javascript-lesson8">
+
+<h2>8. 🏆 Mini-projet</h2>
+
+<p>
+Crée une page contenant un titre,
+un texte, un bouton et une interaction JavaScript.
+</p>
+
+<pre>
+function bienvenue() {
+
+    alert("Bienvenue sur mon site !");
+
+}
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('javascript',8)">
+🏆 Terminer le parcours
+</button>
+
+</article>
+
+</div>
+
+</section>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     PYTHON
+================================================== -->
+
+<section id="course-python"
+class="course-page">
+
+<div class="course-header">
+
+<button
+class="btn btn-secondary back-button"
+onclick="closeCourse()">
+← Retour aux cours
+</button>
+
+<p class="hero-small">
+TAPHZI STACK · PROGRAMMATION
+</p>
+
+<h1>🐍 Python</h1>
+
+<p>
+Découvre un langage simple et puissant
+pour apprendre la programmation.
+</p>
+
+</div>
+
+
+<div class="course-layout">
+
+<aside class="lesson-menu">
+
+<h3>🐍 Leçons Python</h3>
+
+<div class="lesson-link active"
+onclick="showLesson('python',1,this)">
+1. Introduction à Python
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('python',2,this)">
+2. Variables
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('python',3,this)">
+3. Types de données
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('python',4,this)">
+4. Conditions
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('python',5,this)">
+5. Boucles
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('python',6,this)">
+6. Fonctions
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('python',7,this)">
+7. Listes
+</div>
+
+<div class="lesson-link"
+onclick="showLesson('python',8,this)">
+8. Mini-projet
+</div>
+
+</aside>
+
+
+<section>
+
+<div class="progress-box">
+
+<div class="progress-info">
+
+<b>📊 Progression Python</b>
+
+<span id="pythonProgress">
+0 / 8
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+id="pythonBar"
+class="progress-fill">
+</div>
+
+</div>
+
+</div>
+
+
+<div id="python-lessons">
+
+
+<article class="lesson active"
+id="python-lesson1">
+
+<h2>1. 🐍 Introduction à Python</h2>
+
+<p>
+Python est un langage de programmation connu
+pour sa syntaxe relativement simple.
+</p>
+
+<h3>Premier programme</h3>
+
+<pre>
+print("Bonjour TAPHZI STACK !")
+</pre>
+
+<p>
+La fonction <b>print()</b> permet d'afficher
+une information.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('python',1)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="python-lesson2">
+
+<h2>2. 📦 Les variables</h2>
+
+<p>
+Une variable permet de stocker une information.
+</p>
+
+<pre>
+nom = "TAPHZI"
+
+age = 20
+
+print(nom)
+
+print(age)
+</pre>
+
+<p>
+Python permet de créer une variable sans
+indiquer explicitement son type.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('python',2)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="python-lesson3">
+
+<h2>3. 🔢 Les types de données</h2>
+
+<pre>
+nom = "Moussa"
+
+age = 20
+
+taille = 1.75
+
+connecte = True
+</pre>
+
+<p>
+Les données peuvent être de différents types :
+texte, entier, nombre décimal ou booléen.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('python',3)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="python-lesson4">
+
+<h2>4. 🔀 Les conditions</h2>
+
+<p>
+Une condition permet au programme de prendre
+une décision.
+</p>
+
+<pre>
+age = 18
+
+if age >= 18:
+
+    print("Majeur")
+
+else:
+
+    print("Mineur")
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('python',4)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="python-lesson5">
+
+<h2>5. 🔁 Les boucles</h2>
+
+<p>
+Une boucle permet de répéter des instructions.
+</p>
+
+<pre>
+for i in range(5):
+
+    print(i)
+</pre>
+
+<p>
+Ce programme affiche les nombres de 0 à 4.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('python',5)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="python-lesson6">
+
+<h2>6. ⚙️ Les fonctions</h2>
+
+<p>
+Une fonction regroupe des instructions
+qui peuvent être réutilisées.
+</p>
+
+<pre>
+def saluer(nom):
+
+    print("Bonjour", nom)
+
+
+saluer("Moussa")
+</pre>
+
+<button class="btn btn-primary"
+onclick="completeLesson('python',6)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="python-lesson7">
+
+<h2>7. 📋 Les listes</h2>
+
+<p>
+Une liste permet de stocker plusieurs valeurs.
+</p>
+
+<pre>
+fruits = [
+    "pomme",
+    "banane",
+    "orange"
+]
+
+print(fruits)
+</pre>
+
+<p>
+On peut ensuite accéder aux éléments
+de la liste et les modifier.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('python',7)">
+✓ Leçon terminée
+</button>
+
+</article>
+
+
+<article class="lesson"
+id="python-lesson8">
+
+<h2>8. 🏆 Mini-projet Python</h2>
+
+<p>
+Crée un petit programme qui demande
+le prénom de l'utilisateur et lui répond.
+</p>
+
+<pre>
+prenom = input("Ton prénom : ")
+
+print("Bonjour", prenom)
+</pre>
+
+<h3>🎯 Mission</h3>
+
+<p>
+Modifie le programme pour afficher
+un message personnalisé.
+</p>
+
+<button class="btn btn-primary"
+onclick="completeLesson('python',8)">
+🏆 Terminer le parcours
+</button>
+
+</article>
+
+</div>
+
+</section>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     JAVASCRIPT DU SITE
+================================================== -->
+
+<script>
+
+
+/* =========================
+   OUVRIR UN COURS
+========================= */
+
+function openCourse(course) {
+
+  document.getElementById("homePage").style.display = "none";
+
+  document.querySelectorAll(".course-page").forEach(function(page) {
+
+    page.classList.remove("active");
+
+  });
+
+  const selected =
+    document.getElementById("course-" + course);
+
+  if (selected) {
+
+    selected.classList.add("active");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+
+}
+
+
+/* =========================
+   FERMER LE COURS
+========================= */
+
+function closeCourse() {
+
+  document.querySelectorAll(".course-page").forEach(function(page) {
+
+    page.classList.remove("active");
+
+  });
+
+  document.getElementById("homePage").style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+/* =========================
+   AFFICHER UNE LEÇON
+========================= */
+
+function showLesson(course, number, element) {
+
+  const container =
+    document.getElementById(course + "-lessons");
+
+  if (!container) return;
+
+
+  container.querySelectorAll(".lesson").forEach(function(lesson) {
+
+    lesson.classList.remove("active");
+
+  });
+
+
+  const selected =
+    document.getElementById(
+      course + "-lesson" + number
+    );
+
+  if (selected) {
+
+    selected.classList.add("active");
+
+  }
+
+
+  const menu =
+    element.parentElement;
+
+  menu.querySelectorAll(".lesson-link").forEach(function(link) {
+
+    link.classList.remove("active");
+
+  });
+
+
+  element.classList.add("active");
+
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+/* =========================
+   TERMINER UNE LEÇON
+========================= */
+
+function completeLesson(course, number) {
+
+  const storageKey =
+    "taphzi_" + course + "_progress";
+
+
+  let done =
+    JSON.parse(
+      localStorage.getItem(storageKey) || "[]"
     );
 
 
-    /* ================= CONTACT ================= */
+  if (!done.includes(number)) {
 
-    function sendMessage(event) {
+    done.push(number);
 
-      event.preventDefault();
+    localStorage.setItem(
+      storageKey,
+      JSON.stringify(done)
+    );
 
-      const name =
-        document.getElementById("name").value;
+  }
 
-      alert(
-        "Merci " +
-        name +
-        " ! Ton message a bien été pris en compte."
-      );
 
-      event.target.reset();
+  updateCourseProgress(course);
 
-    }
 
-  </script>
+  if (number === 8) {
+
+    alert(
+      "🎉 Félicitations ! Tu as terminé le parcours " +
+      getCourseName(course) +
+      " !"
+    );
+
+  } else {
+
+    alert(
+      "✓ Leçon terminée !"
+    );
+
+  }
+
+}
+
+
+/* =========================
+   NOM DES COURS
+========================= */
+
+function getCourseName(course) {
+
+  if (course === "informatique") {
+    return "Bases de l'informatique";
+  }
+
+  if (course === "web") {
+    return "HTML & CSS";
+  }
+
+  if (course === "javascript") {
+    return "JavaScript";
+  }
+
+  if (course === "python") {
+    return "Python";
+  }
+
+  return course;
+
+}
+
+
+/* =========================
+   PROGRESSION
+========================= */
+
+function updateCourseProgress(course) {
+
+  const storageKey =
+    "taphzi_" + course + "_progress";
+
+
+  let done =
+    JSON.parse(
+      localStorage.getItem(storageKey) || "[]"
+    );
+
+
+  let percentage =
+    (done.length / 8) * 100;
+
+
+  let progressText;
+  let progressBar;
+
+
+  if (course === "informatique") {
+
+    progressText =
+      document.getElementById("infoProgress");
+
+    progressBar =
+      document.getElementById("infoBar");
+
+  }
+
+
+  if (course === "web") {
+
+    progressText =
+      document.getElementById("webProgress");
+
+    progressBar =
+      document.getElementById("webBar");
+
+  }
+
+
+  if (course === "javascript") {
+
+    progressText =
+      document.getElementById("jsProgress");
+
+    progressBar =
+      document.getElementById("jsBar");
+
+  }
+
+
+  if (course === "python") {
+
+    progressText =
+      document.getElementById("pythonProgress");
+
+    progressBar =
+      document.getElementById("pythonBar");
+
+  }
+
+
+  if (progressText) {
+
+    progressText.textContent =
+      done.length + " / 8";
+
+  }
+
+
+  if (progressBar) {
+
+    progressBar.style.width =
+      percentage + "%";
+
+  }
+
+}
+
+
+/* =========================
+   CHARGER LES PROGRESSIONS
+========================= */
+
+updateCourseProgress("informatique");
+
+updateCourseProgress("web");
+
+updateCourseProgress("javascript");
+
+updateCourseProgress("python");
+
+
+/* =========================
+   CONTACT
+========================= */
+
+function sendMessage(event) {
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value;
+
+  alert(
+    "Merci " +
+    name +
+    " ! Ton message a bien été pris en compte."
+  );
+
+  event.target.reset();
+
+}
+
+</script>
 
 </body>
-
 </html>
