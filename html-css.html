@@ -5,684 +5,679 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TAPHZI STACK — HTML & CSS</title>
+  <title>TAPHZI STACK — Apprendre l'informatique</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
+  <!-- ================= HEADER ================= -->
+
+  <header class="header">
 
     <div class="logo">
       <span>TAPHZI</span> STACK
     </div>
 
-    <a href="index.html" class="btn">
-      ← Accueil
-    </a>
-
-  </nav>
-
-
-  <!-- HERO -->
-  <header class="hero">
-
-    <div class="container">
-
-      <span class="badge">
-        TAPHZI STACK · DÉVELOPPEMENT WEB
-      </span>
-
-      <h1>
-        🌐 HTML <span class="blue">&</span> CSS
-      </h1>
-
-      <p>
-        Apprends à créer des pages web modernes,
-        étape par étape, même si tu débutes.
-      </p>
-
-    </div>
+    <nav class="navbar">
+      <a href="#accueil">Accueil</a>
+      <a href="#cours">Cours</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
   </header>
 
 
-  <!-- COURS -->
-  <main class="main">
+  <!-- ================= ACCUEIL ================= -->
 
+  <main>
 
-    <!-- MENU DES LEÇONS -->
-    <aside class="sidebar">
+    <section id="accueil" class="hero">
 
-      <h3>
-        🌐 HTML & CSS
-      </h3>
+      <div class="hero-content">
 
+        <p class="hero-small">
+          TAPHZI STACK · APPRENTISSAGE
+        </p>
 
-      <div class="lesson-link active"
-           onclick="showLesson(1,this)">
-        1. Introduction
-      </div>
+        <h1>
+          Apprends.<br>
+          <span>Code.</span><br>
+          Réussis.
+        </h1>
 
+        <p>
+          Découvre l'informatique étape par étape avec des cours simples,
+          des exercices et des projets pratiques.
+        </p>
 
-      <div class="lesson-link"
-           onclick="showLesson(2,this)">
-        2. Structure HTML
-      </div>
+        <div class="hero-buttons">
 
+          <a href="#cours" class="btn btn-primary">
+            🚀 Commencer maintenant
+          </a>
 
-      <div class="lesson-link"
-           onclick="showLesson(3,this)">
-        3. Les titres et textes
-      </div>
-
-
-      <div class="lesson-link"
-           onclick="showLesson(4,this)">
-        4. Les liens et images
-      </div>
-
-
-      <div class="lesson-link"
-           onclick="showLesson(5,this)">
-        5. Introduction au CSS
-      </div>
-
-
-      <div class="lesson-link"
-           onclick="showLesson(6,this)">
-        6. Couleurs et tailles
-      </div>
-
-
-      <div class="lesson-link"
-           onclick="showLesson(7,this)">
-        7. Créer un bouton
-      </div>
-
-
-      <div class="lesson-link"
-           onclick="showLesson(8,this)">
-        8. Mini-projet
-      </div>
-
-    </aside>
-
-
-    <!-- CONTENU -->
-    <section>
-
-
-      <!-- PROGRESSION -->
-      <div class="progress">
-
-        <b>📊 Ta progression HTML & CSS</b>
-
-        <span id="progressText"
-              style="float:right">
-          0 / 8 leçons
-        </span>
-
-        <div class="bar">
-
-          <div class="fill"
-               id="fill">
-          </div>
+          <a href="#cours" class="btn btn-secondary">
+            📚 Nos cours
+          </a>
 
         </div>
 
       </div>
 
+    </section>
 
-      <!-- LEÇON 1 -->
-      <article class="lesson active"
-               id="lesson1">
+
+    <!-- ================= COURS ================= -->
+
+    <section id="cours" class="courses">
+
+      <div class="section-title">
+
+        <p>APPRENDS À TON RYTHME</p>
 
         <h2>
-          1. Introduction au développement web
+          Choisis ton parcours
         </h2>
 
-        <p class="muted">
-          Un site web utilise généralement plusieurs
-          technologies pour fonctionner.
-        </p>
+        <span>
+          Des cours conçus pour apprendre progressivement.
+        </span>
+
+      </div>
 
 
-        <h3>
-          🌐 Les trois principales technologies
-        </h3>
+      <div class="course-grid">
+
+
+        <!-- ================= INFORMATIQUE ================= -->
+
+        <article class="course-card">
+
+          <div class="course-icon">
+            💻
+          </div>
+
+          <div class="course-content">
+
+            <span class="course-level">
+              DÉBUTANT
+            </span>
+
+            <h3>
+              Bases de l'informatique
+            </h3>
+
+            <p>
+              Découvre les fondamentaux de l'informatique,
+              du matériel aux logiciels.
+            </p>
+
+            <ul>
+              <li>🖥️ Ordinateur</li>
+              <li>⚙️ Système d'exploitation</li>
+              <li>📁 Fichiers et dossiers</li>
+              <li>🌐 Internet</li>
+            </ul>
+
+            <button
+              class="course-btn"
+              onclick="openCourse('informatique.html')">
+
+              Commencer le cours →
+
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- ================= HTML & CSS ================= -->
+
+        <article class="course-card">
+
+          <div class="course-icon">
+            🌐
+          </div>
+
+          <div class="course-content">
+
+            <span class="course-level">
+              DÉBUTANT
+            </span>
+
+            <h3>
+              HTML & CSS
+            </h3>
+
+            <p>
+              Apprends à créer et styliser tes premières
+              pages web avec HTML et CSS.
+            </p>
+
+            <ul>
+              <li>🏗️ Structure HTML</li>
+              <li>📝 Texte et titres</li>
+              <li>🎨 CSS</li>
+              <li>📱 Responsive design</li>
+            </ul>
+
+            <button
+              class="course-btn"
+              onclick="openCourse('html-css.html')">
+
+              Commencer le cours →
+
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- ================= JAVASCRIPT ================= -->
+
+        <article class="course-card">
+
+          <div class="course-icon">
+            ⚡
+          </div>
+
+          <div class="course-content">
+
+            <span class="course-level">
+              INTERMÉDIAIRE
+            </span>
+
+            <h3>
+              JavaScript
+            </h3>
+
+            <p>
+              Donne de la vie à tes sites grâce à
+              la programmation JavaScript.
+            </p>
+
+            <ul>
+              <li>🔢 Variables</li>
+              <li>🔀 Conditions</li>
+              <li>🔁 Boucles</li>
+              <li>🖱️ Interactions</li>
+            </ul>
+
+            <button
+              class="course-btn"
+              onclick="openCourse('javascript.html')">
+
+              Commencer le cours →
+
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- ================= PYTHON ================= -->
+
+        <article class="course-card">
+
+          <div class="course-icon">
+            🐍
+          </div>
+
+          <div class="course-content">
+
+            <span class="course-level">
+              DÉBUTANT
+            </span>
+
+            <h3>
+              Python
+            </h3>
+
+            <p>
+              Découvre un langage simple et puissant
+              pour apprendre la programmation.
+            </p>
+
+            <ul>
+              <li>🐍 Syntaxe Python</li>
+              <li>📦 Variables</li>
+              <li>🔀 Conditions</li>
+              <li>🔁 Boucles</li>
+            </ul>
+
+            <button
+              class="course-btn"
+              onclick="openCourse('python.html')">
+
+              Commencer le cours →
+
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- ================= PROJETS ================= -->
+
+        <article class="course-card special-card">
+
+          <div class="course-icon">
+            🚀
+          </div>
+
+          <div class="course-content">
+
+            <span class="course-level">
+              PROJETS
+            </span>
+
+            <h3>
+              Projets pratiques
+            </h3>
+
+            <p>
+              Mets tes connaissances en pratique en
+              construisant de vrais petits projets.
+            </p>
+
+            <ul>
+              <li>🌐 Site web</li>
+              <li>🧮 Calculatrice</li>
+              <li>🎮 Mini-jeu</li>
+              <li>💡 Projets personnels</li>
+            </ul>
+
+            <button
+              class="course-btn"
+              onclick="openProjects()">
+
+              Découvrir les projets →
+
+            </button>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= POURQUOI ================= -->
+
+    <section class="why">
+
+      <div class="section-title">
 
         <p>
-          🧱 <b>HTML</b> → structure de la page
-          <br><br>
-
-          🎨 <b>CSS</b> → apparence et design
-          <br><br>
-
-          ⚡ <b>JavaScript</b> → interactions
+          POURQUOI TAPHZI STACK ?
         </p>
-
-
-        <h3>
-          💻 Exemple HTML
-        </h3>
-
-        <pre>
-&lt;h1&gt;Bienvenue sur TAPHZI STACK&lt;/h1&gt;
-        </pre>
-
-
-        <h3>
-          🎯 À retenir
-        </h3>
-
-        <p class="muted">
-          HTML construit la page.
-          CSS la rend belle.
-          JavaScript permet de créer des interactions.
-        </p>
-
-
-        <button class="btn"
-                onclick="complete(1)">
-          ✓ Leçon terminée
-        </button>
-
-      </article>
-
-
-      <!-- LEÇON 2 -->
-      <article class="lesson"
-               id="lesson2">
 
         <h2>
-          2. La structure HTML
+          Apprendre autrement.
         </h2>
 
-        <p class="muted">
-          Une page HTML possède une structure de base.
+      </div>
+
+
+      <div class="why-grid">
+
+        <div class="why-card">
+
+          <div>📚</div>
+
+          <h3>
+            Cours simples
+          </h3>
+
+          <p>
+            Des explications faciles à comprendre,
+            même lorsque tu débutes.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div>💻</div>
+
+          <h3>
+            Pratique
+          </h3>
+
+          <p>
+            Apprends en pratiquant avec des exercices
+            et des projets.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div>🚀</div>
+
+          <h3>
+            Progression
+          </h3>
+
+          <p>
+            Avance étape par étape jusqu'à devenir
+            autonome.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= À PROPOS ================= -->
+
+    <section id="apropos" class="about">
+
+      <div class="about-content">
+
+        <p class="section-label">
+          À PROPOS DE TAPHZI STACK
         </p>
-
-
-        <pre>
-&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-
-&lt;head&gt;
-
-    &lt;title&gt;Ma page&lt;/title&gt;
-
-&lt;/head&gt;
-
-&lt;body&gt;
-
-    &lt;h1&gt;Bonjour !&lt;/h1&gt;
-
-&lt;/body&gt;
-
-&lt;/html&gt;
-        </pre>
-
-
-        <h3>
-          🧠 Comprendre
-        </h3>
-
-        <p class="muted">
-          <b>&lt;head&gt;</b> contient les informations
-          de la page.
-          <br><br>
-
-          <b>&lt;body&gt;</b> contient ce qui est visible
-          sur la page.
-        </p>
-
-
-        <button class="btn"
-                onclick="complete(2)">
-          ✓ Leçon terminée
-        </button>
-
-      </article>
-
-
-      <!-- LEÇON 3 -->
-      <article class="lesson"
-               id="lesson3">
 
         <h2>
-          3. Les titres et les textes
+          Ton parcours vers
+          <span>l'informatique.</span>
         </h2>
-
-        <p class="muted">
-          HTML possède plusieurs niveaux de titres.
-        </p>
-
-
-        <pre>
-&lt;h1&gt;Grand titre&lt;/h1&gt;
-
-&lt;h2&gt;Sous-titre&lt;/h2&gt;
-
-&lt;h3&gt;Petit titre&lt;/h3&gt;
-
-&lt;p&gt;
-Voici un paragraphe.
-&lt;/p&gt;
-        </pre>
-
-
-        <h3>
-          🎯 Exemple
-        </h3>
 
         <p>
-          Le titre principal utilise généralement
-          <b>h1</b>.
+          TAPHZI STACK est une plateforme d'apprentissage
+          destinée à rendre l'informatique plus simple
+          et accessible.
         </p>
-
-
-        <button class="btn"
-                onclick="complete(3)">
-          ✓ Leçon terminée
-        </button>
-
-      </article>
-
-
-      <!-- LEÇON 4 -->
-      <article class="lesson"
-               id="lesson4">
-
-        <h2>
-          4. Les liens et les images
-        </h2>
-
-        <p class="muted">
-          HTML permet d'ajouter des liens et des images.
-        </p>
-
-
-        <h3>
-          🔗 Créer un lien
-        </h3>
-
-        <pre>
-&lt;a href="https://example.com"&gt;
-
-    Visiter le site
-
-&lt;/a&gt;
-        </pre>
-
-
-        <h3>
-          🖼️ Ajouter une image
-        </h3>
-
-        <pre>
-&lt;img src="image.jpg"
-     alt="Mon image"&gt;
-        </pre>
-
-
-        <button class="btn"
-                onclick="complete(4)">
-          ✓ Leçon terminée
-        </button>
-
-      </article>
-
-
-      <!-- LEÇON 5 -->
-      <article class="lesson"
-               id="lesson5">
-
-        <h2>
-          5. Introduction au CSS
-        </h2>
-
-        <p class="muted">
-          CSS permet de modifier l'apparence
-          des éléments HTML.
-        </p>
-
-
-        <h3>
-          🎨 Exemple
-        </h3>
-
-        <pre>
-h1 {
-
-    color: blue;
-
-}
-        </pre>
-
 
         <p>
-          Ici, le titre devient bleu.
+          Que tu sois débutant ou que tu souhaites améliorer
+          tes compétences, tu peux apprendre progressivement
+          grâce aux cours, exercices et projets.
         </p>
 
+        <a href="#cours" class="btn btn-primary">
+          Découvrir les cours →
+        </a>
 
-        <h3>
-          🧠 CSS signifie
-        </h3>
+      </div>
 
-        <p class="muted">
-          <b>Cascading Style Sheets</b>,
-          c'est-à-dire feuilles de style en cascade.
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+      <div class="section-title">
+
+        <p>
+          UNE QUESTION ?
         </p>
-
-
-        <button class="btn"
-                onclick="complete(5)">
-          ✓ Leçon terminée
-        </button>
-
-      </article>
-
-
-      <!-- LEÇON 6 -->
-      <article class="lesson"
-               id="lesson6">
 
         <h2>
-          6. Couleurs et tailles
+          Contacte TAPHZI STACK
         </h2>
 
+        <span>
+          Une question, une suggestion ou une idée de cours ?
+        </span>
 
-        <p class="muted">
-          CSS permet de modifier les couleurs
-          et les tailles des éléments.
-        </p>
-
-
-        <pre>
-h1 {
-
-    color: blue;
-
-    font-size: 40px;
-
-}
+      </div>
 
 
-p {
+      <form
+        class="contact-form"
+        onsubmit="sendMessage(event)">
 
-    color: gray;
+        <input
+          type="text"
+          id="name"
+          placeholder="Ton nom"
+          required
+        >
 
-}
-        </pre>
+        <input
+          type="email"
+          id="email"
+          placeholder="Ton adresse e-mail"
+          required
+        >
 
+        <textarea
+          id="message"
+          rows="6"
+          placeholder="Ton message..."
+          required
+        ></textarea>
 
-        <h3>
-          📌 Les propriétés
-        </h3>
+        <button
+          type="submit"
+          class="btn btn-primary">
 
-        <p class="muted">
-          <b>color</b> change la couleur.
-          <br><br>
+          Envoyer le message 🚀
 
-          <b>font-size</b> change la taille du texte.
-        </p>
-
-
-        <button class="btn"
-                onclick="complete(6)">
-          ✓ Leçon terminée
         </button>
 
-      </article>
-
-
-      <!-- LEÇON 7 -->
-      <article class="lesson"
-               id="lesson7">
-
-        <h2>
-          7. Créer un bouton
-        </h2>
-
-
-        <p class="muted">
-          HTML permet de créer un bouton avec
-          l'élément <b>&lt;button&gt;</b>.
-        </p>
-
-
-        <pre>
-&lt;button&gt;
-
-    Commencer
-
-&lt;/button&gt;
-        </pre>
-
-
-        <h3>
-          🎨 Ajouter du CSS
-        </h3>
-
-
-        <pre>
-button {
-
-    background: blue;
-
-    color: white;
-
-    padding: 12px 20px;
-
-}
-        </pre>
-
-
-        <p class="muted">
-          Avec CSS, tu peux modifier l'apparence
-          du bouton.
-        </p>
-
-
-        <button class="btn"
-                onclick="complete(7)">
-          ✓ Leçon terminée
-        </button>
-
-      </article>
-
-
-      <!-- LEÇON 8 -->
-      <article class="lesson"
-               id="lesson8">
-
-        <h2>
-          8. 🏆 Mini-projet
-        </h2>
-
-
-        <p class="muted">
-          Tu vas créer ta première petite page web.
-        </p>
-
-
-        <h3>
-          💻 Code de départ
-        </h3>
-
-
-        <pre>
-&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-
-&lt;head&gt;
-
-    &lt;title&gt;Mon site&lt;/title&gt;
-
-&lt;/head&gt;
-
-&lt;body&gt;
-
-    &lt;h1&gt;Mon site&lt;/h1&gt;
-
-    &lt;p&gt;
-        Bienvenue sur mon site !
-    &lt;/p&gt;
-
-    &lt;button&gt;
-        Commencer
-    &lt;/button&gt;
-
-&lt;/body&gt;
-
-&lt;/html&gt;
-        </pre>
-
-
-        <h3>
-          🎯 Mission
-        </h3>
-
-
-        <p class="muted">
-          Personnalise la page avec :
-          <br><br>
-
-          • ton propre titre
-          <br>
-          • un paragraphe
-          <br>
-          • un bouton
-          <br>
-          • tes propres couleurs
-        </p>
-
-
-        <button class="btn"
-                onclick="complete(8)">
-          🏆 Terminer le parcours
-        </button>
-
-      </article>
-
+      </form>
 
     </section>
 
   </main>
 
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- ================= FOOTER ================= -->
 
-    © 2026 TAPHZI STACK —
-    Apprentissage informatique
+  <footer class="footer">
+
+    <div class="footer-logo">
+      <span>TAPHZI</span> STACK
+    </div>
+
+    <p>
+      Apprends. Code. Réussis.
+    </p>
+
+    <div class="footer-links">
+
+      <a href="#accueil">
+        Accueil
+      </a>
+
+      <a href="#cours">
+        Cours
+      </a>
+
+      <a href="#apropos">
+        À propos
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+    <p class="copyright">
+      © 2026 TAPHZI STACK — Tous droits réservés.
+    </p>
 
   </footer>
 
 
-  <!-- JAVASCRIPT -->
+  <!-- ================= MODALE PROJETS ================= -->
+
+  <div
+    id="courseModal"
+    class="modal"
+    aria-hidden="true">
+
+    <div class="modal-box">
+
+      <button
+        class="modal-close"
+        onclick="closeCourse()">
+
+        ×
+
+      </button>
+
+      <div class="modal-icon">
+        🚀
+      </div>
+
+      <h2 id="modalTitle">
+        Projets pratiques
+      </h2>
+
+      <p id="modalText">
+        Les projets pratiques seront bientôt disponibles
+        sur TAPHZI STACK !
+      </p>
+
+      <button
+        class="btn btn-primary"
+        onclick="closeCourse()">
+
+        Fermer
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
   <script>
 
-    let done = JSON.parse(
-      localStorage.getItem("taphziStackWebDone") || "[]"
+    /*
+    ==========================================
+    OUVRIR UN COURS
+    ==========================================
+    */
+
+    function openCourse(page) {
+
+      window.location.href = page;
+
+    }
+
+
+    /*
+    ==========================================
+    OUVRIR LES PROJETS
+    ==========================================
+    */
+
+    function openProjects() {
+
+      const modal =
+        document.getElementById("courseModal");
+
+      const title =
+        document.getElementById("modalTitle");
+
+      const text =
+        document.getElementById("modalText");
+
+      title.textContent =
+        "🚀 Projets pratiques";
+
+      text.textContent =
+        "Les projets pratiques seront bientôt disponibles sur TAPHZI STACK !";
+
+      modal.classList.add("show");
+
+      modal.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+    }
+
+
+    /*
+    ==========================================
+    FERMER LA MODALE
+    ==========================================
+    */
+
+    function closeCourse() {
+
+      const modal =
+        document.getElementById("courseModal");
+
+      modal.classList.remove("show");
+
+      modal.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+    }
+
+
+    /*
+    ==========================================
+    FERMER EN CLIQUANT À L'EXTÉRIEUR
+    ==========================================
+    */
+
+    window.addEventListener(
+      "click",
+      function(event) {
+
+        const modal =
+          document.getElementById("courseModal");
+
+        if (event.target === modal) {
+
+          closeCourse();
+
+        }
+
+      }
     );
 
 
-    function showLesson(number, element) {
+    /*
+    ==========================================
+    CONTACT
+    ==========================================
+    */
 
-      document
-        .querySelectorAll(".lesson")
-        .forEach(function(x) {
+    function sendMessage(event) {
 
-          x.classList.remove("active");
+      event.preventDefault();
 
-        });
+      const name =
+        document.getElementById("name").value;
 
+      alert(
+        "Merci " +
+        name +
+        " ! Ton message a bien été pris en compte."
+      );
 
-      document
-        .getElementById("lesson" + number)
-        .classList.add("active");
-
-
-      document
-        .querySelectorAll(".lesson-link")
-        .forEach(function(x) {
-
-          x.classList.remove("active");
-
-        });
-
-
-      element.classList.add("active");
-
-
-      window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-      });
+      event.target.reset();
 
     }
-
-
-    function complete(number) {
-
-      if (!done.includes(number)) {
-
-        done.push(number);
-
-        localStorage.setItem(
-          "taphziStackWebDone",
-          JSON.stringify(done)
-        );
-
-      }
-
-
-      updateProgress();
-
-
-      if (number === 8) {
-
-        alert(
-          "🎉 Félicitations ! Tu as terminé le parcours HTML & CSS !"
-        );
-
-      } else {
-
-        alert(
-          "✓ Leçon terminée !"
-        );
-
-      }
-
-    }
-
-
-    function updateProgress() {
-
-      document
-        .getElementById("progressText")
-        .textContent =
-        done.length + " / 8 leçons";
-
-
-      document
-        .getElementById("fill")
-        .style.width =
-        (done.length / 8 * 100) + "%";
-
-    }
-
-
-    updateProgress();
 
   </script>
 
