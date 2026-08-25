@@ -8,256 +8,38 @@
   <title>TAPHZI STACK — Bases de l'informatique</title>
 
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* ================= COURS ================= */
-
-    .course-page {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .course-header {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .course-header .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 20px;
-      background: rgba(59, 130, 246, 0.12);
-      color: #3b82f6;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .course-header h1 {
-      margin: 15px 0 10px;
-      font-size: clamp(30px, 5vw, 48px);
-    }
-
-    .course-header p {
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.7;
-      opacity: .75;
-    }
-
-    .course-layout {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 25px;
-      align-items: start;
-    }
-
-    /* ================= MENU ================= */
-
-    .course-sidebar {
-      position: sticky;
-      top: 20px;
-      padding: 20px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .course-sidebar h3 {
-      margin-top: 0;
-      margin-bottom: 15px;
-    }
-
-    .lesson-link {
-      width: 100%;
-      display: block;
-      padding: 13px 14px;
-      margin-bottom: 8px;
-      border: none;
-      border-radius: 10px;
-      background: transparent;
-      color: inherit;
-      text-align: left;
-      cursor: pointer;
-      transition: .2s;
-      font-size: 14px;
-    }
-
-    .lesson-link:hover {
-      background: rgba(59,130,246,.1);
-    }
-
-    .lesson-link.active {
-      background: #2563eb;
-      color: white;
-    }
-
-    /* ================= PROGRESSION ================= */
-
-    .progress-box {
-      margin-bottom: 20px;
-      padding: 18px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .progress-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .progress-bar {
-      height: 9px;
-      border-radius: 20px;
-      overflow: hidden;
-      background: rgba(255,255,255,.1);
-    }
-
-    .progress-fill {
-      height: 100%;
-      width: 0%;
-      background: #2563eb;
-      transition: width .3s ease;
-    }
-
-    /* ================= LEÇONS ================= */
-
-    .lesson {
-      display: none;
-      padding: 30px;
-      border-radius: 20px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-      animation: fadeIn .25s ease;
-    }
-
-    .lesson.active {
-      display: block;
-    }
-
-    .lesson h2 {
-      margin-top: 0;
-      font-size: 28px;
-    }
-
-    .lesson h3 {
-      margin-top: 30px;
-    }
-
-    .lesson p {
-      line-height: 1.8;
-    }
-
-    .lesson ul {
-      line-height: 2;
-    }
-
-    .example-box {
-      margin: 20px 0;
-      padding: 18px;
-      border-left: 4px solid #2563eb;
-      border-radius: 10px;
-      background: rgba(37,99,235,.08);
-    }
-
-    pre {
-      padding: 20px;
-      border-radius: 12px;
-      overflow-x: auto;
-      background: #111827;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-
-    .complete-btn {
-      margin-top: 25px;
-      padding: 13px 20px;
-      border: none;
-      border-radius: 10px;
-      background: #2563eb;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .complete-btn:hover {
-      opacity: .9;
-    }
-
-    .lesson-status {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(5px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 800px) {
-
-      .course-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .course-sidebar {
-        position: static;
-      }
-
-      .lesson {
-        padding: 22px;
-      }
-
-      .lesson h2 {
-        font-size: 24px;
-      }
-
-    }
-  </style>
-
 </head>
 
 <body>
 
   <!-- ================= NAVIGATION ================= -->
 
-  <nav class="header">
+  <nav>
 
     <div class="logo">
       <span>TAPHZI</span> STACK
     </div>
 
-    <a href="index.html" class="btn">
+    <a href="index.html" class="btn btn-secondary">
       ← Accueil
     </a>
 
   </nav>
 
 
-  <!-- ================= EN-TÊTE ================= -->
+  <!-- ================= HERO ================= -->
 
-  <header class="course-header">
+  <header class="hero">
 
-    <div class="course-page">
+    <div class="container">
 
       <span class="badge">
         TAPHZI STACK · INFORMATIQUE
       </span>
 
       <h1>
-        💻 Bases de l'informatique
+        💻 Bases de
+        <span class="blue">l'informatique</span>
       </h1>
 
       <p>
@@ -272,515 +54,614 @@
 
   <!-- ================= COURS ================= -->
 
-  <main class="course-page">
-
-    <div class="course-layout">
+  <main class="main">
 
 
-      <!-- ================= SIDEBAR ================= -->
+    <!-- ================= MENU ================= -->
 
-      <aside class="course-sidebar">
+    <aside class="sidebar">
 
-        <h3>
-          📚 Les leçons
-        </h3>
+      <h3>
+        💻 Bases de l'informatique
+      </h3>
 
-        <button class="lesson-link active"
-                onclick="showLesson(1,this)">
-          1. Introduction
-        </button>
+      <div class="lesson-link active"
+           onclick="showLesson(1,this)">
+        1. Introduction
+      </div>
 
-        <button class="lesson-link"
-                onclick="showLesson(2,this)">
-          2. Composants
-        </button>
+      <div class="lesson-link"
+           onclick="showLesson(2,this)">
+        2. Ordinateur
+      </div>
 
-        <button class="lesson-link"
-                onclick="showLesson(3,this)">
-          3. Processeur
-        </button>
+      <div class="lesson-link"
+           onclick="showLesson(3,this)">
+        3. Composants
+      </div>
 
-        <button class="lesson-link"
-                onclick="showLesson(4,this)">
-          4. RAM et stockage
-        </button>
+      <div class="lesson-link"
+           onclick="showLesson(4,this)">
+        4. Processeur
+      </div>
 
-        <button class="lesson-link"
-                onclick="showLesson(5,this)">
-          5. Périphériques
-        </button>
+      <div class="lesson-link"
+           onclick="showLesson(5,this)">
+        5. RAM et stockage
+      </div>
 
-        <button class="lesson-link"
-                onclick="showLesson(6,this)">
-          6. Internet et Web
-        </button>
+      <div class="lesson-link"
+           onclick="showLesson(6,this)">
+        6. Système d'exploitation
+      </div>
 
-        <button class="lesson-link"
-                onclick="showLesson(7,this)">
-          7. Sécurité
-        </button>
+      <div class="lesson-link"
+           onclick="showLesson(7,this)">
+        7. Internet
+      </div>
 
-        <button class="lesson-link"
-                onclick="showLesson(8,this)">
-          8. Mini-projet
-        </button>
+      <div class="lesson-link"
+           onclick="showLesson(8,this)">
+        8. Sécurité
+      </div>
 
-      </aside>
+      <div class="lesson-link"
+           onclick="showLesson(9,this)">
+        9. Mini-projet
+      </div>
+
+    </aside>
 
 
-      <!-- ================= CONTENU ================= -->
+    <!-- ================= CONTENU ================= -->
 
-      <section>
+    <section>
 
 
-        <!-- PROGRESSION -->
+      <!-- PROGRESSION -->
 
-        <div class="progress-box">
+      <div class="progress">
 
-          <div class="progress-top">
+        <b>
+          📊 Ta progression
+        </b>
 
-            <b>
-              📊 Ta progression
-            </b>
+        <span id="progressText"
+              style="float:right">
+          0 / 9 leçons
+        </span>
 
-            <span id="progressText">
-              0 / 8
-            </span>
+        <div class="bar">
 
-          </div>
-
-          <div class="progress-bar">
-
-            <div
-              id="progressFill"
-              class="progress-fill">
-            </div>
-
+          <div
+            class="fill"
+            id="fill">
           </div>
 
         </div>
 
+      </div>
 
-        <!-- ================= LEÇON 1 ================= -->
 
-        <article id="lesson1" class="lesson active">
+      <!-- ================= LEÇON 1 ================= -->
 
-          <h2>
-            1. 🖥️ Qu'est-ce que l'informatique ?
-          </h2>
+      <article class="lesson active"
+               id="lesson1">
 
-          <p>
-            L'informatique est le domaine qui permet
-            de traiter, stocker et transmettre des
-            informations grâce aux ordinateurs et aux
-            systèmes numériques.
-          </p>
+        <h2>
+          1. 🖥️ Qu'est-ce que l'informatique ?
+        </h2>
 
-          <h3>
-            💡 Exemple
-          </h3>
+        <p class="muted">
+          L'informatique est le domaine qui permet
+          de traiter, stocker et transmettre des
+          informations grâce aux technologies numériques.
+        </p>
 
-          <div class="example-box">
+        <h3>
+          💡 Exemple
+        </h3>
 
-            Lorsque tu écris un message, regardes une
-            vidéo ou utilises une application,
-            l'informatique intervient pour traiter
-            les données.
+        <p>
+          Lorsque tu utilises un téléphone, un ordinateur,
+          une tablette ou une application, l'informatique
+          intervient pour traiter les données.
+        </p>
 
-          </div>
+        <h3>
+          🧠 À retenir
+        </h3>
 
-          <h3>
-            🧠 À retenir
-          </h3>
+        <p class="muted">
+          L'informatique permet notamment de manipuler
+          des données et d'automatiser certaines tâches.
+        </p>
 
-          <p>
-            L'informatique permet notamment de manipuler
-            des données et d'utiliser des programmes
-            pour réaliser différentes tâches.
-          </p>
+        <h3>
+          🧩 Petit exercice
+        </h3>
 
-          <button class="complete-btn"
-                  onclick="completeLesson(1)">
-            ✓ Leçon terminée
+        <p>
+          Lequel utilise l'informatique ?
+        </p>
+
+        <div class="quiz">
+
+          <button onclick="answer(this,true,
+          'Bravo ! Un smartphone utilise l’informatique.')">
+            A. 📱 Un smartphone
           </button>
 
-          <div id="status1" class="lesson-status"></div>
-
-        </article>
-
-
-        <!-- ================= LEÇON 2 ================= -->
-
-        <article id="lesson2" class="lesson">
-
-          <h2>
-            2. 💻 Les composants d'un ordinateur
-          </h2>
-
-          <p>
-            Un ordinateur est composé de plusieurs
-            éléments qui travaillent ensemble.
-          </p>
-
-          <h3>
-            🧩 Les principaux composants
-          </h3>
-
-          <ul>
-
-            <li>
-              🧠 <b>Processeur (CPU)</b> :
-              exécute les instructions.
-            </li>
-
-            <li>
-              💾 <b>RAM</b> :
-              conserve temporairement les données utilisées.
-            </li>
-
-            <li>
-              💽 <b>Stockage</b> :
-              conserve les fichiers.
-            </li>
-
-            <li>
-              🖥️ <b>Écran</b> :
-              affiche les informations.
-            </li>
-
-          </ul>
-
-          <h3>
-            🎯 À retenir
-          </h3>
-
-          <p>
-            Chaque composant possède un rôle différent,
-            mais tous travaillent ensemble.
-          </p>
-
-          <button class="complete-btn"
-                  onclick="completeLesson(2)">
-            ✓ Leçon terminée
+          <button onclick="answer(this,false,
+          'Essaie encore.')">
+            B. 🪑 Une chaise
           </button>
 
-          <div id="status2" class="lesson-status"></div>
-
-        </article>
-
-
-        <!-- ================= LEÇON 3 ================= -->
-
-        <article id="lesson3" class="lesson">
-
-          <h2>
-            3. 🧠 Le processeur (CPU)
-          </h2>
-
-          <p>
-            Le processeur, appelé CPU, est un élément
-            essentiel d'un ordinateur.
-          </p>
-
-          <h3>
-            ⚡ Son rôle
-          </h3>
-
-          <p>
-            Le CPU exécute les instructions des
-            programmes et effectue des calculs.
-          </p>
-
-          <div class="example-box">
-
-            💡 Exemple : lorsque tu ouvres une
-            application, le processeur participe
-            au traitement des instructions nécessaires
-            à son fonctionnement.
-
-          </div>
-
-          <h3>
-            🎯 À retenir
-          </h3>
-
-          <p>
-            <b>CPU = processeur = unité centrale
-            de traitement.</b>
-          </p>
-
-          <button class="complete-btn"
-                  onclick="completeLesson(3)">
-            ✓ Leçon terminée
+          <button onclick="answer(this,false,
+          'Essaie encore.')">
+            C. 📓 Un cahier
           </button>
 
-          <div id="status3" class="lesson-status"></div>
+        </div>
 
-        </article>
+        <div class="result"></div>
+
+        <button class="btn btn-primary"
+                onclick="complete(1)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
 
 
-        <!-- ================= LEÇON 4 ================= -->
+      <!-- ================= LEÇON 2 ================= -->
 
-        <article id="lesson4" class="lesson">
+      <article class="lesson"
+               id="lesson2">
 
-          <h2>
-            4. 💾 RAM et stockage
-          </h2>
+        <h2>
+          2. 💻 L'ordinateur
+        </h2>
 
-          <h3>
-            🧠 La RAM
-          </h3>
+        <p class="muted">
+          Un ordinateur est une machine électronique
+          capable de recevoir, traiter et produire
+          des informations.
+        </p>
 
-          <p>
-            La mémoire RAM permet de conserver
-            temporairement les données dont les
-            programmes ont besoin.
-          </p>
+        <h3>
+          🔄 Comment fonctionne-t-il ?
+        </h3>
 
-          <h3>
-            💽 Le stockage
-          </h3>
+        <p>
+          Un ordinateur reçoit des données,
+          les traite puis produit un résultat.
+        </p>
 
-          <p>
-            Le stockage permet de conserver les fichiers
-            même lorsque l'ordinateur est éteint.
-          </p>
+        <pre>
+Entrée
+   ↓
+Traitement
+   ↓
+Sortie
+        </pre>
 
-          <div class="example-box">
+        <h3>
+          💡 Exemple
+        </h3>
 
-            📸 Photos → stockage<br><br>
+        <p>
+          Lorsque tu écris au clavier,
+          l'ordinateur reçoit tes touches,
+          les traite et les affiche sur l'écran.
+        </p>
 
-            🎮 Jeu ouvert → RAM utilisée
+        <button class="btn btn-primary"
+                onclick="complete(2)">
+          ✓ Leçon terminée
+        </button>
 
-          </div>
+      </article>
 
-          <button class="complete-btn"
-                  onclick="completeLesson(4)">
-            ✓ Leçon terminée
+
+      <!-- ================= LEÇON 3 ================= -->
+
+      <article class="lesson"
+               id="lesson3">
+
+        <h2>
+          3. 🧩 Les composants d'un ordinateur
+        </h2>
+
+        <p class="muted">
+          Un ordinateur possède plusieurs composants
+          qui travaillent ensemble.
+        </p>
+
+        <h3>
+          🧠 Processeur
+        </h3>
+
+        <p>
+          Le processeur exécute les instructions
+          des programmes.
+        </p>
+
+        <h3>
+          💾 RAM
+        </h3>
+
+        <p>
+          La RAM conserve temporairement les données
+          utilisées par les programmes.
+        </p>
+
+        <h3>
+          💽 Stockage
+        </h3>
+
+        <p>
+          Le stockage conserve les fichiers et les
+          données de manière durable.
+        </p>
+
+        <h3>
+          🖥️ Écran
+        </h3>
+
+        <p>
+          L'écran affiche les informations à l'utilisateur.
+        </p>
+
+        <button class="btn btn-primary"
+                onclick="complete(3)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- ================= LEÇON 4 ================= -->
+
+      <article class="lesson"
+               id="lesson4">
+
+        <h2>
+          4. 🧠 Le processeur CPU
+        </h2>
+
+        <p class="muted">
+          Le CPU signifie
+          <b>Central Processing Unit</b>,
+          ou unité centrale de traitement.
+        </p>
+
+        <h3>
+          ⚡ Son rôle
+        </h3>
+
+        <p>
+          Le processeur exécute les instructions
+          nécessaires au fonctionnement des programmes.
+        </p>
+
+        <h3>
+          💡 Exemple
+        </h3>
+
+        <p>
+          Lorsque tu ouvres une application,
+          le processeur traite les instructions
+          nécessaires à son fonctionnement.
+        </p>
+
+        <h3>
+          🎯 À retenir
+        </h3>
+
+        <p class="muted">
+          CPU = processeur = unité centrale de traitement.
+        </p>
+
+        <button class="btn btn-primary"
+                onclick="complete(4)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
+
+
+      <!-- ================= LEÇON 5 ================= -->
+
+      <article class="lesson"
+               id="lesson5">
+
+        <h2>
+          5. 💾 RAM et stockage
+        </h2>
+
+        <h3>
+          🧠 La RAM
+        </h3>
+
+        <p class="muted">
+          La mémoire RAM est une mémoire temporaire.
+          Elle permet aux programmes de travailler
+          avec les données dont ils ont besoin.
+        </p>
+
+        <h3>
+          💽 Le stockage
+        </h3>
+
+        <p class="muted">
+          Le stockage conserve les données même
+          lorsque l'appareil est éteint.
+        </p>
+
+        <h3>
+          📌 Exemple
+        </h3>
+
+        <p>
+          📸 Photos → stockage
+          <br><br>
+          🎮 Jeu ouvert → RAM utilisée
+        </p>
+
+        <h3>
+          🧠 Question
+        </h3>
+
+        <div class="quiz">
+
+          <button onclick="answer(this,true,
+          'Bravo ! La RAM est une mémoire temporaire.')">
+            A. La RAM est temporaire
           </button>
 
-          <div id="status4" class="lesson-status"></div>
-
-        </article>
-
-
-        <!-- ================= LEÇON 5 ================= -->
-
-        <article id="lesson5" class="lesson">
-
-          <h2>
-            5. ⌨️ Les périphériques
-          </h2>
-
-          <p>
-            Les périphériques sont des appareils
-            connectés à un ordinateur pour permettre
-            différentes fonctions.
-          </p>
-
-          <h3>
-            ⌨️ Périphériques d'entrée
-          </h3>
-
-          <p>
-            Clavier, souris, microphone, caméra...
-          </p>
-
-          <h3>
-            🖥️ Périphériques de sortie
-          </h3>
-
-          <p>
-            Écran, haut-parleurs, imprimante...
-          </p>
-
-          <div class="example-box">
-
-            💡 La souris permet d'envoyer des actions
-            vers l'ordinateur.
-
-          </div>
-
-          <button class="complete-btn"
-                  onclick="completeLesson(5)">
-            ✓ Leçon terminée
+          <button onclick="answer(this,false,
+          'Essaie encore.')">
+            B. La RAM conserve toujours les fichiers
           </button>
 
-          <div id="status5" class="lesson-status"></div>
+        </div>
 
-        </article>
+        <div class="result"></div>
+
+        <button class="btn btn-primary"
+                onclick="complete(5)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
 
 
-        <!-- ================= LEÇON 6 ================= -->
+      <!-- ================= LEÇON 6 ================= -->
 
-        <article id="lesson6" class="lesson">
+      <article class="lesson"
+               id="lesson6">
 
-          <h2>
-            6. 🌐 Internet et le Web
-          </h2>
+        <h2>
+          6. ⚙️ Le système d'exploitation
+        </h2>
 
-          <p>
-            Internet est un vaste réseau qui relie
-            des ordinateurs et des appareils dans
-            le monde.
-          </p>
+        <p class="muted">
+          Le système d'exploitation est le logiciel
+          principal qui permet de gérer un appareil
+          et ses ressources.
+        </p>
 
-          <h3>
-            🌍 Internet
-          </h3>
+        <h3>
+          💻 Exemples
+        </h3>
 
-          <p>
-            Il permet aux appareils de communiquer
-            et d'échanger des données.
-          </p>
+        <p>
+          🪟 Windows
+          <br><br>
+          🍎 macOS
+          <br><br>
+          🐧 Linux
+          <br><br>
+          📱 Android
+          <br><br>
+          📱 iOS
+        </p>
 
-          <h3>
-            🌐 Le Web
-          </h3>
+        <h3>
+          🎯 Son rôle
+        </h3>
 
-          <p>
-            Le Web est un service qui fonctionne
-            sur Internet et permet notamment de
-            consulter des pages et des sites web.
-          </p>
+        <p class="muted">
+          Il permet notamment aux applications
+          et à l'utilisateur d'utiliser le matériel
+          de l'appareil.
+        </p>
 
-          <div class="example-box">
+        <button class="btn btn-primary"
+                onclick="complete(6)">
+          ✓ Leçon terminée
+        </button>
 
-            💡 Lorsque tu visites un site avec
-            un navigateur, tu utilises le Web.
+      </article>
 
-          </div>
 
-          <button class="complete-btn"
-                  onclick="completeLesson(6)">
-            ✓ Leçon terminée
+      <!-- ================= LEÇON 7 ================= -->
+
+      <article class="lesson"
+               id="lesson7">
+
+        <h2>
+          7. 🌐 Internet
+        </h2>
+
+        <p class="muted">
+          Internet est un immense réseau qui permet
+          à des appareils de communiquer entre eux.
+        </p>
+
+        <h3>
+          🌍 Internet et Web
+        </h3>
+
+        <p>
+          Internet est l'infrastructure réseau.
+          <br><br>
+          Le Web est un service qui fonctionne
+          sur Internet et permet notamment de consulter
+          des sites et des pages web.
+        </p>
+
+        <h3>
+          💡 Exemple
+        </h3>
+
+        <p>
+          Lorsque tu ouvres un site avec un navigateur,
+          tu utilises le Web.
+        </p>
+
+        <h3>
+          🧠 Question
+        </h3>
+
+        <div class="quiz">
+
+          <button onclick="answer(this,true,
+          'Bravo ! Le Web fonctionne sur Internet.')">
+            A. Le Web fonctionne sur Internet
           </button>
 
-          <div id="status6" class="lesson-status"></div>
-
-        </article>
-
-
-        <!-- ================= LEÇON 7 ================= -->
-
-        <article id="lesson7" class="lesson">
-
-          <h2>
-            7. 🔐 Sécurité informatique
-          </h2>
-
-          <p>
-            La sécurité informatique consiste à protéger
-            les appareils, les comptes et les données.
-          </p>
-
-          <h3>
-            🛡️ Bonnes pratiques
-          </h3>
-
-          <ul>
-
-            <li>
-              🔑 Utiliser des mots de passe solides.
-            </li>
-
-            <li>
-              🔒 Ne pas partager ses mots de passe.
-            </li>
-
-            <li>
-              📱 Activer la double authentification
-              lorsqu'elle est disponible.
-            </li>
-
-            <li>
-              ⚠️ Éviter les liens et fichiers suspects.
-            </li>
-
-          </ul>
-
-          <h3>
-            🎯 À retenir
-          </h3>
-
-          <p>
-            La sécurité commence par de bonnes habitudes.
-          </p>
-
-          <button class="complete-btn"
-                  onclick="completeLesson(7)">
-            ✓ Leçon terminée
+          <button onclick="answer(this,false,
+          'Essaie encore.')">
+            B. Internet et le Web sont exactement la même chose
           </button>
 
-          <div id="status7" class="lesson-status"></div>
+        </div>
 
-        </article>
+        <div class="result"></div>
+
+        <button class="btn btn-primary"
+                onclick="complete(7)">
+          ✓ Leçon terminée
+        </button>
+
+      </article>
 
 
-        <!-- ================= LEÇON 8 ================= -->
+      <!-- ================= LEÇON 8 ================= -->
 
-        <article id="lesson8" class="lesson">
+      <article class="lesson"
+               id="lesson8">
 
-          <h2>
-            8. 🏆 Mini-projet
-          </h2>
+        <h2>
+          8. 🔐 Sécurité informatique
+        </h2>
 
-          <p>
-            Pour terminer ce parcours, découvre
-            les caractéristiques de ton appareil.
-          </p>
+        <p class="muted">
+          La sécurité informatique consiste à protéger
+          les appareils, les comptes et les données.
+        </p>
 
-          <h3>
-            🎯 Mission
-          </h3>
+        <h3>
+          🛡️ Bonnes pratiques
+        </h3>
 
-          <p>
-            Essaie de trouver :
-          </p>
+        <p>
+          🔑 Utiliser des mots de passe solides.
+          <br><br>
 
-          <ul>
+          🔒 Ne pas partager ses mots de passe.
+          <br><br>
 
-            <li>
-              🧠 Le modèle du processeur
-            </li>
+          📱 Activer la double authentification
+          lorsqu'elle est disponible.
+          <br><br>
 
-            <li>
-              💾 La quantité de RAM
-            </li>
+          ⚠️ Faire attention aux liens et fichiers suspects.
+          <br><br>
 
-            <li>
-              💽 La capacité de stockage
-            </li>
+          🔄 Garder ses logiciels à jour.
+        </p>
 
-            <li>
-              🖥️ Le système d'exploitation
-            </li>
+        <h3>
+          🎯 À retenir
+        </h3>
 
-          </ul>
+        <p class="muted">
+          La sécurité commence par de bonnes habitudes.
+        </p>
 
-          <h3>
-            💡 Objectif
-          </h3>
+        <button class="btn btn-primary"
+                onclick="complete(8)">
+          ✓ Leçon terminée
+        </button>
 
-          <p>
-            À la fin de cette mission, tu dois être
-            capable d'expliquer simplement à quoi
-            servent les principaux composants de ton
-            ordinateur.
-          </p>
+      </article>
 
-          <button class="complete-btn"
-                  onclick="completeLesson(8)">
-            🏆 Terminer le parcours
-          </button>
 
-          <div id="status8" class="lesson-status"></div>
+      <!-- ================= LEÇON 9 ================= -->
 
-        </article>
+      <article class="lesson"
+               id="lesson9">
 
-      </section>
+        <h2>
+          9. 🏆 Mini-projet
+        </h2>
 
-    </div>
+        <p class="muted">
+          Tu vas maintenant utiliser ce que tu as appris
+          pour découvrir ton propre appareil.
+        </p>
+
+        <h3>
+          🎯 Mission
+        </h3>
+
+        <p>
+          Trouve les informations suivantes sur ton appareil :
+          <br><br>
+
+          🧠 Le processeur
+          <br><br>
+
+          💾 La quantité de RAM
+          <br><br>
+
+          💽 La capacité de stockage
+          <br><br>
+
+          ⚙️ Le système d'exploitation
+        </p>
+
+        <h3>
+          💡 Objectif
+        </h3>
+
+        <p class="muted">
+          À la fin du parcours, tu dois être capable
+          d'expliquer simplement le rôle des principaux
+          composants d'un ordinateur.
+        </p>
+
+        <h3>
+          🎓 Félicitations
+        </h3>
+
+        <p>
+          Tu as terminé les bases de l'informatique !
+          Tu peux maintenant passer au développement web
+          et à la programmation.
+        </p>
+
+        <button class="btn btn-primary"
+                onclick="complete(9)">
+          🏆 Terminer le parcours
+        </button>
+
+      </article>
+
+    </section>
 
   </main>
 
@@ -797,8 +678,28 @@
       Apprends. Code. Réussis.
     </p>
 
+    <div class="footer-links">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="html-css.html">
+        HTML & CSS
+      </a>
+
+      <a href="javascript.html">
+        JavaScript
+      </a>
+
+      <a href="python.html">
+        Python
+      </a>
+
+    </div>
+
     <p class="copyright">
-      © 2026 TAPHZI STACK — Apprentissage informatique.
+      © 2026 TAPHZI STACK — Tous droits réservés.
     </p>
 
   </footer>
@@ -810,15 +711,14 @@
 
     /* ================= PROGRESSION ================= */
 
-    let completed =
-      JSON.parse(
-        localStorage.getItem("taphziComputerDone") || "[]"
-      );
+    let done = JSON.parse(
+      localStorage.getItem("taphziComputerDone") || "[]"
+    );
 
 
     /* ================= AFFICHER UNE LEÇON ================= */
 
-    function showLesson(number, button) {
+    function showLesson(number, element) {
 
       document
         .querySelectorAll(".lesson")
@@ -829,21 +729,31 @@
         });
 
 
-      document
-        .getElementById("lesson" + number)
-        .classList.add("active");
+      const selectedLesson =
+        document.getElementById("lesson" + number);
+
+
+      if (selectedLesson) {
+
+        selectedLesson.classList.add("active");
+
+      }
 
 
       document
         .querySelectorAll(".lesson-link")
-        .forEach(function(item) {
+        .forEach(function(link) {
 
-          item.classList.remove("active");
+          link.classList.remove("active");
 
         });
 
 
-      button.classList.add("active");
+      if (element) {
+
+        element.classList.add("active");
+
+      }
 
 
       window.scrollTo({
@@ -857,42 +767,26 @@
     }
 
 
-    /* ================= TERMINER ================= */
+    /* ================= TERMINER UNE LEÇON ================= */
 
-    function completeLesson(number) {
+    function complete(number) {
 
-      if (!completed.includes(number)) {
+      if (!done.includes(number)) {
 
-        completed.push(number);
-
-        completed.sort(function(a, b) {
-          return a - b;
-        });
+        done.push(number);
 
         localStorage.setItem(
           "taphziComputerDone",
-          JSON.stringify(completed)
+          JSON.stringify(done)
         );
 
       }
 
 
-      document
-        .getElementById("status" + number)
-        .textContent =
-        "✓ Leçon terminée !";
-
-
-      document
-        .getElementById("status" + number)
-        .style.color =
-        "#34d399";
-
-
       updateProgress();
 
 
-      if (number === 8) {
+      if (number === 9) {
 
         alert(
           "🎉 Félicitations ! Tu as terminé les bases de l'informatique !"
@@ -917,38 +811,38 @@
         document.getElementById("progressText");
 
       const fill =
-        document.getElementById("progressFill");
+        document.getElementById("fill");
 
 
       text.textContent =
-        completed.length + " / 8";
+        done.length + " / 9 leçons";
 
 
       fill.style.width =
-        (completed.length / 8 * 100) + "%";
-
-
-      completed.forEach(function(number) {
-
-        const status =
-          document.getElementById("status" + number);
-
-        if (status) {
-
-          status.textContent =
-            "✓ Leçon terminée !";
-
-          status.style.color =
-            "#34d399";
-
-        }
-
-      });
+        (done.length / 9 * 100) + "%";
 
     }
 
 
-    /* ================= DÉMARRAGE ================= */
+    /* ================= QUIZ ================= */
+
+    function answer(button, correct, message) {
+
+      const result =
+        button.parentElement.nextElementSibling;
+
+
+      result.textContent =
+        (correct ? "✓ " : "✗ ") + message;
+
+
+      result.style.color =
+        correct ? "#34d399" : "#ff8b8b";
+
+    }
+
+
+    /* ================= INITIALISATION ================= */
 
     updateProgress();
 
