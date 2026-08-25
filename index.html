@@ -1228,7 +1228,7 @@ function unlockBadge(id, icon, text) {
 
   let badge =
     document.getElementById(id);
-
+badge.classList.add("unlocked");
   if (!badge) return;
 
   let status =
