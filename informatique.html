@@ -652,20 +652,60 @@
     }
 
 
-    function updateProgress() {
+   function updateCourseProgress() {
 
-      document
-        .getElementById("progressText")
-        .textContent =
-        done.length + " / 8 leçons";
+  /* 💻 Bases de l'informatique */
+  let info =
+    getDoneCount([
+      "tsbComputerDone"
+    ]);
+
+  setCourseProgress(
+    "infoProgressText",
+    "infoProgressBar",
+    info
+  );
 
 
-      document
-        .getElementById("fill")
-        .style.width =
-        (done.length / 8 * 100) + "%";
+  /* 🌐 HTML & CSS */
+  let html =
+    getDoneCount([
+      "tsbWebDone"
+    ]);
 
-    }
+  setCourseProgress(
+    "htmlProgressText",
+    "htmlProgressBar",
+    html
+  );
+
+
+  /* ⚡ JavaScript */
+  let javascript =
+    getDoneCount([
+      "tsbJavaScriptDone"
+    ]);
+
+  setCourseProgress(
+    "jsProgressText",
+    "jsProgressBar",
+    javascript
+  );
+
+
+  /* 🐍 Python */
+  let python =
+    getDoneCount([
+      "tsbPythonDone"
+    ]);
+
+  setCourseProgress(
+    "pythonProgressText",
+    "pythonProgressBar",
+    python
+  );
+
+}
 
 
     function answer(button, correct, message) {
