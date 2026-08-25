@@ -1,4 +1,4 @@
-.<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -7,35 +7,49 @@
 
   <title>TSB Tech — Apprendre l'informatique</title>
 
-  <link rel="stylesheet" href="style.css"><style>
+  <link rel="stylesheet" href="style.css">
 
-.badge-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+  <style>
 
-.badge-card strong {
-  display: inline-block;
-  margin-top: 10px;
-  opacity: 0.7;
-}
+    /* ================= BADGES ================= */
 
-.badge-card.unlocked {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(52, 211, 153, 0.18);
-}
+    .badge-card {
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
 
-.badge-card.unlocked strong {
-  opacity: 1;
-}
+    .badge-card strong {
+      display: inline-block;
+      margin-top: 10px;
+      opacity: 0.7;
+    }
 
-.badge-card.unlocked .course-icon {
-  transform: scale(1.08);
-}
+    .badge-card.unlocked {
+      transform: translateY(-4px);
+      box-shadow:
+        0 10px 30px rgba(52, 211, 153, 0.18);
+    }
 
-</style>
+    .badge-card.unlocked strong {
+      opacity: 1;
+    }
+
+    .badge-card.unlocked .course-icon {
+      transform: scale(1.08);
+    }
+
+    #badgeCounter {
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+  </style>
+
 </head>
 
 <body>
+
 
   <!-- ================= NAVIGATION ================= -->
 
@@ -50,11 +64,13 @@
       <a href="#apropos">À propos</a>
     </div>
 
-    <button class="btn" onclick="window.location='#cours'">
+    <button class="btn"
+            onclick="window.location='#cours'">
       Apprendre
     </button>
 
   </nav>
+
 
 
   <!-- ================= ACCUEIL ================= -->
@@ -85,6 +101,7 @@
     </div>
 
   </header>
+
 
 
   <!-- ================= COURS ================= -->
@@ -128,21 +145,32 @@
           <div class="course-progress">
 
             <div class="course-progress-top">
-              <span>Progression</span>
-              <span id="infoProgressText">0 / 8</span>
+
+              <span>
+                Progression
+              </span>
+
+              <span id="infoProgressText">
+                0 / 8
+              </span>
+
             </div>
 
+
             <div class="course-progress-bar">
+
               <div
                 class="course-progress-fill"
                 id="infoProgressBar">
               </div>
+
             </div>
 
           </div>
 
 
-          <a href="informatique.html" class="btn">
+          <a href="informatique.html"
+             class="btn">
             🚀 Commencer
           </a>
 
@@ -175,21 +203,32 @@
           <div class="course-progress">
 
             <div class="course-progress-top">
-              <span>Progression</span>
-              <span id="htmlProgressText">0 / 8</span>
+
+              <span>
+                Progression
+              </span>
+
+              <span id="htmlProgressText">
+                0 / 8
+              </span>
+
             </div>
 
+
             <div class="course-progress-bar">
+
               <div
                 class="course-progress-fill"
                 id="htmlProgressBar">
               </div>
+
             </div>
 
           </div>
 
 
-          <a href="html-css.html" class="btn">
+          <a href="html-css.html"
+             class="btn">
             🚀 Commencer
           </a>
 
@@ -222,21 +261,32 @@
           <div class="course-progress">
 
             <div class="course-progress-top">
-              <span>Progression</span>
-              <span id="jsProgressText">0 / 8</span>
+
+              <span>
+                Progression
+              </span>
+
+              <span id="jsProgressText">
+                0 / 8
+              </span>
+
             </div>
 
+
             <div class="course-progress-bar">
+
               <div
                 class="course-progress-fill"
                 id="jsProgressBar">
               </div>
+
             </div>
 
           </div>
 
 
-          <a href="javascript.html" class="btn">
+          <a href="javascript.html"
+             class="btn">
             🚀 Commencer
           </a>
 
@@ -269,11 +319,17 @@
           <div class="course-progress">
 
             <div class="course-progress-top">
-              <span>Progression</span>
+
+              <span>
+                Progression
+              </span>
+
               <span id="pythonProgressText">
                 0 / 8
               </span>
+
             </div>
+
 
             <div class="course-progress-bar">
 
@@ -287,7 +343,8 @@
           </div>
 
 
-          <a href="#python" class="btn">
+          <a href="#python"
+             class="btn">
             🚀 Commencer
           </a>
 
@@ -410,30 +467,24 @@
           automatiser des tâches et travailler avec les données.
         </p>
 
-
         <h3>
           Ton premier programme
         </h3>
 
-
         <pre>print("Bienvenue sur TSB Tech !")</pre>
-
 
         <p class="muted">
           La fonction <b>print()</b> permet
           d'afficher du texte.
         </p>
 
-
         <h3>
           🧩 Exercice
         </h3>
 
-
         <p>
           Quelle commande permet d'afficher « Bonjour » ?
         </p>
-
 
         <div class="quiz">
 
@@ -451,9 +502,7 @@
 
         </div>
 
-
         <div class="result"></div>
-
 
         <button class="btn"
                 onclick="complete(1)">
@@ -473,11 +522,9 @@
           2. Les variables
         </h2>
 
-
         <p class="muted">
           Une variable permet de stocker une information.
         </p>
-
 
         <pre>
 nom = "TSB Tech"
@@ -487,17 +534,14 @@ print(nom)
 print(age)
         </pre>
 
-
         <h3>
           🎯 Défi
         </h3>
-
 
         <p>
           Crée une variable appelée
           <b>prenom</b> et donne-lui ton prénom.
         </p>
-
 
         <button class="btn"
                 onclick="complete(2)">
@@ -517,11 +561,9 @@ print(age)
           3. Les types de données
         </h2>
 
-
         <p class="muted">
           Python possède plusieurs types de données.
         </p>
-
 
         <pre>
 nom = "Awa"
@@ -530,13 +572,11 @@ taille = 1.75
 connecte = True
         </pre>
 
-
         <p class="muted">
           Les types courants sont
           <b>str</b>, <b>int</b>,
           <b>float</b> et <b>bool</b>.
         </p>
-
 
         <button class="btn"
                 onclick="complete(3)">
@@ -556,12 +596,10 @@ connecte = True
           4. Les conditions
         </h2>
 
-
         <p class="muted">
           Une condition permet au programme
           de prendre une décision.
         </p>
-
 
         <pre>
 age = 18
@@ -571,7 +609,6 @@ if age >= 18:
 else:
     print("Mineur")
         </pre>
-
 
         <button class="btn"
                 onclick="complete(4)">
@@ -591,17 +628,14 @@ else:
           5. Les boucles
         </h2>
 
-
         <p class="muted">
           Une boucle permet de répéter une instruction.
         </p>
-
 
         <pre>
 for i in range(5):
     print(i)
         </pre>
-
 
         <button class="btn"
                 onclick="complete(5)">
@@ -621,12 +655,10 @@ for i in range(5):
           6. Les fonctions
         </h2>
 
-
         <p class="muted">
           Une fonction permet de regrouper
           des instructions réutilisables.
         </p>
-
 
         <pre>
 def saluer(nom):
@@ -634,7 +666,6 @@ def saluer(nom):
 
 saluer("Awa")
         </pre>
-
 
         <button class="btn"
                 onclick="complete(6)">
@@ -654,11 +685,9 @@ saluer("Awa")
           7. Les listes
         </h2>
 
-
         <p class="muted">
           Une liste permet de stocker plusieurs éléments.
         </p>
-
 
         <pre>
 fruits = ["mangue", "banane", "orange"]
@@ -667,7 +696,6 @@ print(fruits[0])
 
 fruits.append("pomme")
         </pre>
-
 
         <button class="btn"
                 onclick="complete(7)">
@@ -687,12 +715,10 @@ fruits.append("pomme")
           8. 🏆 Mini-projet : calculatrice
         </h2>
 
-
         <p class="muted">
           Pour terminer ton premier parcours,
           crée une petite calculatrice Python.
         </p>
-
 
         <pre>
 a = 10
@@ -704,18 +730,15 @@ print("Multiplication :", a * b)
 print("Division :", a / b)
         </pre>
 
-
         <h3>
           🎯 Mission
         </h3>
-
 
         <p class="muted">
           Améliore ensuite le programme avec
           <b>input()</b> afin que l'utilisateur
           puisse entrer ses propres nombres.
         </p>
-
 
         <button class="btn"
                 onclick="complete(8)">
@@ -729,112 +752,136 @@ print("Division :", a / b)
 
   </main>
 
-<!-- ================= BADGES ================= -->
 
-<section class="courses" id="badges">
 
-  <div class="container">
+  <!-- ================= BADGES ================= -->
 
-    <h2>🏆 Tes badges</h2>
+  <section class="courses" id="badges">
 
-    <p class="muted">
-      Progresse dans tes cours et débloque des récompenses.
-    </p>
+    <div class="container">
 
-    <div class="course-grid">
+      <h2>
+        🏆 Tes badges
+      </h2>
 
-      <!-- PREMIER PAS -->
-      <div class="course-card badge-card" id="badge1">
+      <p class="muted">
+        Progresse dans tes cours et débloque des récompenses.
+      </p>
 
-        <div class="course-icon">
-          🥉
-        </div>
-
-        <h3>
-          Premier pas
-        </h3>
-
-        <p class="muted">
-          Termine ta première leçon.
-        </p>
-
-        <strong>
-          🔒 Verrouillé
-        </strong>
-
+      <div id="badgeCounter">
+        🏆 0 badge débloqué
       </div>
 
 
-      <!-- APPRENTI -->
-      <div class="course-card badge-card" id="badge2">
+      <div class="course-grid">
 
-        <div class="course-icon">
-          🥈
+
+        <!-- PREMIER PAS -->
+
+        <div class="course-card badge-card"
+             id="badge1">
+
+          <div class="course-icon">
+            🥉
+          </div>
+
+          <h3>
+            Premier pas
+          </h3>
+
+          <p class="muted">
+            Termine ta première leçon.
+          </p>
+
+          <strong>
+            🔒 Verrouillé
+          </strong>
+
         </div>
 
-        <h3>
-          Apprenti
-        </h3>
-
-        <p class="muted">
-          Termine 4 leçons.
-        </p>
-
-        <strong>
-          🔒 Verrouillé
-        </strong>
-
-      </div>
 
 
-      <!-- EXPERT -->
-      <div class="course-card badge-card" id="badge3">
+        <!-- APPRENTI -->
 
-        <div class="course-icon">
-          🥇
+        <div class="course-card badge-card"
+             id="badge2">
+
+          <div class="course-icon">
+            🥈
+          </div>
+
+          <h3>
+            Apprenti
+          </h3>
+
+          <p class="muted">
+            Termine 4 leçons.
+          </p>
+
+          <strong>
+            🔒 Verrouillé
+          </strong>
+
         </div>
 
-        <h3>
-          Expert
-        </h3>
-
-        <p class="muted">
-          Termine un parcours complet.
-        </p>
-
-        <strong>
-          🔒 Verrouillé
-        </strong>
-
-      </div>
 
 
-      <!-- MAÎTRE TSB -->
-      <div class="course-card badge-card" id="badge4">
+        <!-- EXPERT -->
 
-        <div class="course-icon">
-          👑
+        <div class="course-card badge-card"
+             id="badge3">
+
+          <div class="course-icon">
+            🥇
+          </div>
+
+          <h3>
+            Expert
+          </h3>
+
+          <p class="muted">
+            Termine un parcours complet.
+          </p>
+
+          <strong>
+            🔒 Verrouillé
+          </strong>
+
         </div>
 
-        <h3>
-          Maître TSB
-        </h3>
 
-        <p class="muted">
-          Termine les 4 parcours.
-        </p>
 
-        <strong>
-          🔒 Verrouillé
-        </strong>
+        <!-- MAÎTRE TSB -->
+
+        <div class="course-card badge-card"
+             id="badge4">
+
+          <div class="course-icon">
+            👑
+          </div>
+
+          <h3>
+            Maître TSB
+          </h3>
+
+          <p class="muted">
+            Termine les 4 parcours.
+          </p>
+
+          <strong>
+            🔒 Verrouillé
+          </strong>
+
+        </div>
+
 
       </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
+
 
   <!-- ================= À PROPOS ================= -->
 
@@ -849,7 +896,6 @@ print("Division :", a / b)
         <h2>
           🚀 TSB Tech
         </h2>
-
 
         <p class="muted">
 
@@ -948,6 +994,7 @@ print("Division :", a / b)
 
       updateProgress();
       updateCourseProgress();
+      updateBadges();
 
 
       if (number === 8) {
@@ -1021,7 +1068,9 @@ print("Division :", a / b)
               JSON.parse(data);
 
             if (Array.isArray(array)) {
+
               return array.length;
+
             }
 
           } catch (error) {
@@ -1040,21 +1089,34 @@ print("Division :", a / b)
 
 
 
-    function setCourseProgress(textId, barId, count) {
+    function setCourseProgress(
+      textId,
+      barId,
+      count
+    ) {
 
       if (count > 8) {
+
         count = 8;
+
       }
 
-      document
-        .getElementById(textId)
-        .textContent =
+
+      let text =
+        document.getElementById(textId);
+
+      let bar =
+        document.getElementById(barId);
+
+
+      if (!text || !bar) return;
+
+
+      text.textContent =
         count + " / 8";
 
 
-      document
-        .getElementById(barId)
-        .style.width =
+      bar.style.width =
         (count / 8 * 100) + "%";
 
     }
@@ -1064,12 +1126,12 @@ print("Division :", a / b)
     function updateCourseProgress() {
 
 
-      /* Informatique */
+      /* 💻 INFORMATIQUE */
 
       let info =
         getDoneCount([
-          "tsbInformatiqueDone",
           "tsbComputerDone",
+          "tsbInformatiqueDone",
           "tsbInfoDone"
         ]);
 
@@ -1082,13 +1144,13 @@ print("Division :", a / b)
 
 
 
-      /* HTML & CSS */
+      /* 🌐 HTML & CSS */
 
       let html =
         getDoneCount([
+          "tsbWebDone",
           "tsbHtmlCssDone",
-          "tsbHTMLDone",
-          "tsbWebDone"
+          "tsbHTMLDone"
         ]);
 
 
@@ -1100,7 +1162,7 @@ print("Division :", a / b)
 
 
 
-      /* JavaScript */
+      /* ⚡ JAVASCRIPT */
 
       let javascript =
         getDoneCount([
@@ -1118,7 +1180,7 @@ print("Division :", a / b)
 
 
 
-      /* Python */
+      /* 🐍 PYTHON */
 
       let python =
         getDoneCount([
@@ -1136,122 +1198,225 @@ print("Division :", a / b)
 
 
 
+    /* ================= BADGES ================= */
+
+    function updateBadges() {
+
+      const courses = [
+
+        "tsbComputerDone",
+        "tsbWebDone",
+        "tsbJavaScriptDone",
+        "tsbPythonDone"
+
+      ];
+
+
+      let totalLessons = 0;
+
+      let completedCourses = 0;
+
+
+      courses.forEach(function(key) {
+
+        let data;
+
+        try {
+
+          data =
+            JSON.parse(
+              localStorage.getItem(key) || "[]"
+            );
+
+        } catch (error) {
+
+          data = [];
+
+        }
+
+
+        if (!Array.isArray(data)) {
+
+          data = [];
+
+        }
+
+
+        totalLessons += data.length;
+
+
+        if (data.length >= 8) {
+
+          completedCourses++;
+
+        }
+
+      });
+
+
+
+      /* 🥉 PREMIER PAS */
+
+      if (totalLessons >= 1) {
+
+        unlockBadge(
+          "badge1",
+          "🥉",
+          "Débloqué ✓"
+        );
+
+      }
+
+
+
+      /* 🥈 APPRENTI */
+
+      if (totalLessons >= 4) {
+
+        unlockBadge(
+          "badge2",
+          "🥈",
+          "Débloqué ✓"
+        );
+
+      }
+
+
+
+      /* 🥇 EXPERT */
+
+      if (completedCourses >= 1) {
+
+        unlockBadge(
+          "badge3",
+          "🥇",
+          "Débloqué ✓"
+        );
+
+      }
+
+
+
+      /* 👑 MAÎTRE TSB */
+
+      if (completedCourses >= 4) {
+
+        unlockBadge(
+          "badge4",
+          "👑",
+          "Débloqué ✓"
+        );
+
+      }
+
+
+
+      /* ================= COMPTEUR ================= */
+
+      let badges = 0;
+
+
+      if (totalLessons >= 1) {
+
+        badges++;
+
+      }
+
+
+      if (totalLessons >= 4) {
+
+        badges++;
+
+      }
+
+
+      if (completedCourses >= 1) {
+
+        badges++;
+
+      }
+
+
+      if (completedCourses >= 4) {
+
+        badges++;
+
+      }
+
+
+      let counter =
+        document.getElementById("badgeCounter");
+
+
+      if (counter) {
+
+        counter.textContent =
+          "🏆 " +
+          badges +
+          (badges > 1 ? " badges" : " badge") +
+          " débloqué" +
+          (badges > 1 ? "s" : "");
+
+      }
+
+    }
+
+
+
+    /* ================= DÉBLOQUER UN BADGE ================= */
+
+    function unlockBadge(
+      id,
+      icon,
+      text
+    ) {
+
+      let badge =
+        document.getElementById(id);
+
+
+      if (!badge) return;
+
+
+      badge.classList.add("unlocked");
+
+
+      let status =
+        badge.querySelector("strong");
+
+
+      if (status) {
+
+        status.textContent =
+          text;
+
+      }
+
+
+      let iconElement =
+        badge.querySelector(".course-icon");
+
+
+      if (iconElement) {
+
+        iconElement.textContent =
+          icon;
+
+      }
+
+    }
+
+
+
     /* ================= DÉMARRAGE ================= */
 
     updateProgress();
 
     updateCourseProgress();
-updateBadges();
-function updateBadges() {
 
-  const courses = [
-    "tsbComputerDone",
-    "tsbWebDone",
-    "tsbJavaScriptDone",
-    "tsbPythonDone"
-  ];
-
-  let totalLessons = 0;
-  let completedCourses = 0;
-
-  courses.forEach(function(key) {
-
-    let data =
-      JSON.parse(
-        localStorage.getItem(key) || "[]"
-      );
-
-    totalLessons += data.length;
-
-    if (data.length >= 8) {
-      completedCourses++;
-    }
-
-  });
+    updateBadges();
 
 
-  /* 🥉 PREMIER PAS */
-
-  if (totalLessons >= 1) {
-
-    unlockBadge(
-      "badge1",
-      "🥉",
-      "Débloqué ✓"
-    );
-
-  }
-
-
-  /* 🥈 APPRENTI */
-
-  if (totalLessons >= 4) {
-
-    unlockBadge(
-      "badge2",
-      "🥈",
-      "Débloqué ✓"
-    );
-
-  }
-
-
-  /* 🥇 EXPERT */
-
-  if (completedCourses >= 1) {
-
-    unlockBadge(
-      "badge3",
-      "🥇",
-      "Débloqué ✓"
-    );
-
-  }
-
-
-  /* 👑 MAÎTRE TSB */
-
-  if (completedCourses >= 4) {
-
-    unlockBadge(
-      "badge4",
-      "👑",
-      "Débloqué ✓"
-    );
-
-  }
-
-}
-
-
-function unlockBadge(id, icon, text) {
-
-  let badge =
-    document.getElementById(id);
-badge.classList.add("unlocked");
-  if (!badge) return;
-
-  let status =
-    badge.querySelector("strong");
-
-  if (status) {
-
-    status.textContent =
-      text;
-
-  }
-
-  let iconElement =
-    badge.querySelector(".course-icon");
-
-  if (iconElement) {
-
-    iconElement.textContent =
-      icon;
-
-  }
-
-}
   </script>
 
 
