@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+.<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -1116,8 +1116,117 @@ print("Division :", a / b)
     updateProgress();
 
     updateCourseProgress();
+updateBadges();
+function updateBadges() {
+
+  const courses = [
+    "tsbComputerDone",
+    "tsbWebDone",
+    "tsbJavaScriptDone",
+    "tsbPythonDone"
+  ];
+
+  let totalLessons = 0;
+  let completedCourses = 0;
+
+  courses.forEach(function(key) {
+
+    let data =
+      JSON.parse(
+        localStorage.getItem(key) || "[]"
+      );
+
+    totalLessons += data.length;
+
+    if (data.length >= 8) {
+      completedCourses++;
+    }
+
+  });
 
 
+  /* 🥉 PREMIER PAS */
+
+  if (totalLessons >= 1) {
+
+    unlockBadge(
+      "badge1",
+      "🥉",
+      "Débloqué ✓"
+    );
+
+  }
+
+
+  /* 🥈 APPRENTI */
+
+  if (totalLessons >= 4) {
+
+    unlockBadge(
+      "badge2",
+      "🥈",
+      "Débloqué ✓"
+    );
+
+  }
+
+
+  /* 🥇 EXPERT */
+
+  if (completedCourses >= 1) {
+
+    unlockBadge(
+      "badge3",
+      "🥇",
+      "Débloqué ✓"
+    );
+
+  }
+
+
+  /* 👑 MAÎTRE TSB */
+
+  if (completedCourses >= 4) {
+
+    unlockBadge(
+      "badge4",
+      "👑",
+      "Débloqué ✓"
+    );
+
+  }
+
+}
+
+
+function unlockBadge(id, icon, text) {
+
+  let badge =
+    document.getElementById(id);
+
+  if (!badge) return;
+
+  let status =
+    badge.querySelector("strong");
+
+  if (status) {
+
+    status.textContent =
+      text;
+
+  }
+
+  let iconElement =
+    badge.querySelector(".course-icon");
+
+  if (iconElement) {
+
+    iconElement.textContent =
+      icon;
+
+  }
+
+}
   </script>
 
 
