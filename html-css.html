@@ -1,24 +1,1021 @@
-<!-- INFORMATIQUE -->
-<a href="informatique.html" class="course-btn">
-  Commencer le cours →
-</a>
+<!DOCTYPE html>
+<html lang="fr">
 
-<!-- HTML -->
-<a href="html-css.html" class="course-btn">
-  Commencer le cours →
-</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- CSS -->
-<a href="html-css.html" class="course-btn">
-  Commencer le cours →
-</a>
+  <title>TAPHZI STACK — HTML & CSS</title>
 
-<!-- JAVASCRIPT -->
-<a href="javascript.html" class="course-btn">
-  Commencer le cours →
-</a>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-<!-- PYTHON -->
-<a href="python.html" class="course-btn">
-  Commencer le cours →
-</a>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+
+    <div class="logo">
+      <span>TAPHZI</span> STACK
+    </div>
+
+    <a href="index.html" class="btn">
+      ← Accueil
+    </a>
+
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <span class="badge">
+        TAPHZI STACK · DÉVELOPPEMENT WEB
+      </span>
+
+      <h1>
+        🌐 HTML <span class="blue">&</span> CSS
+      </h1>
+
+      <p>
+        Apprends à créer des pages web modernes,
+        étape par étape, même si tu débutes.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= COURS ================= -->
+
+  <main class="main">
+
+
+    <!-- ================= MENU DES LEÇONS ================= -->
+
+    <aside class="sidebar">
+
+      <h3>
+        🌐 HTML & CSS
+      </h3>
+
+
+      <div
+        class="lesson-link active"
+        onclick="showLesson(1,this)">
+
+        1. Introduction
+
+      </div>
+
+
+      <div
+        class="lesson-link"
+        onclick="showLesson(2,this)">
+
+        2. Structure HTML
+
+      </div>
+
+
+      <div
+        class="lesson-link"
+        onclick="showLesson(3,this)">
+
+        3. Les titres et textes
+
+      </div>
+
+
+      <div
+        class="lesson-link"
+        onclick="showLesson(4,this)">
+
+        4. Les liens et images
+
+      </div>
+
+
+      <div
+        class="lesson-link"
+        onclick="showLesson(5,this)">
+
+        5. Introduction au CSS
+
+      </div>
+
+
+      <div
+        class="lesson-link"
+        onclick="showLesson(6,this)">
+
+        6. Couleurs et tailles
+
+      </div>
+
+
+      <div
+        class="lesson-link"
+        onclick="showLesson(7,this)">
+
+        7. Créer un bouton
+
+      </div>
+
+
+      <div
+        class="lesson-link"
+        onclick="showLesson(8,this)">
+
+        8. Mini-projet
+
+      </div>
+
+    </aside>
+
+
+    <!-- ================= CONTENU ================= -->
+
+    <section>
+
+
+      <!-- ================= PROGRESSION ================= -->
+
+      <div class="progress">
+
+        <b>
+          📊 Ta progression HTML & CSS
+        </b>
+
+        <span
+          id="progressText"
+          style="float:right">
+
+          0 / 8 leçons
+
+        </span>
+
+
+        <div class="bar">
+
+          <div
+            class="fill"
+            id="fill">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= LEÇON 1 ================= -->
+
+      <article
+        class="lesson active"
+        id="lesson1">
+
+        <h2>
+          1. 🌐 Introduction au développement web
+        </h2>
+
+        <p class="muted">
+
+          Un site web utilise généralement plusieurs
+          technologies pour fonctionner.
+
+        </p>
+
+
+        <h3>
+          🌐 Les trois principales technologies
+        </h3>
+
+
+        <p>
+
+          🧱 <b>HTML</b> → structure de la page
+
+          <br><br>
+
+          🎨 <b>CSS</b> → apparence et design
+
+          <br><br>
+
+          ⚡ <b>JavaScript</b> → interactions
+
+        </p>
+
+
+        <h3>
+          💻 Exemple HTML
+        </h3>
+
+
+        <pre>
+&lt;h1&gt;Bienvenue sur TAPHZI STACK&lt;/h1&gt;
+
+&lt;p&gt;Mon premier site web.&lt;/p&gt;
+        </pre>
+
+
+        <h3>
+          🎯 À retenir
+        </h3>
+
+
+        <p class="muted">
+
+          HTML construit la structure de la page.
+          CSS permet de la rendre belle.
+          JavaScript permet d'ajouter des interactions.
+
+        </p>
+
+
+        <button
+          class="btn"
+          onclick="complete(1)">
+
+          ✓ Leçon terminée
+
+        </button>
+
+      </article>
+
+
+
+      <!-- ================= LEÇON 2 ================= -->
+
+      <article
+        class="lesson"
+        id="lesson2">
+
+        <h2>
+          2. 🏗️ La structure HTML
+        </h2>
+
+
+        <p class="muted">
+
+          Une page HTML possède une structure
+          de base.
+
+        </p>
+
+
+        <pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="fr"&gt;
+
+&lt;head&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+
+    &lt;title&gt;Ma page&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Bonjour !&lt;/h1&gt;
+
+    &lt;p&gt;Bienvenue sur mon site.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+        </pre>
+
+
+        <h3>
+          🧠 Comprendre
+        </h3>
+
+
+        <p class="muted">
+
+          <b>&lt;html&gt;</b> contient toute la page.
+
+          <br><br>
+
+          <b>&lt;head&gt;</b> contient les informations
+          de la page.
+
+          <br><br>
+
+          <b>&lt;body&gt;</b> contient ce qui est visible
+          sur la page.
+
+        </p>
+
+
+        <button
+          class="btn"
+          onclick="complete(2)">
+
+          ✓ Leçon terminée
+
+        </button>
+
+      </article>
+
+
+
+      <!-- ================= LEÇON 3 ================= -->
+
+      <article
+        class="lesson"
+        id="lesson3">
+
+        <h2>
+          3. 📝 Les titres et les textes
+        </h2>
+
+
+        <p class="muted">
+
+          HTML possède plusieurs niveaux de titres
+          et permet d'écrire des paragraphes.
+
+        </p>
+
+
+        <pre>
+&lt;h1&gt;Grand titre&lt;/h1&gt;
+
+&lt;h2&gt;Sous-titre&lt;/h2&gt;
+
+&lt;h3&gt;Petit titre&lt;/h3&gt;
+
+&lt;p&gt;
+Voici un paragraphe.
+&lt;/p&gt;
+        </pre>
+
+
+        <h3>
+          🎯 Exemple
+        </h3>
+
+
+        <p>
+
+          Le titre principal utilise généralement
+          <b>&lt;h1&gt;</b>.
+
+          <br><br>
+
+          Les titres secondaires peuvent utiliser
+          <b>&lt;h2&gt;</b> ou <b>&lt;h3&gt;</b>.
+
+        </p>
+
+
+        <button
+          class="btn"
+          onclick="complete(3)">
+
+          ✓ Leçon terminée
+
+        </button>
+
+      </article>
+
+
+
+      <!-- ================= LEÇON 4 ================= -->
+
+      <article
+        class="lesson"
+        id="lesson4">
+
+        <h2>
+          4. 🔗 Les liens et les images
+        </h2>
+
+
+        <p class="muted">
+
+          HTML permet d'ajouter des liens
+          et des images.
+
+        </p>
+
+
+        <h3>
+          🔗 Créer un lien
+        </h3>
+
+
+        <pre>
+&lt;a href="https://example.com"&gt;
+
+    Visiter le site
+
+&lt;/a&gt;
+        </pre>
+
+
+        <h3>
+          🖼️ Ajouter une image
+        </h3>
+
+
+        <pre>
+&lt;img
+  src="image.jpg"
+  alt="Mon image"
+&gt;
+        </pre>
+
+
+        <h3>
+          💡 À retenir
+        </h3>
+
+
+        <p class="muted">
+
+          L'attribut <b>href</b> indique la destination
+          d'un lien.
+
+          <br><br>
+
+          L'attribut <b>src</b> indique l'emplacement
+          d'une image.
+
+          <br><br>
+
+          L'attribut <b>alt</b> décrit l'image.
+
+        </p>
+
+
+        <button
+          class="btn"
+          onclick="complete(4)">
+
+          ✓ Leçon terminée
+
+        </button>
+
+      </article>
+
+
+
+      <!-- ================= LEÇON 5 ================= -->
+
+      <article
+        class="lesson"
+        id="lesson5">
+
+        <h2>
+          5. 🎨 Introduction au CSS
+        </h2>
+
+
+        <p class="muted">
+
+          CSS permet de modifier l'apparence
+          des éléments HTML.
+
+        </p>
+
+
+        <h3>
+          🎨 Exemple
+        </h3>
+
+
+        <pre>
+h1 {
+
+    color: blue;
+
+}
+        </pre>
+
+
+        <p>
+
+          Ici, la couleur du titre devient bleue.
+
+        </p>
+
+
+        <h3>
+          🧠 CSS signifie
+        </h3>
+
+
+        <p class="muted">
+
+          <b>Cascading Style Sheets</b>,
+          c'est-à-dire feuilles de style en cascade.
+
+        </p>
+
+
+        <h3>
+          💻 Exemple HTML + CSS
+        </h3>
+
+
+        <pre>
+&lt;h1 class="titre"&gt;
+    Bienvenue
+&lt;/h1&gt;
+
+
+.titre {
+
+    color: blue;
+
+}
+        </pre>
+
+
+        <button
+          class="btn"
+          onclick="complete(5)">
+
+          ✓ Leçon terminée
+
+        </button>
+
+      </article>
+
+
+
+      <!-- ================= LEÇON 6 ================= -->
+
+      <article
+        class="lesson"
+        id="lesson6">
+
+        <h2>
+          6. 🎨 Couleurs et tailles
+        </h2>
+
+
+        <p class="muted">
+
+          CSS permet de modifier les couleurs,
+          les tailles et l'apparence du texte.
+
+        </p>
+
+
+        <pre>
+h1 {
+
+    color: blue;
+
+    font-size: 40px;
+
+}
+
+
+p {
+
+    color: gray;
+
+}
+        </pre>
+
+
+        <h3>
+          📌 Les propriétés
+        </h3>
+
+
+        <p class="muted">
+
+          <b>color</b> change la couleur.
+
+          <br><br>
+
+          <b>font-size</b> change la taille du texte.
+
+          <br><br>
+
+          <b>background-color</b> change la couleur
+          de l'arrière-plan.
+
+        </p>
+
+
+        <h3>
+          💻 Exemple
+        </h3>
+
+
+        <pre>
+body {
+
+    background-color: black;
+
+}
+
+
+h1 {
+
+    color: white;
+
+    font-size: 40px;
+
+}
+        </pre>
+
+
+        <button
+          class="btn"
+          onclick="complete(6)">
+
+          ✓ Leçon terminée
+
+        </button>
+
+      </article>
+
+
+
+      <!-- ================= LEÇON 7 ================= -->
+
+      <article
+        class="lesson"
+        id="lesson7">
+
+        <h2>
+          7. 🔘 Créer un bouton
+        </h2>
+
+
+        <p class="muted">
+
+          HTML permet de créer un bouton avec
+          l'élément <b>&lt;button&gt;</b>.
+
+        </p>
+
+
+        <pre>
+&lt;button&gt;
+
+    Commencer
+
+&lt;/button&gt;
+        </pre>
+
+
+        <h3>
+          🎨 Ajouter du CSS
+        </h3>
+
+
+        <pre>
+button {
+
+    background: blue;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+}
+        </pre>
+
+
+        <p class="muted">
+
+          Avec CSS, tu peux modifier l'apparence
+          du bouton.
+
+        </p>
+
+
+        <h3>
+          🧪 Exemple
+        </h3>
+
+
+        <button
+          class="btn"
+          onclick="demoButton()">
+
+          👆 Tester le bouton
+
+        </button>
+
+
+        <br><br>
+
+
+        <button
+          class="btn"
+          onclick="complete(7)">
+
+          ✓ Leçon terminée
+
+        </button>
+
+      </article>
+
+
+
+      <!-- ================= LEÇON 8 ================= -->
+
+      <article
+        class="lesson"
+        id="lesson8">
+
+        <h2>
+          8. 🏆 Mini-projet
+        </h2>
+
+
+        <p class="muted">
+
+          Tu vas créer ta première petite page web.
+
+        </p>
+
+
+        <h3>
+          💻 Code de départ
+        </h3>
+
+
+        <pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="fr"&gt;
+
+&lt;head&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+
+    &lt;title&gt;Mon site&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Mon site&lt;/h1&gt;
+
+    &lt;p&gt;
+        Bienvenue sur mon site !
+    &lt;/p&gt;
+
+    &lt;button&gt;
+        Commencer
+    &lt;/button&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+        </pre>
+
+
+        <h3>
+          🎯 Mission
+        </h3>
+
+
+        <p class="muted">
+
+          Personnalise la page avec :
+
+          <br><br>
+
+          • ton propre titre
+
+          <br>
+
+          • un paragraphe
+
+          <br>
+
+          • un bouton
+
+          <br>
+
+          • tes propres couleurs
+
+          <br>
+
+          • une image
+
+        </p>
+
+
+        <h3>
+          🚀 Objectif
+        </h3>
+
+
+        <p>
+
+          À la fin du projet, tu dois être capable
+          de créer une petite page web avec HTML
+          et de la personnaliser avec CSS.
+
+        </p>
+
+
+        <button
+          class="btn"
+          onclick="complete(8)">
+
+          🏆 Terminer le parcours
+
+        </button>
+
+      </article>
+
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    © 2026 TAPHZI STACK —
+    Apprentissage informatique
+
+  </footer>
+
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* ================= PROGRESSION ================= */
+
+    let done = JSON.parse(
+      localStorage.getItem("taphziStackWebDone") || "[]"
+    );
+
+
+    /* ================= AFFICHER UNE LEÇON ================= */
+
+    function showLesson(number, element) {
+
+      document
+        .querySelectorAll(".lesson")
+        .forEach(function(lesson) {
+
+          lesson.classList.remove("active");
+
+        });
+
+
+      const selectedLesson =
+        document.getElementById(
+          "lesson" + number
+        );
+
+
+      if (selectedLesson) {
+
+        selectedLesson.classList.add("active");
+
+      }
+
+
+      document
+        .querySelectorAll(".lesson-link")
+        .forEach(function(link) {
+
+          link.classList.remove("active");
+
+        });
+
+
+      if (element) {
+
+        element.classList.add("active");
+
+      }
+
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+      });
+
+    }
+
+
+
+    /* ================= TERMINER UNE LEÇON ================= */
+
+    function complete(number) {
+
+      if (!done.includes(number)) {
+
+        done.push(number);
+
+        localStorage.setItem(
+          "taphziStackWebDone",
+          JSON.stringify(done)
+        );
+
+      }
+
+
+      updateProgress();
+
+
+      if (number === 8) {
+
+        alert(
+          "🎉 Félicitations ! Tu as terminé le parcours HTML & CSS !"
+        );
+
+      } else {
+
+        alert(
+          "✓ Leçon terminée !"
+        );
+
+      }
+
+    }
+
+
+
+    /* ================= PROGRESSION ================= */
+
+    function updateProgress() {
+
+      const progressText =
+        document.getElementById(
+          "progressText"
+        );
+
+
+      const fill =
+        document.getElementById(
+          "fill"
+        );
+
+
+      if (progressText) {
+
+        progressText.textContent =
+          done.length + " / 8 leçons";
+
+      }
+
+
+      if (fill) {
+
+        fill.style.width =
+          (done.length / 8 * 100) + "%";
+
+      }
+
+    }
+
+
+
+    /* ================= BOUTON DE DÉMONSTRATION ================= */
+
+    function demoButton() {
+
+      alert(
+        "🎨 Bravo ! Tu viens de tester un bouton HTML."
+      );
+
+    }
+
+
+
+    /* ================= INITIALISATION ================= */
+
+    updateProgress();
+
+  </script>
+
+</body>
+
+</html>
