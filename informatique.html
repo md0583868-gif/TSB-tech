@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TSB Tech — Bases de l'informatique</title>
+  <title>TAPHZI STACK — Bases de l'informatique</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +16,7 @@
   <nav>
 
     <div class="logo">
-      <span>TSB</span> Tech
+      <span>TAPHZI</span> STACK
     </div>
 
     <a href="index.html" class="btn">
@@ -32,7 +32,7 @@
     <div class="container">
 
       <span class="badge">
-        TSB TECH · INFORMATIQUE
+        TAPHZI STACK · INFORMATIQUE
       </span>
 
       <h1>
@@ -565,7 +565,7 @@
   <!-- FOOTER -->
   <footer>
 
-    © 2026 TSB Tech —
+    © 2026 TAPHZI STACK —
     Apprentissage informatique
 
   </footer>
@@ -652,60 +652,60 @@
     }
 
 
-   function updateCourseProgress() {
+    function updateCourseProgress() {
 
-  /* 💻 Bases de l'informatique */
-  let info =
-    getDoneCount([
-      "tsbComputerDone"
-    ]);
+      /* 💻 Bases de l'informatique */
+      let info =
+        getDoneCount([
+          "tsbComputerDone"
+        ]);
 
-  setCourseProgress(
-    "infoProgressText",
-    "infoProgressBar",
-    info
-  );
-
-
-  /* 🌐 HTML & CSS */
-  let html =
-    getDoneCount([
-      "tsbWebDone"
-    ]);
-
-  setCourseProgress(
-    "htmlProgressText",
-    "htmlProgressBar",
-    html
-  );
+      setCourseProgress(
+        "infoProgressText",
+        "infoProgressBar",
+        info
+      );
 
 
-  /* ⚡ JavaScript */
-  let javascript =
-    getDoneCount([
-      "tsbJavaScriptDone"
-    ]);
+      /* 🌐 HTML & CSS */
+      let html =
+        getDoneCount([
+          "tsbWebDone"
+        ]);
 
-  setCourseProgress(
-    "jsProgressText",
-    "jsProgressBar",
-    javascript
-  );
+      setCourseProgress(
+        "htmlProgressText",
+        "htmlProgressBar",
+        html
+      );
 
 
-  /* 🐍 Python */
-  let python =
-    getDoneCount([
-      "tsbPythonDone"
-    ]);
+      /* ⚡ JavaScript */
+      let javascript =
+        getDoneCount([
+          "tsbJavaScriptDone"
+        ]);
 
-  setCourseProgress(
-    "pythonProgressText",
-    "pythonProgressBar",
-    python
-  );
+      setCourseProgress(
+        "jsProgressText",
+        "jsProgressBar",
+        javascript
+      );
 
-}
+
+      /* 🐍 Python */
+      let python =
+        getDoneCount([
+          "tsbPythonDone"
+        ]);
+
+      setCourseProgress(
+        "pythonProgressText",
+        "pythonProgressBar",
+        python
+      );
+
+    }
 
 
     function answer(button, correct, message) {
