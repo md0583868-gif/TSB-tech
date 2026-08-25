@@ -12,935 +12,885 @@
 
 <body>
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+  <!-- ================= HEADER ================= -->
 
-<nav>
+  <header class="header">
 
-  <div class="logo">
-    <span>TAPHZI</span> STACK
-  </div>
-
-  <a href="index.html" class="btn">
-    ← Accueil
-  </a>
-
-</nav>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<header class="hero">
-
-  <div class="container">
-
-    <span class="badge">
-      TAPHZI STACK · PROGRAMMATION
-    </span>
-
-    <h1>
-      ⚡ <span class="blue">JavaScript</span>
-    </h1>
-
-    <p>
-      Apprends à rendre tes pages web
-      interactives et dynamiques.
-    </p>
-
-  </div>
-
-</header>
-
-
-<!-- =====================================================
-     COURS
-===================================================== -->
-
-<main class="main">
-
-
-  <!-- ===================================================
-       MENU DES LEÇONS
-  ==================================================== -->
-
-  <aside class="sidebar">
-
-    <h3>
-      ⚡ JavaScript
-    </h3>
-
-    <div class="lesson-link active"
-         onclick="showLesson(1, this)">
-      1. Introduction
+    <div class="logo">
+      <span>TAPHZI</span> STACK
     </div>
 
-    <div class="lesson-link"
-         onclick="showLesson(2, this)">
-      2. Variables
+    <nav class="navbar">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="index.html#cours">
+        Cours
+      </a>
+
+      <a href="index.html#apropos">
+        À propos
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <p class="hero-small">
+        TAPHZI STACK · PROGRAMMATION
+      </p>
+
+      <h1>
+        Java<span>Script.</span>
+      </h1>
+
+      <p>
+        Apprends à programmer des interactions
+        et à rendre tes pages web dynamiques.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="#cours-javascript"
+          class="btn btn-primary">
+          ⚡ Commencer le cours
+        </a>
+
+        <a
+          href="index.html"
+          class="btn btn-secondary">
+          ← Retour
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="lesson-link"
-         onclick="showLesson(3, this)">
-      3. Types et opérateurs
-    </div>
-
-    <div class="lesson-link"
-         onclick="showLesson(4, this)">
-      4. Conditions
-    </div>
-
-    <div class="lesson-link"
-         onclick="showLesson(5, this)">
-      5. Boucles
-    </div>
-
-    <div class="lesson-link"
-         onclick="showLesson(6, this)">
-      6. Fonctions
-    </div>
-
-    <div class="lesson-link"
-         onclick="showLesson(7, this)">
-      7. Interactions
-    </div>
-
-    <div class="lesson-link"
-         onclick="showLesson(8, this)">
-      8. Mini-projet
-    </div>
-
-  </aside>
+  </section>
 
 
-  <!-- ===================================================
-       CONTENU
-  ==================================================== -->
+  <!-- ================= COURS ================= -->
 
-  <section>
+  <main
+    id="cours-javascript"
+    class="python-course">
+
+    <div class="python-container">
 
 
-    <!-- =================================================
-         PROGRESSION
-    ================================================== -->
+      <!-- ================= TITRE ================= -->
 
-    <div class="progress">
+      <div class="python-header">
 
-      <b>📊 Ta progression JavaScript</b>
+        <p class="hero-small">
+          PARCOURS DÉBUTANT
+        </p>
 
-      <span id="progressText" style="float:right">
-        0 / 8 leçons
-      </span>
+        <h2>
+          ⚡ JavaScript
+        </h2>
 
-      <div class="bar">
+        <p>
+          Découvre les bases de JavaScript et apprends
+          à créer des pages web interactives.
+        </p>
 
-        <div
-          class="fill"
-          id="fill">
+      </div>
+
+
+      <!-- ================= PROGRESSION ================= -->
+
+      <div class="progress">
+
+        <b>
+          📊 Ta progression JavaScript
+        </b>
+
+        <span
+          id="progressText"
+          style="float:right;">
+          0 / 10 leçons
+        </span>
+
+        <div class="bar">
+
+          <div
+            class="fill"
+            id="fill">
+          </div>
+
         </div>
 
       </div>
 
-    </div>
+
+      <!-- ================= LAYOUT ================= -->
+
+      <div class="python-layout">
 
 
-    <!-- =================================================
-         LEÇON 1
-    ================================================== -->
+        <!-- ================= MENU ================= -->
 
-    <article class="lesson active" id="lesson1">
+        <aside class="python-sidebar">
 
-      <h2>
-        1. ⚡ Introduction à JavaScript
-      </h2>
+          <h3>
+            ⚡ Leçons
+          </h3>
 
-      <p class="muted">
-        JavaScript est un langage de programmation
-        très utilisé dans le développement web.
-      </p>
+          <button
+            class="python-link active"
+            onclick="showLesson(1,this)">
+            1. Introduction
+          </button>
 
-      <p>
-        Il permet notamment de rendre une page
-        interactive et de réagir aux actions
-        de l'utilisateur.
-      </p>
+          <button
+            class="python-link"
+            onclick="showLesson(2,this)">
+            2. Variables
+          </button>
 
-      <h3>
-        💻 Premier exemple
-      </h3>
+          <button
+            class="python-link"
+            onclick="showLesson(3,this)">
+            3. Types de données
+          </button>
 
-      <pre><code>alert("Bienvenue sur TAPHZI STACK !");</code></pre>
+          <button
+            class="python-link"
+            onclick="showLesson(4,this)">
+            4. Conditions
+          </button>
 
-      <p class="muted">
-        La fonction <b>alert()</b> affiche une boîte
-        de dialogue dans le navigateur.
-      </p>
+          <button
+            class="python-link"
+            onclick="showLesson(5,this)">
+            5. Boucles
+          </button>
 
-      <h3>
-        🧩 Exercice
-      </h3>
+          <button
+            class="python-link"
+            onclick="showLesson(6,this)">
+            6. Fonctions
+          </button>
 
-      <p>
-        Quelle instruction permet d'afficher
-        un message ?
-      </p>
+          <button
+            class="python-link"
+            onclick="showLesson(7,this)">
+            7. Tableaux
+          </button>
 
-      <div class="quiz">
+          <button
+            class="python-link"
+            onclick="showLesson(8,this)">
+            8. Objets
+          </button>
 
-        <button onclick="answer(this, true, 'Bravo ! alert() affiche un message.')">
-          A. alert("Bonjour")
-        </button>
+          <button
+            class="python-link"
+            onclick="showLesson(9,this)">
+            9. DOM et événements
+          </button>
 
-        <button onclick="answer(this, false, 'Essaie encore.')">
-          B. message("Bonjour")
-        </button>
+          <button
+            class="python-link"
+            onclick="showLesson(10,this)">
+            10. 🏆 Mini-projet
+          </button>
 
-        <button onclick="answer(this, false, 'Essaie encore.')">
-          C. popup("Bonjour")
-        </button>
-
-      </div>
-
-      <div class="result"></div>
-
-      <br>
-
-      <button class="btn" onclick="complete(1)">
-        ✓ Leçon terminée
-      </button>
-
-    </article>
+        </aside>
 
 
-    <!-- =================================================
-         LEÇON 2
-    ================================================== -->
+        <!-- ================= CONTENU ================= -->
 
-    <article class="lesson" id="lesson2">
+        <section class="python-content">
 
-      <h2>
-        2. 📦 Les variables
-      </h2>
 
-      <p class="muted">
-        Une variable permet de stocker une information
-        que ton programme peut utiliser.
-      </p>
+          <!-- ================= LEÇON 1 ================= -->
 
-      <h3>
-        💻 Exemple
-      </h3>
+          <article
+            class="python-lesson active"
+            id="lesson1">
 
-      <pre><code>let nom = "TAPHZI STACK";
+            <h2>
+              1. ⚡ Introduction à JavaScript
+            </h2>
+
+            <p>
+              JavaScript est un langage de programmation
+              principalement utilisé pour rendre les pages
+              web interactives.
+            </p>
+
+            <h3>
+              🌐 HTML + CSS + JavaScript
+            </h3>
+
+            <pre>
+HTML
+→ Structure
+
+CSS
+→ Design
+
+JavaScript
+→ Interaction
+            </pre>
+
+            <h3>
+              💻 Premier code
+            </h3>
+
+            <pre>
+console.log("Bonjour TAPHZI STACK !");
+            </pre>
+
+            <p>
+              <b>console.log()</b> permet d'afficher
+              une information dans la console.
+            </p>
+
+            <button
+              class="btn btn-primary"
+              onclick="complete(1)">
+              ✓ Leçon terminée
+            </button>
+
+          </article>
+
+
+          <!-- ================= LEÇON 2 ================= -->
+
+          <article
+            class="python-lesson"
+            id="lesson2">
+
+            <h2>
+              2. 📦 Les variables
+            </h2>
+
+            <p>
+              Une variable permet de stocker une valeur
+              afin de pouvoir l'utiliser dans un programme.
+            </p>
+
+            <pre>
+let nom = "Moussa";
 
 let age = 20;
+
+const pays = "Sénégal";
 
 console.log(nom);
+            </pre>
 
-console.log(age);</code></pre>
+            <h3>
+              🧠 À retenir
+            </h3>
 
-      <h3>
-        🧠 Les mots-clés
-      </h3>
+            <ul>
+              <li><b>let</b> → variable pouvant changer</li>
+              <li><b>const</b> → valeur constante</li>
+            </ul>
 
-      <p>
-        <b>let</b> permet de créer une variable
-        dont la valeur peut être modifiée.
-      </p>
+            <button
+              class="btn btn-primary"
+              onclick="complete(2)">
+              ✓ Leçon terminée
+            </button>
 
-      <p>
-        <b>const</b> permet de déclarer une valeur
-        qui ne doit pas être réassignée.
-      </p>
-
-      <h3>
-        🎯 Défi
-      </h3>
-
-      <p>
-        Crée une variable appelée
-        <b>prenom</b>.
-      </p>
-
-      <pre><code>let prenom = "Ton prénom";</code></pre>
-
-      <button class="btn" onclick="complete(2)">
-        ✓ Leçon terminée
-      </button>
-
-    </article>
+          </article>
 
 
-    <!-- =================================================
-         LEÇON 3
-    ================================================== -->
+          <!-- ================= LEÇON 3 ================= -->
 
-    <article class="lesson" id="lesson3">
+          <article
+            class="python-lesson"
+            id="lesson3">
 
-      <h2>
-        3. 🔢 Types de données et opérateurs
-      </h2>
+            <h2>
+              3. 🔤 Les types de données
+            </h2>
 
-      <p class="muted">
-        JavaScript peut manipuler différents types
-        de données.
-      </p>
+            <p>
+              JavaScript possède plusieurs types
+              de données.
+            </p>
 
-      <h3>
-        📦 Exemples
-      </h3>
-
-      <pre><code>let nom = "Awa";
+            <pre>
+let nom = "Ali";
 
 let age = 20;
 
-let prix = 10.5;
+let prix = 15.5;
 
-let connecte = true;</code></pre>
+let actif = true;
+            </pre>
 
-      <h3>
-        🧠 Quelques types
-      </h3>
+            <h3>
+              📌 Principaux types
+            </h3>
 
-      <p>
-        <b>String</b> → texte
-      </p>
+            <ul>
+              <li>String → texte</li>
+              <li>Number → nombre</li>
+              <li>Boolean → vrai ou faux</li>
+              <li>Array → liste</li>
+              <li>Object → objet</li>
+            </ul>
 
-      <p>
-        <b>Number</b> → nombre
-      </p>
+            <button
+              class="btn btn-primary"
+              onclick="complete(3)">
+              ✓ Leçon terminée
+            </button>
 
-      <p>
-        <b>Boolean</b> → vrai ou faux
-      </p>
-
-      <h3>
-        ➕ Les opérateurs
-      </h3>
-
-      <pre><code>let a = 10;
-
-let b = 5;
-
-console.log(a + b);
-
-console.log(a - b);
-
-console.log(a * b);
-
-console.log(a / b);</code></pre>
-
-      <h3>
-        🧩 Exercice
-      </h3>
-
-      <p>
-        Quel opérateur permet de multiplier deux nombres ?
-      </p>
-
-      <div class="quiz">
-
-        <button onclick="answer(this, false, 'Essaie encore.')">
-          A. +
-        </button>
-
-        <button onclick="answer(this, false, 'Essaie encore.')">
-          B. -
-        </button>
-
-        <button onclick="answer(this, true, 'Bravo ! * permet de multiplier.')">
-          C. *
-        </button>
-
-      </div>
-
-      <div class="result"></div>
-
-      <br>
-
-      <button class="btn" onclick="complete(3)">
-        ✓ Leçon terminée
-      </button>
-
-    </article>
+          </article>
 
 
-    <!-- =================================================
-         LEÇON 4
-    ================================================== -->
+          <!-- ================= LEÇON 4 ================= -->
 
-    <article class="lesson" id="lesson4">
+          <article
+            class="python-lesson"
+            id="lesson4">
 
-      <h2>
-        4. 🔀 Les conditions
-      </h2>
+            <h2>
+              4. 🔀 Les conditions
+            </h2>
 
-      <p class="muted">
-        Une condition permet à un programme
-        de prendre une décision.
-      </p>
+            <p>
+              Les conditions permettent à un programme
+              de prendre des décisions.
+            </p>
 
-      <h3>
-        💻 Exemple
-      </h3>
-
-      <pre><code>let age = 18;
+            <pre>
+let age = 20;
 
 if (age >= 18) {
 
-    console.log("Majeur");
+  console.log("Majeur");
 
 } else {
 
-    console.log("Mineur");
-
-}</code></pre>
-
-      <h3>
-        🧠 Comprendre
-      </h3>
-
-      <p>
-        Si la condition après <b>if</b> est vraie,
-        le premier bloc est exécuté.
-      </p>
-
-      <p>
-        Sinon, le bloc <b>else</b> est exécuté.
-      </p>
-
-      <h3>
-        🎯 Exemple
-      </h3>
-
-      <pre><code>let note = 15;
-
-if (note >= 10) {
-
-    console.log("Réussi");
-
-} else {
-
-    console.log("À revoir");
-
-}</code></pre>
-
-      <button class="btn" onclick="complete(4)">
-        ✓ Leçon terminée
-      </button>
-
-    </article>
-
-
-    <!-- =================================================
-         LEÇON 5
-    ================================================== -->
-
-    <article class="lesson" id="lesson5">
-
-      <h2>
-        5. 🔁 Les boucles
-      </h2>
-
-      <p class="muted">
-        Une boucle permet de répéter une instruction
-        plusieurs fois.
-      </p>
-
-      <h3>
-        💻 Exemple avec for
-      </h3>
-
-      <pre><code>for (let i = 0; i < 5; i++) {
-
-    console.log(i);
-
-}</code></pre>
-
-      <p class="muted">
-        Cette boucle affiche les nombres
-        de 0 à 4.
-      </p>
-
-      <h3>
-        🔁 Pourquoi utiliser une boucle ?
-      </h3>
-
-      <p>
-        Une boucle évite d'écrire plusieurs fois
-        la même instruction.
-      </p>
-
-      <h3>
-        🧩 Petit exercice
-      </h3>
-
-      <p>
-        Combien de fois cette boucle s'exécute-t-elle ?
-      </p>
-
-      <pre><code>for (let i = 0; i < 3; i++) {
-
-    console.log(i);
-
-}</code></pre>
-
-      <div class="quiz">
-
-        <button onclick="answer(this, false, 'Essaie encore.')">
-          A. 2 fois
-        </button>
-
-        <button onclick="answer(this, true, 'Bravo ! La boucle s’exécute 3 fois.')">
-          B. 3 fois
-        </button>
-
-        <button onclick="answer(this, false, 'Essaie encore.')">
-          C. 4 fois
-        </button>
-
-      </div>
-
-      <div class="result"></div>
-
-      <br>
-
-      <button class="btn" onclick="complete(5)">
-        ✓ Leçon terminée
-      </button>
-
-    </article>
-
-
-    <!-- =================================================
-         LEÇON 6
-    ================================================== -->
-
-    <article class="lesson" id="lesson6">
-
-      <h2>
-        6. ⚙️ Les fonctions
-      </h2>
-
-      <p class="muted">
-        Une fonction regroupe des instructions
-        que tu peux réutiliser.
-      </p>
-
-      <h3>
-        💻 Exemple
-      </h3>
-
-      <pre><code>function saluer(nom) {
-
-    console.log("Bonjour " + nom);
+  console.log("Mineur");
 
 }
+            </pre>
 
-saluer("Awa");</code></pre>
+            <h3>
+              🧠 Principe
+            </h3>
 
-      <h3>
-        🧠 Comprendre
-      </h3>
+            <p>
+              Si la condition est vraie, le premier bloc
+              est exécuté. Sinon, le bloc <b>else</b>
+              est exécuté.
+            </p>
 
-      <p>
-        <b>function</b> permet de créer une fonction.
-      </p>
+            <button
+              class="btn btn-primary"
+              onclick="complete(4)">
+              ✓ Leçon terminée
+            </button>
 
-      <p>
-        <b>nom</b> est un paramètre.
-      </p>
+          </article>
 
-      <p>
-        <b>saluer("Awa")</b> appelle la fonction.
-      </p>
 
-      <h3>
-        🎯 Autre exemple
-      </h3>
+          <!-- ================= LEÇON 5 ================= -->
 
-      <pre><code>function addition(a, b) {
+          <article
+            class="python-lesson"
+            id="lesson5">
 
-    return a + b;
+            <h2>
+              5. 🔁 Les boucles
+            </h2>
+
+            <p>
+              Les boucles permettent de répéter
+              une instruction plusieurs fois.
+            </p>
+
+            <pre>
+for (let i = 1; i <= 5; i++) {
+
+  console.log(i);
 
 }
+            </pre>
 
-let resultat = addition(5, 3);
+            <p>
+              Ce programme affiche les nombres
+              de 1 à 5.
+            </p>
 
-console.log(resultat);</code></pre>
+            <h3>
+              🔄 Exemple avec while
+            </h3>
 
-      <button class="btn" onclick="complete(6)">
-        ✓ Leçon terminée
-      </button>
+            <pre>
+let i = 0;
 
-    </article>
+while (i < 5) {
+
+  console.log(i);
+
+  i++;
+
+}
+            </pre>
+
+            <button
+              class="btn btn-primary"
+              onclick="complete(5)">
+              ✓ Leçon terminée
+            </button>
+
+          </article>
 
 
-    <!-- =================================================
-         LEÇON 7
-    ================================================== -->
+          <!-- ================= LEÇON 6 ================= -->
 
-    <article class="lesson" id="lesson7">
+          <article
+            class="python-lesson"
+            id="lesson6">
 
-      <h2>
-        7. 🖱️ Les interactions
-      </h2>
+            <h2>
+              6. 🧩 Les fonctions
+            </h2>
 
-      <p class="muted">
-        JavaScript peut réagir aux actions
-        effectuées par l'utilisateur.
-      </p>
+            <p>
+              Une fonction est un bloc de code
+              que l'on peut réutiliser.
+            </p>
 
-      <h3>
-        💻 Exemple
-      </h3>
-
-      <pre><code>&lt;button onclick="direBonjour()"&gt;
-    Cliquez ici
-&lt;/button&gt;
-
-&lt;script&gt;
-
+            <pre>
 function direBonjour() {
+
+  console.log("Bonjour !");
+
+}
+
+direBonjour();
+            </pre>
+
+            <h3>
+              📌 Avec un paramètre
+            </h3>
+
+            <pre>
+function saluer(nom) {
+
+  console.log("Bonjour " + nom);
+
+}
+
+saluer("Ali");
+            </pre>
+
+            <button
+              class="btn btn-primary"
+              onclick="complete(6)">
+              ✓ Leçon terminée
+            </button>
+
+          </article>
+
+
+          <!-- ================= LEÇON 7 ================= -->
+
+          <article
+            class="python-lesson"
+            id="lesson7">
+
+            <h2>
+              7. 📋 Les tableaux
+            </h2>
+
+            <p>
+              Un tableau permet de stocker plusieurs
+              valeurs dans une même variable.
+            </p>
+
+            <pre>
+let fruits = [
+  "Pomme",
+  "Banane",
+  "Orange"
+];
+
+console.log(fruits[0]);
+            </pre>
+
+            <h3>
+              ➕ Ajouter une valeur
+            </h3>
+
+            <pre>
+fruits.push("Mangue");
+            </pre>
+
+            <p>
+              Les éléments d'un tableau commencent
+              généralement à l'index <b>0</b>.
+            </p>
+
+            <button
+              class="btn btn-primary"
+              onclick="complete(7)">
+              ✓ Leçon terminée
+            </button>
+
+          </article>
+
+
+          <!-- ================= LEÇON 8 ================= -->
+
+          <article
+            class="python-lesson"
+            id="lesson8">
+
+            <h2>
+              8. 🧱 Les objets
+            </h2>
+
+            <p>
+              Un objet permet de regrouper plusieurs
+              informations liées entre elles.
+            </p>
+
+            <pre>
+let personne = {
+
+  nom: "Ali",
+
+  age: 20,
+
+  ville: "Dakar"
+
+};
+
+console.log(personne.nom);
+            </pre>
+
+            <h3>
+              🧠 À retenir
+            </h3>
+
+            <p>
+              Les propriétés d'un objet permettent
+              de décrire ses caractéristiques.
+            </p>
+
+            <button
+              class="btn btn-primary"
+              onclick="complete(8)">
+              ✓ Leçon terminée
+            </button>
+
+          </article>
+
+
+          <!-- ================= LEÇON 9 ================= -->
+
+          <article
+            class="python-lesson"
+            id="lesson9">
+
+            <h2>
+              9. 🖱️ DOM et événements
+            </h2>
+
+            <p>
+              JavaScript peut modifier les éléments
+              HTML d'une page grâce au DOM.
+            </p>
+
+            <h3>
+              💻 HTML
+            </h3>
+
+            <pre>
+&lt;button id="monBouton"&gt;
+  Cliquez-moi
+&lt;/button&gt;
+            </pre>
+
+            <h3>
+              ⚡ JavaScript
+            </h3>
+
+            <pre>
+const bouton =
+  document.getElementById("monBouton");
+
+bouton.addEventListener(
+  "click",
+  function() {
 
     alert("Bonjour !");
 
-}
+  }
+);
+            </pre>
 
-&lt;/script&gt;</code></pre>
+            <p>
+              Ici, JavaScript détecte le clic
+              sur le bouton et affiche un message.
+            </p>
 
-      <h3>
-        🧪 Tester
-      </h3>
+            <button
+              class="btn btn-primary"
+              onclick="complete(9)">
+              ✓ Leçon terminée
+            </button>
 
-      <button class="btn" onclick="demoInteraction()">
-        🖱️ Cliquer ici
-      </button>
-
-      <h3>
-        🎯 À retenir
-      </h3>
-
-      <p class="muted">
-        JavaScript peut écouter les actions de l'utilisateur,
-        comme un clic sur un bouton.
-      </p>
-
-      <br>
-
-      <button class="btn" onclick="complete(7)">
-        ✓ Leçon terminée
-      </button>
-
-    </article>
+          </article>
 
 
-    <!-- =================================================
-         LEÇON 8
-    ================================================== -->
+          <!-- ================= LEÇON 10 ================= -->
 
-    <article class="lesson" id="lesson8">
+          <article
+            class="python-lesson"
+            id="lesson10">
 
-      <h2>
-        8. 🏆 Mini-projet JavaScript
-      </h2>
+            <h2>
+              10. 🏆 Mini-projet JavaScript
+            </h2>
 
-      <p class="muted">
-        Tu vas maintenant créer une petite page
-        interactive.
-      </p>
+            <p>
+              Pour terminer le parcours, crée une petite
+              interaction avec JavaScript.
+            </p>
 
-      <h3>
-        🎯 Objectif
-      </h3>
+            <h3>
+              💻 Exemple
+            </h3>
 
-      <p>
-        Crée une page contenant :
-      </p>
+            <pre>
+&lt;button
+  onclick="bonjour()"&gt;
 
-      <p>
-        🌐 Un titre<br>
-        📝 Un texte<br>
-        🖱️ Un bouton<br>
-        ⚡ Une interaction JavaScript
-      </p>
+  Clique ici
 
-      <h3>
-        💻 Exemple
-      </h3>
-
-      <pre><code>&lt;button onclick="bienvenue()"&gt;
-    Cliquez ici
 &lt;/button&gt;
 
 &lt;script&gt;
 
-function bienvenue() {
+function bonjour() {
 
-    alert("Bienvenue sur mon site !");
+  alert("Bienvenue sur TAPHZI STACK !");
 
 }
 
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;
+            </pre>
 
-      <h3>
-        🚀 Mission
-      </h3>
+            <h3>
+              🎯 Mission
+            </h3>
 
-      <p class="muted">
-        Personnalise le message et crée ta propre
-        interaction.
-      </p>
+            <ul>
+              <li>Créer un bouton</li>
+              <li>Créer une fonction</li>
+              <li>Afficher un message</li>
+              <li>Modifier un élément HTML</li>
+              <li>Créer ta propre interaction</li>
+            </ul>
 
-      <button class="btn" onclick="demoProject()">
-        🚀 Tester le projet
-      </button>
+            <button
+              class="btn btn-primary"
+              onclick="complete(10)">
+              🏆 Terminer le parcours
+            </button>
 
-      <br><br>
+          </article>
 
-      <button class="btn" onclick="complete(8)">
-        🏆 Terminer le parcours
-      </button>
 
-    </article>
+        </section>
 
+      </div>
 
-  </section>
+    </div>
 
-</main>
+  </main>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+  <!-- ================= FOOTER ================= -->
 
-<footer>
+  <footer class="footer">
 
-  © 2026 TAPHZI STACK —
-  Apprentissage informatique
+    <div class="footer-logo">
+      <span>TAPHZI</span> STACK
+    </div>
 
-</footer>
+    <p>
+      Apprends. Code. Réussis.
+    </p>
 
+    <div class="footer-links">
 
-<!-- =====================================================
-     JAVASCRIPT DU COURS
-===================================================== -->
+      <a href="index.html">
+        Accueil
+      </a>
 
-<script>
+      <a href="index.html#cours">
+        Cours
+      </a>
 
-  /* =====================================================
-     PROGRESSION
-  ===================================================== */
+      <a href="index.html#apropos">
+        À propos
+      </a>
 
-  let done = JSON.parse(
-    localStorage.getItem("taphziStackJavaScriptDone") || "[]"
-  );
+      <a href="index.html#contact">
+        Contact
+      </a>
 
+    </div>
 
-  /* =====================================================
-     AFFICHER UNE LEÇON
-  ===================================================== */
+    <p class="copyright">
+      © 2026 TAPHZI STACK — Tous droits réservés.
+    </p>
 
-  function showLesson(number, element) {
+  </footer>
 
-    document
-      .querySelectorAll(".lesson")
-      .forEach(function(lesson) {
 
-        lesson.classList.remove("active");
+  <!-- ================= JAVASCRIPT DU COURS ================= -->
 
-      });
+  <script>
 
+    const STORAGE_KEY =
+      "taphziStackJavaScriptDone";
 
-    const selectedLesson =
-      document.getElementById("lesson" + number);
 
+    let done = JSON.parse(
+      localStorage.getItem(STORAGE_KEY) || "[]"
+    );
 
-    if (selectedLesson) {
 
-      selectedLesson.classList.add("active");
+    /* ================= AFFICHER UNE LEÇON ================= */
 
-    }
+    function showLesson(number, element) {
 
+      document
+        .querySelectorAll(".python-lesson")
+        .forEach(function(lesson) {
 
-    document
-      .querySelectorAll(".lesson-link")
-      .forEach(function(link) {
-
-        link.classList.remove("active");
-
-      });
-
-
-    if (element) {
-
-      element.classList.add("active");
-
-    }
-
-
-    window.scrollTo({
-
-      top: 0,
-
-      behavior: "smooth"
-
-    });
-
-  }
-
-
-  /* =====================================================
-     TERMINER UNE LEÇON
-  ===================================================== */
-
-  function complete(number) {
-
-    if (!done.includes(number)) {
-
-      done.push(number);
-
-      localStorage.setItem(
-        "taphziStackJavaScriptDone",
-        JSON.stringify(done)
-      );
-
-    }
-
-
-    updateProgress();
-
-
-    if (number === 8) {
-
-      alert(
-        "🎉 Félicitations ! Tu as terminé le parcours JavaScript de TAPHZI STACK !"
-      );
-
-    } else {
-
-      alert(
-        "✓ Leçon " + number + " terminée !"
-      );
-
-    }
-
-  }
-
-
-  /* =====================================================
-     PROGRESSION
-  ===================================================== */
-
-  function updateProgress() {
-
-    const progressText =
-      document.getElementById("progressText");
-
-    const fill =
-      document.getElementById("fill");
-
-
-    const percentage =
-      (done.length / 8) * 100;
-
-
-    if (progressText) {
-
-      progressText.textContent =
-        done.length + " / 8 leçons";
-
-    }
-
-
-    if (fill) {
-
-      fill.style.width =
-        percentage + "%";
-
-    }
-
-  }
-
-
-  /* =====================================================
-     QUIZ
-  ===================================================== */
-
-  function answer(button, correct, message) {
-
-    const quiz =
-      button.parentElement;
-
-    const result =
-      quiz.nextElementSibling;
-
-
-    if (correct) {
-
-      result.textContent =
-        "✓ " + message;
-
-      result.style.color =
-        "#34d399";
-
-
-      quiz
-        .querySelectorAll("button")
-        .forEach(function(btn) {
-
-          btn.disabled = true;
+          lesson.classList.remove("active");
 
         });
 
-    } else {
 
-      result.textContent =
-        "✗ " + message;
+      const selected =
+        document.getElementById("lesson" + number);
 
-      result.style.color =
-        "#ff8b8b";
+
+      if (selected) {
+
+        selected.classList.add("active");
+
+      }
+
+
+      document
+        .querySelectorAll(".python-link")
+        .forEach(function(link) {
+
+          link.classList.remove("active");
+
+        });
+
+
+      if (element) {
+
+        element.classList.add("active");
+
+      }
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
 
     }
 
-  }
+
+    /* ================= TERMINER ================= */
+
+    function complete(number) {
+
+      if (!done.includes(number)) {
+
+        done.push(number);
+
+        localStorage.setItem(
+          STORAGE_KEY,
+          JSON.stringify(done)
+        );
+
+      }
 
 
-  /* =====================================================
-     INTERACTION
-  ===================================================== */
-
-  function demoInteraction() {
-
-    alert(
-      "⚡ Bravo ! JavaScript vient de réagir à ton clic."
-    );
-
-  }
+      updateProgress();
 
 
-  /* =====================================================
-     MINI-PROJET
-  ===================================================== */
+      if (number === 10) {
 
-  function demoProject() {
+        alert(
+          "🎉 Félicitations ! Tu as terminé le parcours JavaScript !"
+        );
 
-    alert(
-      "🚀 Bienvenue dans ton premier projet JavaScript !"
-    );
+      } else {
 
-  }
+        alert(
+          "✓ Leçon terminée ! Continue ton apprentissage."
+        );
+
+      }
+
+    }
 
 
-  /* =====================================================
-     INITIALISATION
-  ===================================================== */
+    /* ================= PROGRESSION ================= */
 
-  updateProgress();
+    function updateProgress() {
 
-</script>
+      const progressText =
+        document.getElementById("progressText");
+
+      const fill =
+        document.getElementById("fill");
+
+
+      progressText.textContent =
+        done.length + " / 10 leçons";
+
+
+      fill.style.width =
+        (done.length / 10 * 100) + "%";
+
+    }
+
+
+    /* ================= INITIALISATION ================= */
+
+    updateProgress();
+
+  </script>
 
 </body>
 
