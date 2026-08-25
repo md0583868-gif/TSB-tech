@@ -122,7 +122,7 @@
 
             <button
               class="course-btn"
-              onclick="openCourse('Bases de l’informatique')">
+              onclick="openCourse('informatique.html')">
               Commencer le cours →
             </button>
 
@@ -163,7 +163,7 @@
 
             <button
               class="course-btn"
-              onclick="openCourse('HTML')">
+              onclick="openCourse('html.html')">
               Commencer le cours →
             </button>
 
@@ -204,7 +204,7 @@
 
             <button
               class="course-btn"
-              onclick="openCourse('CSS')">
+              onclick="openCourse('html.html')">
               Commencer le cours →
             </button>
 
@@ -245,7 +245,7 @@
 
             <button
               class="course-btn"
-              onclick="openCourse('JavaScript')">
+              onclick="openCourse('javascript.html')">
               Commencer le cours →
             </button>
 
@@ -286,7 +286,7 @@
 
             <button
               class="course-btn"
-              onclick="openCourse('Python')">
+              onclick="openCourse('python.html')">
               Commencer le cours →
             </button>
 
@@ -327,7 +327,7 @@
 
             <button
               class="course-btn"
-              onclick="openCourse('Projets pratiques')">
+              onclick="openProjects()">
               Découvrir les projets →
             </button>
 
@@ -561,11 +561,11 @@
       </div>
 
       <h2 id="modalTitle">
-        Cours
+        Projets pratiques
       </h2>
 
       <p id="modalText">
-        Le cours sera bientôt disponible sur TAPHZI STACK !
+        Les projets pratiques seront bientôt disponibles sur TAPHZI STACK !
       </p>
 
       <button
@@ -583,7 +583,26 @@
 
   <script>
 
-    function openCourse(courseName) {
+    /*
+    ==========================================
+    OUVRIR UN COURS
+    ==========================================
+    */
+
+    function openCourse(page) {
+
+      window.location.href = page;
+
+    }
+
+
+    /*
+    ==========================================
+    OUVRIR LES PROJETS
+    ==========================================
+    */
+
+    function openProjects() {
 
       const modal =
         document.getElementById("courseModal");
@@ -594,12 +613,11 @@
       const text =
         document.getElementById("modalText");
 
-      title.textContent = courseName;
+      title.textContent =
+        "🚀 Projets pratiques";
 
       text.textContent =
-        "Le cours " +
-        courseName +
-        " sera bientôt disponible sur TAPHZI STACK !";
+        "Les projets pratiques seront bientôt disponibles sur TAPHZI STACK !";
 
       modal.classList.add("show");
 
@@ -610,6 +628,12 @@
 
     }
 
+
+    /*
+    ==========================================
+    FERMER LA MODALE
+    ==========================================
+    */
 
     function closeCourse() {
 
@@ -625,6 +649,12 @@
 
     }
 
+
+    /*
+    ==========================================
+    FERMER EN CLIQUANT À L'EXTÉRIEUR
+    ==========================================
+    */
 
     window.addEventListener(
       "click",
@@ -642,6 +672,12 @@
       }
     );
 
+
+    /*
+    ==========================================
+    CONTACT
+    ==========================================
+    */
 
     function sendMessage(event) {
 
